@@ -93,21 +93,19 @@ We define the location of the cells based on the design scenario. For this case,
 
 3) Surround pre-placed cells with Decoupling capacitors
 
+This piece of circuit is part of block a, block c, and block b. When the output switches from 0 to 1, there is an amount of current needed. Whenever there is a transition, this capacitance has to completely charge to respresent 1, so the amount of capacitance charge is sent by the supply voltage. It is the responsibility of the supply voltage to supply the logic. Whenever 1 to 0, it is vss responsibilty to take that charge, so in theory all the capacitance will get discharged which should be handled by GND. 
+
 <img width="711" height="344" alt="image" src="https://github.com/user-attachments/assets/dc9b5613-5b11-43aa-9f7a-6538136857e7" />
 
-This piece of circuit is part of block a, block c, block b, when the output swicthes from 0 to 1, there is an amount of current needed. whenever there is a transition from 0 to 1, this capacitance has to completely charge to respsernt 1. So the amount of capacitance charge is sent by the supplyu voltage. So it is the responsibility of the supply voltage to supply the logic. 
-
-Whenver 1 to 0 it is vss responsibilty to take that charge. So all the capacitance will get discharged which should be handled by GND. 
-
-In reality, when power supply flows to glogic, there is a drop because of physical dimensions. Anythibng that has physical dimensions has some resistance. Wheenver when this supply tries to flow from + to the gates, there will be voltage drops. VDD- not possible always 1 volt if power supply is 1V and is less. The .7 volt will go into cicuit and will go into logic and if there is an output for 0 to 1, it will be 0.7 volts because thats the amount of supply available. The .7 volts should be wihtin th enoice margin range. 
+In reality, when power supply flows to glogic, there is a drop because of physical dimensions. Anything that has physical dimensions has some resistance. Whenever when this supply tries to flow from + to the gates, there will be voltage drops. VDD- not possible always 1 volt if power supply is 1V and is less. The .7 volt will go into cicuit and will go into logic and if there is an output for 0 to 1, it will be 0.7 volts because thats the amount of supply available. The .7 volts should be within the noise margin range. 
 
 <img width="614" height="374" alt="image" src="https://github.com/user-attachments/assets/a88c9a17-5220-4647-85b4-edea720881e9" />
 
-If 0.7V lies in the 1 area, we're good but if its in the undefined region, then it is bad. So we can't guarantee power supply so we can solve this using decoupling capacitors.
+If 0.7V lies in the 1 area, we're good, but if its in the undefined region, then it is bad. So we can't guarantee power supply. And that's where decoupling capacitors come in. 
 
 <img width="706" height="389" alt="image" src="https://github.com/user-attachments/assets/6093a945-9525-4659-8ba7-04b1fdca3d22" />
 
-Decoupling capacitors are huge capacitors. Whenever circuit switches it gets power from Cd and it deocouples ciruit from main power supply.  And since it is placed clsoe to circuit, there will be hardly any voltage drop. When switching is happenning, the capacitor loses charge but when siwtching is not happening, it is resupplying charge using power supply. 
+Decoupling capacitors are huge capacitors. Whenever circuit switches it gets power from Cd and it deocouples ciruit from main power supply.  And since it is placed close to circuit, there will be hardly any voltage drop. When switching is happenning, the capacitor loses charge, but when switching is not happening, it is resupplying charge using power supply. 
 
 In the chip it will look like this: 
 
@@ -119,10 +117,9 @@ Now there won't be any missing 1 or 0 because the capacitor will make sure it wi
 
 4) Power Planning 
 
-We have another problem. If this particular macro is repeated multiple times, there will be curernt demands for eahc and every element of the macro. 
+We have another problem. If this particular macro is repeated multiple times, there will be curernt demands for each and every element of the macro. 
 
-
-Lets say this is complete chip. There is a signal from driver to load. We have to make sure this line maintains the same signal the whole time. 
+Lets say this is a complete chip. There is a signal from driver to load. We have to make sure this line maintains the same signal the whole time. 
 
 <img width="388" height="305" alt="image" src="https://github.com/user-attachments/assets/1f74d059-308f-4d80-b607-d8c0074a1324" />
 
@@ -130,17 +127,17 @@ These blocks have been tapped to VDD and all the block GND lines area tapped to 
 
 <img width="469" height="378" alt="image" src="https://github.com/user-attachments/assets/22611588-4a5f-4ad5-a608-8fbd561f95d1" />
 
-For this line ot maintain the same scenario, ti should obtain adequate power from supply but there's not decoupling capacitors that will take care of this particular scenario. The power supply is the one to supply this line but its a bit far so possibility of volatage drop. 
+For this line ot maintain the same scenario, it should obtain adequate power from supply, but there's not decoupling capacitors that will take care of this particular scenario. The power supply is the one to supply this line but its a bit far so there is a possibility of volatage drop. 
 
-This a 16-bit bus:
+Let's dive deeper. This is a 16-bit bus:
 
 <img width="558" height="361" alt="image" src="https://github.com/user-attachments/assets/1b0e6aa7-927a-4a30-8680-3119e8aa795e" />
 
-One line is a logic 1 and there is a capacitor charged to VDD. When 0 it is charged to GND.
+Each line is a logic bit. When 1, it is charged to VDD. When 0 it is charged to GND.
 
 <img width="564" height="205" alt="image" src="https://github.com/user-attachments/assets/2a74c3d9-5729-411e-b0f7-3fc72827e377" />
 
-When you pass this particular logic to the inverter it will be inverted. ALl the charged to VDD will be charged to 0 all at the same time and vice versa. But this will cause a problem since it all happens at the same time. Now we have a complete ground line, there is a ground bounce. If the size of this ground bounce exits the noise margin level, it might eneter into an undefined state, which is bad. 
+When you pass this particular logic to the inverter, it will be inverted. All the charged to VDD will be charged to 0 all at the same time and vice versa. But this will cause a problem since it all happens at the same time. Now we have a complete ground line, there is a ground bounce. If the size of this ground bounce exits the noise margin level, it might eneter into an undefined state, which is bad. 
 
 For 0 to 1, it is basically the same and creates a voltage Droop and if it enters undefined state, then there will be uncertainty.
 
