@@ -18,17 +18,14 @@ The chip is sitting at the center. Wire bunch connects the pins to the boundary 
 
 <img width="411" height="257" alt="image" src="https://github.com/user-attachments/assets/27edb3b3-3b65-4788-aa43-47074990fb0d" /><br>
 
-PADS: Signal travels through the pads and into the pins and vice versa.
-CORE: Place where digital logic sits.
-DIE: Silicon that the circuit is fabricated on.
+- PADS: Signal travels through the pads and into the pins and vice versa.
+- CORE: Place where digital logic sits.
+- DIE: Silicon that the circuit is fabricated on.
 
 <img width="517" height="275" alt="image" src="https://github.com/user-attachments/assets/59581eb8-a8c5-4f12-b1da-0b3b7a7aaae6" /><br>
-The core includes some components like the RISCV SoC, SRAM, adc0, adc1, dac, PLE, and SPI.
-
-All performances depend on the foundry, the place where chips get manufactured. Engineers contact foundries.
-
-Foundry IP's or Intelligent Property: This need some amount of integllegine to build this block.
-Macros: Pure digital logic.
+The core includes some components like the RISCV SoC, SRAM, adc0, adc1, dac, PLE, and SPI. All performances depend on the foundry, the place where chips get manufactured. Engineers contact foundries.
+- Foundry IP's or Intelligent Property: This need some amount of integllegine to build this block.
+- Macros: Pure digital logic.
 
 ### 1 - Introduction to RISC-V
 RISC-V is a language of the computer and a way of communication to the computer. If you want a C program to run on this particular layout.
