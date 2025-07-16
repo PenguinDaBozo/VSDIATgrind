@@ -189,6 +189,101 @@ Physical Verification DRC & LVS:
 - Magic is used for DRC and SPICE Extraction from layout
 - magic and netgen are used for LVS, extracted SPICE by Magic vs verilog netlist
 
+## Get familiar to open-source EDA tools
+### 7 - OpenLANE Directory structure in detail
+OpenLANE is a flow which comprises of many multiple open source EDA tools.The aim of openlane is to automate the entire RTL to GSII flow and make it clean and open source. 
+
+------Linux commands-------
+cd: change directory
+<img width="419" height="63" alt="image" src="https://github.com/user-attachments/assets/e1c885fd-d510-4692-8036-2b82783ce763" /><br>
+
+ls -ltr: list stuff in chronological order
+<img width="608" height="99" alt="image" src="https://github.com/user-attachments/assets/7f423327-6318-43ed-9abd-872d8feb5245" /><br>
+
+cmd name --help: instructions on how to use command
+<img width="747" height="632" alt="image" src="https://github.com/user-attachments/assets/62ac67da-68ef-4783-b3b0-8f2e1dfb3f23" /><br>
+
+clear: clears terminal
+<img width="462" height="31" alt="image" src="https://github.com/user-attachments/assets/c5f5a1e9-b5f2-43e9-8e92-0ea43ff34820" /><br>
+
+cd ../: exit out of current directory
+
+-----Exploring OpenLANE tools-----
+<img width="652" height="280" alt="image" src="https://github.com/user-attachments/assets/efcfaf9f-631a-4486-a9cd-e369c70de11f" /><br>
+Skywater.pdk: folder that has all the PDK related files (timing libraries, left...)
+open.pdks: scripts and files that migitates issue of open source and foundry compatibility (magic, netgen...)
+sky130A: pdk that is compatible with open source involvement
+
+*inside sky130A*
+<img width="755" height="139" alt="image" src="https://github.com/user-attachments/assets/74d5a1d7-7b01-4f64-b8a2-459c700d89d5" /><br>
+libs.ref: contains all the process specific files
+libs.tech: files specific to the tools
+
+*inside libs.ref*
+<img width="845" height="274" alt="image" src="https://github.com/user-attachments/assets/a150d43e-9793-48ef-bc08-978b736167a7" />
+
+*inside libs.tech*
+<img width="844" height="243" alt="image" src="https://github.com/user-attachments/assets/0d8ef984-b33c-4828-a316-75ddaff33fd0" />
+
+-----Get to OpenLANE-----
+<img width="673" height="41" alt="image" src="https://github.com/user-attachments/assets/c966db82-041b-45a5-86f0-a01ab2e3ea94" /><br>
+
+### 8 - Design Preparation Step
+1) After getting into the openLane directory, run docker
+<img width="400" height="423" alt="image" src="https://github.com/user-attachments/assets/20f49e8d-2a01-4cc1-b1fa-757bd89c2437" /><br>
+
+2) Run flow interactive:
+ - interactive: step by step process details and compares
+ - without: runs complete rule
+<img width="568" height="237" alt="image" src="https://github.com/user-attachments/assets/e0aa168c-d747-480f-98da-c68d606bdee0" /><br>
+
+3) Download packages
+<img width="597" height="258" alt="image" src="https://github.com/user-attachments/assets/7a7a243e-d299-4fa9-80eb-bf3583f1caa9" /><br>
+
+OpenLANE has several designs and for this part, we're going to use picorv32. 
+<img width="917" height="273" alt="image" src="https://github.com/user-attachments/assets/2152df09-8f72-41fe-8e67-92408f5c4fff" /><br>
+config.tcl: bypasses any contributions that has been done already into a plane
+priority: default, config.tcl, hd_config.tcl
+
+4) Need to prep design because designs only has the 3 default files. Need to set up files specific to the flow; that location needs to be created.
+<img width="734" height="417" alt="image" src="https://github.com/user-attachments/assets/be97b09f-402e-4d52-ae09-26a076bdb009" />
+<img width="729" height="435" alt="image" src="https://github.com/user-attachments/assets/d535dec6-8ff9-41d8-bb6e-73540682320a" />
+
+Changes after prep
+<img width="887" height="196" alt="image" src="https://github.com/user-attachments/assets/d3287e37-24c7-4bc9-a363-28c68b73b0df" />
+<img width="928" height="236" alt="image" src="https://github.com/user-attachments/assets/cd3c52d4-106c-4aa3-b6cb-e26ec36fcbb1" />
+<img width="934" height="394" alt="image" src="https://github.com/user-attachments/assets/1577a65a-eb3b-4083-a234-7575cdd48ff2" />
+
+### 9 - Review files after design prep and run synthesis
+<img width="931" height="259" alt="image" src="https://github.com/user-attachments/assets/b479a722-fe71-4dca-b98e-02ad72dde9f8" /><br>
+Layout; Synthesis is empty right now because nothing has been synthesized. Let's change that!
+
+5) ```%run_synthesis``` to run synthesis
+<img width="913" height="420" alt="image" src="https://github.com/user-attachments/assets/d828a8e0-5b34-4d76-8836-08992f7a6d55" /><br>
+
+### 10 - OpenLANE Project Git Link Description
+Github is a remote repository (project) collection and people can access it.
+https://github.com/efabless/openlane 
+Has all the documentation you need
+
+### 11 - Steps to characterize synthesis results
+Chip area
+<img width="470" height="30" alt="image" src="https://github.com/user-attachments/assets/04277398-7543-4d4f-8a61-964de8e6d34c" /><br>
+
+Number of cells
+<img width="349" height="126" alt="image" src="https://github.com/user-attachments/assets/e83c5a58-815b-4deb-a5ac-8c77a1d2859c" /><br>
+
+Number of D-flip flops
+<img width="350" height="212" alt="image" src="https://github.com/user-attachments/assets/82bab485-0389-43e6-8109-1ab7c40c3347" /><br>
+
+Using number of flip flops we can calculate our flip flop ratio, which is:
+FLIP FLOP RATIO = # OF DFFs / # OF CELLS * 100
+
+Results of synthesis
+<img width="923" height="127" alt="image" src="https://github.com/user-attachments/assets/531c0c6a-b731-493c-8168-64d78e6726b5" />
+<img width="928" height="302" alt="image" src="https://github.com/user-attachments/assets/b88a30ed-7014-4022-9b16-b948ccb813b4" />
+
+
 
 
 
