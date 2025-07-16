@@ -3,7 +3,7 @@ GitHub for my VSDIAT adventure!
 
 [Sky130 DAY 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#sky130-day-1---inception-of-open-source-eda-openlane-and-sky130-pdk)
 - [How to Talk to Computers](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#how-to-talk-to-computers)
-    - [0 - Introduction to QFN-48 Package, chip pads, core, die and IPs](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#0---introduction-to-qfn--48)
+    - [0 - Introduction to QFN-48 Package, chip pads, core, die and IPs](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#0---introduction-to-qfn-48-package-chip-pads-core-die-and-ips)
     - [1 - Introduction to RISC-V](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#1---introduction-to-risc-v)
     - [2 - From Software Applications to Hardware](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#2---from-software-applications-to-hardware)
 - [SoC Design and OpenLANE](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#soc-design-and-openlane)
