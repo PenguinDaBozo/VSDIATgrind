@@ -97,15 +97,15 @@ This piece of circuit is part of block a, block c, and block b. When the output 
 
 <img width="711" height="344" alt="image" src="https://github.com/user-attachments/assets/dc9b5613-5b11-43aa-9f7a-6538136857e7" />
 
-In reality, when power supply flows to glogic, there is a drop because of physical dimensions. Anything that has physical dimensions has some resistance. Whenever when this supply tries to flow from + to the gates, there will be voltage drops. VDD- not possible always 1 volt if power supply is 1V and is less. The .7 volt will go into cicuit and will go into logic and if there is an output for 0 to 1, it will be 0.7 volts because thats the amount of supply available. The .7 volts should be within the noise margin range. 
+In reality, when power supply flows to glogic, there is a drop because of physical dimensions. Anything that has physical dimensions has some resistance. Whenever when this supply tries to flow from + to the gates, there will be voltage drops. VDD- is not always 1 volt because of voltage drops. The .7 volt will go into cicuit and will go into logic and if there is an output for 0 to 1, it will be 0.7 volts because thats the amount of supply available. The 0.7 volts should be within the noise margin range. 
 
 <img width="614" height="374" alt="image" src="https://github.com/user-attachments/assets/a88c9a17-5220-4647-85b4-edea720881e9" />
 
-If 0.7V lies in the 1 area, we're good, but if its in the undefined region, then it is bad. So we can't guarantee power supply. And that's where decoupling capacitors come in. 
+If 0.7V lies in the 1 area, we're good, but if its in the undefined region, then it is unpredictable and we can't guarantee power supply so what should we do? That's where decoupling capacitors come in. 
 
 <img width="706" height="389" alt="image" src="https://github.com/user-attachments/assets/6093a945-9525-4659-8ba7-04b1fdca3d22" />
 
-Decoupling capacitors are huge capacitors. Whenever circuit switches it gets power from Cd and it deocouples ciruit from main power supply.  And since it is placed close to circuit, there will be hardly any voltage drop. When switching is happenning, the capacitor loses charge, but when switching is not happening, it is resupplying charge using power supply. 
+Decoupling capacitors are huge capacitors. Whenever circuit switches it gets power from Cd, it deocouples ciruit from main power supply.  And since it is placed close to circuit, there will be hardly any voltage drop. When switching is happenning, the capacitor loses charge, but when switching is not happening, it is resupplying charge using power supply. 
 
 In the chip it will look like this: 
 
@@ -117,41 +117,37 @@ Now there won't be any missing 1 or 0 because the capacitor will make sure it wi
 
 4) Power Planning 
 
-We have another problem. If this particular macro is repeated multiple times, there will be curernt demands for each and every element of the macro. 
-
-Lets say this is a complete chip. There is a signal from driver to load. We have to make sure this line maintains the same signal the whole time. 
+We have another problem. If this particular macro is repeated multiple times, there will be curernt demands for each and every element of the macro. Lets say this is a complete chip. There is a signal from driver to load. We have to make sure this line maintains the same signal the whole time. 
 
 <img width="388" height="305" alt="image" src="https://github.com/user-attachments/assets/1f74d059-308f-4d80-b607-d8c0074a1324" />
 
-These blocks have been tapped to VDD and all the block GND lines area tapped to GND. Assume this particular line is a 16-bit bus. This line has to maintain this particular scenario the whole time so load recieves same signal.
+These blocks have been tapped to VDD and all the block GND lines area tapped to GND. Assume this particular line is a 16-bit bus. This line has to maintain this particular scenario the whole time so load can recieve the same signal.
 
 <img width="469" height="378" alt="image" src="https://github.com/user-attachments/assets/22611588-4a5f-4ad5-a608-8fbd561f95d1" />
 
-For this line ot maintain the same scenario, it should obtain adequate power from supply, but there's not decoupling capacitors that will take care of this particular scenario. The power supply is the one to supply this line but its a bit far so there is a possibility of volatage drop. 
+For this line to maintain the same scenario, it should obtain adequate power from supply, but there's not decoupling capacitors that will take care of this particular scenario. The power supply is the one to supply this line, but it's a bit far so there is a possibility of volatage drop. 
 
 Let's dive deeper. This is a 16-bit bus:
 
 <img width="558" height="361" alt="image" src="https://github.com/user-attachments/assets/1b0e6aa7-927a-4a30-8680-3119e8aa795e" />
 
-Each line is a logic bit. When 1, it is charged to VDD. When 0 it is charged to GND.
+Each line is a logic bit. When 1, it is charged to VDD. When 0, it is charged to GND.
 
 <img width="564" height="205" alt="image" src="https://github.com/user-attachments/assets/2a74c3d9-5729-411e-b0f7-3fc72827e377" />
 
-When you pass this particular logic to the inverter, it will be inverted. All the charged to VDD will be charged to 0 all at the same time and vice versa. But this will cause a problem since it all happens at the same time. Now we have a complete ground line, there is a ground bounce. If the size of this ground bounce exits the noise margin level, it might eneter into an undefined state, which is bad. 
+When you pass this particular logic to the inverter, it will be inverted. All the charged to VDD will be charged to 0 all at the same time and vice versa. But this will cause a problem since it all happens at the same time. A ground bounce will occur. If the size of this ground bounce exits the noise margin level, it might eneter into an undefined state, which is bad. 
 
-For 0 to 1, it is basically the same and creates a voltage Droop and if it enters undefined state, then there will be uncertainty.
+For 0 to 1, it is basically the same and creates a voltage droop and if it enters undefined state, then it is also bad.
 
 <img width="548" height="195" alt="image" src="https://github.com/user-attachments/assets/59cd7b0d-8077-4d56-a5bc-99fb7e2ecf7e" />
 
-This problem stems from the fact that powre is supplied at one point. If there were multiple supplies, then this problem would not happen since each one would take power from closest supply. 
+This problem stems from the fact that power is supplied at one point. If there were multiple supplies, then this problem would not happen since each one would take power from closest supply. 
 
 Instead of a single power supply, we should have multiple like this: 
 
 <img width="559" height="402" alt="image" src="https://github.com/user-attachments/assets/831f291b-1504-4090-8858-8284e154b759" />
 
-If some logic demands power it will tap power from the nearest line. This is called a mesh.
-
-Now let's apply to our die.
+If some logic demands power, it will tap power from the nearest line. This is called a mesh. Now let's apply to our die.
 
 <img width="664" height="385" alt="image" src="https://github.com/user-attachments/assets/d941a5f6-06aa-47ee-99c1-2490bc621cc8" />
 
@@ -171,16 +167,17 @@ We put them together and connect the respective outputs with each other and this
 
 <img width="574" height="407" alt="image" src="https://github.com/user-attachments/assets/e820bf61-5065-4c85-85d5-377c63666869" />
 
-Most designs usually hae the input on the left and the outputs on the rigt. It is up to preference. 
+Most designs usually have the input on the left and the outputs on the rigt. It is up to designer's preference. 
+
 <img width="644" height="379" alt="image" src="https://github.com/user-attachments/assets/489e4a4c-8d32-4fc2-be33-dd5a6b8712c0" />
 
-The placement of the pins is pretty simple since the pins will be placed according to where the cells are placed.
+The placement of the pins is pretty simple since the pins will be placed according to where the corresponding cells are placed.
 
-CLK ports are bigger than Din because this is the port that is sending signal to the flip flops and drives the complete chip. And its big because we need the least resistance.  
+If you notice, CLK ports are bigger than Din because this is the port that is sending signal to the flip flops and drives the whole chip, which would require less resistance, explaining its big size.
 
 6) Logical Cell Placement Blockage
 
-Next step is to make sure none of automated stuff is placed in the die so it should be blocked off. The blockage makes sure the automated placement doesn't place outside. 
+Next step is to make sure none of automated stuff is placed in the die. The edge should be blocked off to make sure the automated placement doesn't get placed outside. 
 
 <img width="506" height="381" alt="image" src="https://github.com/user-attachments/assets/6eac5001-fd97-4da8-bd83-5b4da42cfbfb" />
 
