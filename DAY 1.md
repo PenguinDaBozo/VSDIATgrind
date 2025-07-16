@@ -70,7 +70,7 @@ Back in the days, the design of an IC was coupled by only a few companies. Lynn 
 
 Until June 30, 2020, there were no open sourced PDK. In June 30, 2020, Google and Skywater made an agreement to open source the FOSS 130nm Production PDK. The PDK had all the information needed for successful ASIC implementation.
 
-Now, we have all three elements for open-source. But isn't 130nm production an old one given it has been around for 20 years? The cutting edge process node is 5nm. The current market share for a 130nm is 7%.
+Now, we have all three elements for open-source. But isn't 130nm production an old one given it has been around for 20 years? Well, surprisingly the 130nm still works. The cutting edge process node is 5nm. The current market share for a 130nm is 7%.
 
 Attributes:
 - civil applications does not need a performance of an advanced node
@@ -83,6 +83,58 @@ Attributes:
 - Example 2: OSU team reported 327 MHz post-layout clock
 
 ### 4 - Simplified RTL2GDS flow
+ASIC design flow:
+<img width="568" height="369" alt="image" src="https://github.com/user-attachments/assets/0214c12b-14e7-49ab-a358-3ca12bc78b11" />
+
+Synthesis: 
+<img width="553" height="381" alt="image" src="https://github.com/user-attachments/assets/a25f8dba-4267-46b8-ac4b-c25f832a6850" /><br>
+- Converts RTL to a circuit out of componetns from the standard cell library (SCL)
+
+FP+PP (Floor and Power Planning): 
+<img width="540" height="394" alt="image" src="https://github.com/user-attachments/assets/b2539179-2485-44ff-8c17-4fc7b2a5c4fc" /><br>
+- Chip Floor-Planning: partition the chip die btwn different system building blocks and place the I/O Pads
+<img width="552" height="384" alt="image" src="https://github.com/user-attachments/assets/1b8cfe21-2bf8-4bb0-a677-64881d472625" /><br>
+- Macro Floor-Planning: Dimensions, pin locations, rows definition
+<img width="562" height="375" alt="image" src="https://github.com/user-attachments/assets/9d0a39bf-c03d-4e62-8a85-9c5ac669f046" /><br>
+- Power Planning: Each chip is powered by multiple VDD VSS pins. The power pins are connected through all rings and vertical horizontal straps. Parallel structures reduces resistance. The distribution network uses upper metal layers as they are thicker than lower metal layers and have less resistance. 
+
+Place:
+<img width="537" height="200" alt="image" src="https://github.com/user-attachments/assets/a6cd8180-134c-4fe0-85c9-802d0408aebc" /><br>
+For macros, place the cells on the floorplan rows, aligned with the sites. Connected cells should be palced close to each other to reduce the interconnected delay. Also to enable successful routing afterward.
+<img width="502" height="202" alt="image" src="https://github.com/user-attachments/assets/6b7334f2-946f-405a-b59d-2303adc8ccc6" /><br>
+- Done in 2 Steps: Global and Detailed
+- Global: find optimal position for all cells
+- Detailed: Postitions from global are minimally altered
+
+CTS:
+<img width="557" height="198" alt="image" src="https://github.com/user-attachments/assets/024c60af-e3d0-4868-9694-420e599a985e" /><br>
+Creates a clock distribution network, which looks like a tree. Clock deliver signal to all components with minimal latency.
+
+Route:
+Implement the interconnect using the available metal layers. The router uses available metal layers as defined by PDK. PDK defines the width, minimun tract, pitch, vias, and thickness. 
+<img width="538" height="226" alt="image" src="https://github.com/user-attachments/assets/7ba97f20-6977-4d39-bf09-91032a68c3cb" /><br>
+The Sky130 defines 6 layers: Interconnect layer(lowest), 5 aluminum layers after
+
+Most routers are grid routers. They construct routing grids out of the metal layer tracts. The routing grid is huge and uses a divide and conquer method to cover the area. 
+- Global Routing: generates routing guides
+- Detailed Routing: Uses the routing gudies to implement the actual wiring
+
+Sign Off:
+Once done with routing, we can construct the final layout, which undergoes verifications. 
+
+Physical Verifications
+- Design Rules Checking (DRC)
+- Layout vs Schematic (LVS)
+
+Timing Verification
+- Static Timing Analysis (STA)
+
+
+
+
+
+
+
 ### 5 - Introduction to OpenLANE and Strive chipsets
 ### 6 - Introduction to OpenLANE detailed ASIC design flow
 
