@@ -11,12 +11,12 @@ This board can also be described in the form of a block diagram:
 The center is a processor and around it is all the programs that go into the processor. This is a typical diagram of a board.
 
 But the other stuff ain't that important, so let's dive deeper into the chip. 
-<img width="456" height="443" alt="image" src="https://github.com/user-attachments/assets/ffa30fdb-2e30-44f8-b65f-2dacf8c8cece" /><br>
+<img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/ffa30fdb-2e30-44f8-b65f-2dacf8c8cece" /><br>
 This is a chip or in more technical terms: a package. 
 
 The chip is sitting at the center. Wire bunch connects the pins to the boundary of the chip, which allows signals to travel to the chip. 
 
-<img width="411" height="257" alt="image" src="https://github.com/user-attachments/assets/27edb3b3-3b65-4788-aa43-47074990fb0d" /><br>
+<img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/27edb3b3-3b65-4788-aa43-47074990fb0d" /><br>
 
 - PADS: Signal travels through the pads and into the pins and vice versa.
 - CORE: Place where digital logic sits.
