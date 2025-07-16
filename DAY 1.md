@@ -228,6 +228,7 @@ Physical Verification DRC & LVS:
 OpenLANE is a flow which comprises of many multiple open source EDA tools.The aim of openlane is to automate the entire RTL to GSII flow and make it clean and open source. 
 
 ------Linux commands-------
+
 cd: change directory
 
 <img width="419" height="63" alt="image" src="https://github.com/user-attachments/assets/e1c885fd-d510-4692-8036-2b82783ce763" /><br>
