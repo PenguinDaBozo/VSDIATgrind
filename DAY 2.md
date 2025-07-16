@@ -177,26 +177,42 @@ We put them together and connect the respective outputs with each other and this
 Most designs usually hae the input on the left and the outputs on the rigt. It is up to preference. 
 <img width="644" height="379" alt="image" src="https://github.com/user-attachments/assets/489e4a4c-8d32-4fc2-be33-dd5a6b8712c0" />
 
-The placement of the pins is pretty simple since the pins will be placed 
+The placement of the pins is pretty simple since the pins will be placed according to where the cells are placed.
+
+CLK ports are bigger than Din because this is the port that is sending signal to the flip flops and drives the complete chip. And its big because we need the least resistance.  
+
+6) Logical Cell Placement Blockage
+
+Next step is to make sure none of automated stuff is placed in the die so it should be blocked off. The blockage makes sure the automated placement doesn't place outside. 
+
+<img width="506" height="381" alt="image" src="https://github.com/user-attachments/assets/6eac5001-fd97-4da8-bd83-5b4da42cfbfb" />
 
 ### 17 - Steps to run floorplan using OpenLANE
+
+
+
+
+
+
+
+
 ### 18 - Review floorplan files and steps to view floorplan
 ### 19 - Review floorplan layout in Magic
 
 ## Library Binding and Placement
 
-### 20-Netlist binding and initial place design
-### 21- Optimize placement using estimated wire-length and capacitance
-### 22-Final placement optimization
-### 23-Need for libraries and characterization
-### 24-Congestion aware placement using Replace
+### 20 - Netlist binding and initial place design
+### 21 - Optimize placement using estimated wire-length and capacitance
+### 22 - Final placement optimization
+### 23 - Need for libraries and characterization
+### 24 - Congestion aware placement using Replace
 
 ## Cell Design and Characterization Flows
-### 25-Inputs for cell design flow
-### 26-Circuit design step
-### 27-Layout design step
-### 28-Typical characterization flow
+### 25 - Inputs for cell design flow
+### 26 - Circuit design step
+### 27 - Layout design step
+### 28 - Typical characterization flow
 
 ## General Timing Characterization Parameters
-### 29-Timing threshold definitions
-### 30-Propagation delay and transition time
+### 29 - Timing threshold definitions
+### 30 - Propagation delay and transition time
