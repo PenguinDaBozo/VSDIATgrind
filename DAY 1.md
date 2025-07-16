@@ -4,6 +4,7 @@
 ### 0 - Introduction to QFN-48 Package, chip, pads, core, die and IPs
 
 A very common Arduino board, yet there's a whole industry that lies within that chip.
+
 <img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/0a49e86c-5ae0-4750-ad90-fffbb5ea83a8" /><br>
 
 This board can also be described in the form of a block diagram:
