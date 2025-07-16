@@ -51,39 +51,35 @@ Another example:
 ### 13 - Concept of pre-placed cells
 2) The next step of floor planning is to define the locations of preplaced cells.
 
-Preplaced cells 
+So what is floorplanning? It is the arrangement of the  IP's in a chip. And Pre-placed cells are IP's/blocks that have user-defined locations are placed in a chip before automated placement and routing. 
+
+To define locations, let's start with this circuit. This circuit is pretty big:
 
 <img width="628" height="162" alt="image" src="https://github.com/user-attachments/assets/288d8ae5-3609-44db-b928-e3dd0a1bef8d" />
 
-circuit is a huge one
-can take this piece of big and divide.
+We can break this circuit down into two parts. We separate both of the blocks and then when they are conected to each other, they will perform some function. 
 
-
-cut the circuit into two parts
-separate both of them when conected to each other they perform some function. put the function into blocks
 <img width="656" height="197" alt="image" src="https://github.com/user-attachments/assets/f44000cc-4fc2-4391-9f16-bb84e976c104" />
 
-now lets extend the IO pins
+Now lets extend the IO pins
+
 <img width="346" height="140" alt="image" src="https://github.com/user-attachments/assets/42cf2dd2-e92b-4aee-a0e4-4b363b1441f1" />
 
-
-black box the boxes, invisible to top netlist. 
+Black box the boxes, which makes the blocks invisible to top netlist. 
 
 <img width="320" height="117" alt="image" src="https://github.com/user-attachments/assets/da986ed3-dbc9-49f4-bd24-a9062d734640" />
+
 
 <img width="510" height="142" alt="image" src="https://github.com/user-attachments/assets/8bed4482-109f-4ca8-8a29-94d254b3ade2" />
 
 the 4 yellow lines will now behave like outputs for block 1 and inputs for block 2
-the blocks will be implemented separately and the advantage of this is resuability. T
+the blocks will be implemented separately and the advantage of this is resuability. 
 
 <img width="472" height="152" alt="image" src="https://github.com/user-attachments/assets/cb9b268d-ad6b-4a50-ae22-5c9e64f0a7e9" />
 
 There are also other IP's availble like memory, clock-gating cell, comparator, mux...
 
 These cells will only be implemented once and can be reused. 
-
-Arrangement of these IP's in a chip is Floorplanning. 
-Pre-placed cells: IP's/blocks that have user-defined locations are placed in a chip before automated placement and routing 
 
 automated placement and routing tools will plae the remaining logical cells in the design onto the chip
 once these cells are placed onto a floorplan, theya re fixed and not touched by automated placement and routing tools 
