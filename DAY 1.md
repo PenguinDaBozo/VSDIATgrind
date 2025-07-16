@@ -2,3 +2,5 @@
 ## How to talk to computers
 
 ### 0 - Introduction to QFN-48 Package, chip, pads, core, die and IPs
+
+hello
