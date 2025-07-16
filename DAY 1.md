@@ -11,15 +11,11 @@ This board can also be described in the form of a block diagram:
 
 <img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/9f84f641-6a83-483a-a2df-b5ca90e514c0" /><br>
 
-The center is a processor and around it is all the programs that go into the processor. This is a typical diagram of a board.
-
-But the other stuff ain't that important, so let's dive deeper into the chip. 
+The center is a processor and around it is all the programs that go into the processor. This is a typical diagram of a board. But the other stuff ain't that important, so let's dive deeper into the chip. 
 
 <img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/ffa30fdb-2e30-44f8-b65f-2dacf8c8cece" /><br>
 
-This is a chip or in more technical terms: a package. 
-
-The chip is sitting at the center. Wire bunch connects the pins to the boundary of the chip, which allows signals to travel to the chip. 
+This is a chip or in more technical terms: a package. The chip is sitting at the center. Wire bunch connects the pins to the boundary of the chip, which allows signals to travel to the chip. 
 
 <img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/27edb3b3-3b65-4788-aa43-47074990fb0d" /><br>
 
@@ -34,11 +30,11 @@ The core includes some components like the RISCV SoC, SRAM, adc0, adc1, dac, PLE
 - Macros: Pure digital logic.
 
 ### 1 - Introduction to RISC-V
-RISC-V is a language of the computer and a way of communication to the computer. If you want a C program to run on this particular layout.
+RISC-V is a language of the computer and a way of communication to the computer. 
 
 <img width="1706" height="650" alt="image" src="https://github.com/user-attachments/assets/741e0621-afe7-4afd-a5ad-58ea7ccf7fd3" /><br>
 
-The C program is first compiled in its assembly language program. which is converted to machine program which is binary program, which is understood in computers. Finally, the sketch gets converted to the particular layout.
+If you want a C program to run on this particular layout, the C program is first compiled in its assembly language program. which is converted to machine program which is binary program, which is understood in computers. Finally, the sketch gets converted to the particular layout.
 
 
 <img width="798" height="504" alt="image" src="https://github.com/user-attachments/assets/456d4298-3031-4403-8679-ae0152f6079d" /><br>
