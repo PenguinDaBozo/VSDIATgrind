@@ -119,19 +119,72 @@ Now there won't be any missing 1 or 0 because the capacitor will make sure it wi
 
 4) Power Planning 
 
+We have another problem. If this particular macro is repeated multiple times, there will be curernt demands for eahc and every element of the macro. 
 
 
+Lets say this is complete chip. There is a signal from driver to load. We have to make sure this line maintains the same signal the whole time. 
 
+<img width="388" height="305" alt="image" src="https://github.com/user-attachments/assets/1f74d059-308f-4d80-b607-d8c0074a1324" />
 
+These blocks have been tapped to VDD and all the block GND lines area tapped to GND. Assume this particular line is a 16-bit bus. This line has to maintain this particular scenario the whole time so load recieves same signal.
 
+<img width="469" height="378" alt="image" src="https://github.com/user-attachments/assets/22611588-4a5f-4ad5-a608-8fbd561f95d1" />
 
+For this line ot maintain the same scenario, ti should obtain adequate power from supply but there's not decoupling capacitors that will take care of this particular scenario. The power supply is the one to supply this line but its a bit far so possibility of volatage drop. 
 
-### 16-Pin placement and logical cell placement blockage
-### 17-Steps to run floorplan using OpenLANE
-### 18-Review floorplan files and steps to view floorplan
-### 19-Review floorplan layout in Magic
+This a 16-bit bus:
+
+<img width="558" height="361" alt="image" src="https://github.com/user-attachments/assets/1b0e6aa7-927a-4a30-8680-3119e8aa795e" />
+
+One line is a logic 1 and there is a capacitor charged to VDD. When 0 it is charged to GND.
+
+<img width="564" height="205" alt="image" src="https://github.com/user-attachments/assets/2a74c3d9-5729-411e-b0f7-3fc72827e377" />
+
+When you pass this particular logic to the inverter it will be inverted. ALl the charged to VDD will be charged to 0 all at the same time and vice versa. But this will cause a problem since it all happens at the same time. Now we have a complete ground line, there is a ground bounce. If the size of this ground bounce exits the noise margin level, it might eneter into an undefined state, which is bad. 
+
+For 0 to 1, it is basically the same and creates a voltage Droop and if it enters undefined state, then there will be uncertainty.
+
+<img width="548" height="195" alt="image" src="https://github.com/user-attachments/assets/59cd7b0d-8077-4d56-a5bc-99fb7e2ecf7e" />
+
+This problem stems from the fact that powre is supplied at one point. If there were multiple supplies, then this problem would not happen since each one would take power from closest supply. 
+
+Instead of a single power supply, we should have multiple like this: 
+
+<img width="559" height="402" alt="image" src="https://github.com/user-attachments/assets/831f291b-1504-4090-8858-8284e154b759" />
+
+If some logic demands power it will tap power from the nearest line. This is called a mesh.
+
+Now let's apply to our die.
+
+<img width="664" height="385" alt="image" src="https://github.com/user-attachments/assets/d941a5f6-06aa-47ee-99c1-2490bc621cc8" />
+
+<img width="649" height="385" alt="image" src="https://github.com/user-attachments/assets/6052dc89-b2c6-4837-8200-d6b229b45683" />
+
+### 16 - Pin placement and logical cell placement blockage
+
+5) Pin Placement
+
+Example Circuit: 
+
+<img width="550" height="336" alt="image" src="https://github.com/user-attachments/assets/e99ecc8a-7c25-46af-9aff-291a97f2a3f0" />
+
+<img width="524" height="344" alt="image" src="https://github.com/user-attachments/assets/be3b2f93-e0b9-4609-bfec-b83b3b007501" />
+
+We put them together and connect the respective outputs with each other and this is our complete design:
+
+<img width="574" height="407" alt="image" src="https://github.com/user-attachments/assets/e820bf61-5065-4c85-85d5-377c63666869" />
+
+Most designs usually hae the input on the left and the outputs on the rigt. It is up to preference. 
+<img width="644" height="379" alt="image" src="https://github.com/user-attachments/assets/489e4a4c-8d32-4fc2-be33-dd5a6b8712c0" />
+
+The placement of the pins is pretty simple since the pins will be placed 
+
+### 17 - Steps to run floorplan using OpenLANE
+### 18 - Review floorplan files and steps to view floorplan
+### 19 - Review floorplan layout in Magic
 
 ## Library Binding and Placement
+
 ### 20-Netlist binding and initial place design
 ### 21- Optimize placement using estimated wire-length and capacitance
 ### 22-Final placement optimization
