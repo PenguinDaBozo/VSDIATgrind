@@ -1,22 +1,18 @@
 # Sky130 DAY 2 - Good Floorplan vs Bad Floorplan and Introduction to Library Cells
 ## Chip Floor planning considerations
 ### 12 - Utilization factor and aspect ratio
-
-1) Define the width and height of the core and die.
+The first step of the design process is to define the width and height of the core and die.
   - Start with a netlist, which describes connectivity of an electronic design
-  - <img width="553" height="216" alt="image" src="https://github.com/user-attachments/assets/941ec159-57b2-4e35-83c4-2bcf20467291" />
 
-dependent on the size of logic ages and flip flops
+<img width="553" height="216" alt="image" src="https://github.com/user-attachments/assets/941ec159-57b2-4e35-83c4-2bcf20467291" />
 
-lets convert the symbols to physical dimension
+The design is dependent on the size of logic ages and flip flops so lets convert the symbols to physical dimensions:
 <img width="545" height="367" alt="image" src="https://github.com/user-attachments/assets/b5ab57ae-8cbe-4bf9-9e81-b46413772b58" />
 
-we are interested in the dimensions of the standard cell adn not the wires (still plays important role but not now)
-
-let's assume the areas of the cells and flipflops
+Right now, the dimensions of the standard cell are important so we can ignore the wires. Let's assume the areas of the cells and flipflops.
 <img width="533" height="415" alt="image" src="https://github.com/user-attachments/assets/52c0c8a8-b3e3-4a09-acf4-c5060ef5a2e2" />
 
-with the helpo of the dimensions, we will calculate the area occupoed by the netlist on a Silicon Wafer by simplifying the netlist to blocks without wires and putting them together like this:
+with the help of the dimensions, we will calculate the area occupoed by the netlist on a Silicon Wafer by simplifying the netlist to blocks without wires and putting them together like this:
 <img width="248" height="203" alt="image" src="https://github.com/user-attachments/assets/9413daf6-35b6-48ef-9938-d3f043ce234e" />
 minimum area occupied by netlist
 
