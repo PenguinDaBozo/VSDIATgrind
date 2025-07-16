@@ -17,6 +17,7 @@ With the help of the dimensions, we will calculate the area occupied by the netl
 minimum area occupied by netlist
 
 **What is the 'core' and 'die' Section of a chip?**
+
 <img width="344" height="281" alt="image" src="https://github.com/user-attachments/assets/d19c7d4d-301f-4290-b548-f31db65e032a" />
 
 <img width="193" height="172" alt="image" src="https://github.com/user-attachments/assets/225ac459-2865-4403-a0bd-2ab706f44dc1" />
