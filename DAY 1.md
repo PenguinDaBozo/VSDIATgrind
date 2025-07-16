@@ -150,10 +150,44 @@ OpenLANE:
 
 
 ### 6 - Introduction to OpenLANE detailed ASIC design flow
+OpenLANE ASIC Flow
+<img width="549" height="334" alt="image" src="https://github.com/user-attachments/assets/3f84e6c1-47c7-4caf-9039-b9c0620da385" /><br>
+OpenLANE is based on several open source projects.
 
+RTL Synthesis: Flow starts with RTL Synthesis. The RTL is fed to Yosys with time constraints. Yosys translate the RTL into a logic circuit using generic components. This circuit can then be optimized and mapped into cells by abc. abc has to be guided during optimization and this guidance comes in the form of abc script (synthesis strategies).
 
+STA: strategies that targets the least area and best timing. Different designs can use different strategies to achieve objectives, and for that, we have synthesis exploration that can be used to generate plots.<br><img width="529" height="272" alt="image" src="https://github.com/user-attachments/assets/cb355e0b-ad03-496e-bb67-e781dd021b0c" /><br>These plots show how the area and delay is affected by the synthesis strategy. Based on this plot, we can decide the best strategy.
 
+Design Exploration: Used to sweep the design configs. There are more than 16 of them and generates reports like this one: <br><img width="527" height="278" alt="image" src="https://github.com/user-attachments/assets/c22f176c-0769-4337-86a3-1065e344adf1" /><br> This report shows different design metrics and violations after generating final layout. Useful for finding best config for design.
 
+Regression Testing: Design exploration can also be used for regression testing. The openLANE team already is running ~70 designs and comparing the results to the best known ones. This will generate a report that shows the design metrics given the configurations and also the number of violations, which will be compared to the bets known results.<br><img width="228" height="236" alt="image" src="https://github.com/user-attachments/assets/c26873b1-3074-4533-ab18-99661a4c435c" /><br>
+
+Design for testing(DFT): Optional; Scan insertion, automatic test pattern generation(ATPG), test patterns compaction, fault coverage, fault simulation. This step adds extra logic and this logic scans catchain as fabrication for testing. It can add digitack control, which enables external access to internet catchain.
+
+Physical Implementation: Several steps done by OpenROAD app. Perform
+- floor/power planning
+- end decoupling capacitors and tap cells insertion
+- placement: global and detailed
+- post placement optimization
+- clock tree synthesis (CTS)
+- routing: global and detailed
+
+Logic Equivalent Checking (LEC): every time the netlist is modified, a verification must be performed. CTS modifies the netlist while post placement optimizationss modifiies the netlist. LEC is used to formally confirm that the function did not change after modifying the netlist. Makes sure what we started with is what we end with. 
+
+Dealing with Antenna Rules Violations: When a metal wire segment is fabricated, it can act as an antenna. Reactive ion etching causes charge to accumulate on the wire, and thus transistor gates can be damaged during fabrication. So transistors should be limited to address this issue -> job of router. If the router fails to do so, two solutions
+- Bridging, which attaches a higher layer intermediary
+- add antenna diode to leak away charges
+With openLANE, they added a fake antenna diode next to every cell input after placement and run the antenna checker(Magic) on the routed layout. If the checker reports a violation on the cell input pin, then replace the Fake Diode cell with a real cell.
+<img width="243" height="194" alt="image" src="https://github.com/user-attachments/assets/1c91c69d-57fa-4b6b-a7c5-a80fcb6f75e7" /><br>
+
+Static Timing Analysis:
+- RC extraction: DEF2SPEF
+- STA: OpenSTA (OpenROAD)
+This step highlights timing violations
+
+Physical Verification DRC & LVS: 
+- Magic is used for DRC and SPICE Extraction from layout
+- magic and netgen are used for LVS, extracted SPICE by Magic vs verilog netlist
 
 
 
