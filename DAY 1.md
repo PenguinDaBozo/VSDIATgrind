@@ -7,7 +7,7 @@ A very common Arduino board, yet there's a whole industry that lies within that 
 <img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/0a49e86c-5ae0-4750-ad90-fffbb5ea83a8" /><br>
 
 This board can also be described in the form of a block diagram:
-<img width="1169" height="786" alt="image" src="https://github.com/user-attachments/assets/9f84f641-6a83-483a-a2df-b5ca90e514c0" /><br>
+<img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/9f84f641-6a83-483a-a2df-b5ca90e514c0" /><br>
 The center is a processor and around it is all the programs that go into the processor. This is a typical diagram of a board.
 
 But the other stuff ain't that important, so let's dive deeper into the chip. 
