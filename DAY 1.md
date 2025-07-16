@@ -91,6 +91,7 @@ Attributes:
 
 ### 4 - Simplified RTL2GDS flow
 ASIC design flow:
+
 <img width="568" height="369" alt="image" src="https://github.com/user-attachments/assets/0214c12b-14e7-49ab-a358-3ca12bc78b11" />
 
 Synthesis: 
@@ -111,19 +112,23 @@ FP+PP (Floor and Power Planning):
 
 Place:
 <img width="537" height="200" alt="image" src="https://github.com/user-attachments/assets/a6cd8180-134c-4fe0-85c9-802d0408aebc" /><br>
+
 For macros, place the cells on the floorplan rows, aligned with the sites. Connected cells should be palced close to each other to reduce the interconnected delay. Also to enable successful routing afterward.
 <img width="502" height="202" alt="image" src="https://github.com/user-attachments/assets/6b7334f2-946f-405a-b59d-2303adc8ccc6" /><br>
+
 - Done in 2 Steps: Global and Detailed
 - Global: find optimal position for all cells
 - Detailed: Postitions from global are minimally altered
 
 CTS:
 <img width="557" height="198" alt="image" src="https://github.com/user-attachments/assets/024c60af-e3d0-4868-9694-420e599a985e" /><br>
+
 Creates a clock distribution network, which looks like a tree. Clock deliver signal to all components with minimal latency.
 
 Route:
 Implement the interconnect using the available metal layers. The router uses available metal layers as defined by PDK. PDK defines the width, minimun tract, pitch, vias, and thickness. 
 <img width="538" height="226" alt="image" src="https://github.com/user-attachments/assets/7ba97f20-6977-4d39-bf09-91032a68c3cb" /><br>
+
 The Sky130 defines 6 layers: Interconnect layer(lowest), 5 aluminum layers after
 
 Most routers are grid routers. They construct routing grids out of the metal layer tracts. The routing grid is huge and uses a divide and conquer method to cover the area. 
@@ -148,6 +153,7 @@ The problem is tougher when using Open Source EDA. You need to worry about missi
 OpenLANE comes with the Apache version 2.0 license. You can use as long as you acknowledge credits and copyrights. OpenLANE started as an Open-Source flow for a true open source tape-out experiment. 
 
 <img width="495" height="375" alt="image" src="https://github.com/user-attachments/assets/dcb58eb3-6fe4-4e4a-9565-f5efb8263053" /><br>
+
 striVe is a family of open everything SoCs. This family has several members. 
 
 OpenLANE:
@@ -163,13 +169,18 @@ OpenLANE:
 ### 6 - Introduction to OpenLANE detailed ASIC design flow
 OpenLANE ASIC Flow
 <img width="549" height="334" alt="image" src="https://github.com/user-attachments/assets/3f84e6c1-47c7-4caf-9039-b9c0620da385" /><br>
+
 OpenLANE is based on several open source projects.
 
 RTL Synthesis: Flow starts with RTL Synthesis. The RTL is fed to Yosys with time constraints. Yosys translate the RTL into a logic circuit using generic components. This circuit can then be optimized and mapped into cells by abc. abc has to be guided during optimization and this guidance comes in the form of abc script (synthesis strategies).
 
-STA: strategies that targets the least area and best timing. Different designs can use different strategies to achieve objectives, and for that, we have synthesis exploration that can be used to generate plots.<br><img width="529" height="272" alt="image" src="https://github.com/user-attachments/assets/cb355e0b-ad03-496e-bb67-e781dd021b0c" /><br>These plots show how the area and delay is affected by the synthesis strategy. Based on this plot, we can decide the best strategy.
+STA: strategies that targets the least area and best timing. Different designs can use different strategies to achieve objectives, and for that, we have synthesis exploration that can be used to generate plots.<br><img width="529" height="272" alt="image" src="https://github.com/user-attachments/assets/cb355e0b-ad03-496e-bb67-e781dd021b0c" /><br>
 
-Design Exploration: Used to sweep the design configs. There are more than 16 of them and generates reports like this one: <br><img width="527" height="278" alt="image" src="https://github.com/user-attachments/assets/c22f176c-0769-4337-86a3-1065e344adf1" /><br> This report shows different design metrics and violations after generating final layout. Useful for finding best config for design.
+These plots show how the area and delay is affected by the synthesis strategy. Based on this plot, we can decide the best strategy.
+
+Design Exploration: Used to sweep the design configs. There are more than 16 of them and generates reports like this one: <br><img width="527" height="278" alt="image" src="https://github.com/user-attachments/assets/c22f176c-0769-4337-86a3-1065e344adf1" /><br> 
+
+This report shows different design metrics and violations after generating final layout. Useful for finding best config for design.
 
 Regression Testing: Design exploration can also be used for regression testing. The openLANE team already is running ~70 designs and comparing the results to the best known ones. This will generate a report that shows the design metrics given the configurations and also the number of violations, which will be compared to the bets known results.<br><img width="228" height="236" alt="image" src="https://github.com/user-attachments/assets/c26873b1-3074-4533-ab18-99661a4c435c" /><br>
 
@@ -189,6 +200,7 @@ Dealing with Antenna Rules Violations: When a metal wire segment is fabricated, 
 - Bridging, which attaches a higher layer intermediary
 - add antenna diode to leak away charges
 With openLANE, they added a fake antenna diode next to every cell input after placement and run the antenna checker(Magic) on the routed layout. If the checker reports a violation on the cell input pin, then replace the Fake Diode cell with a real cell.
+
 <img width="243" height="194" alt="image" src="https://github.com/user-attachments/assets/1c91c69d-57fa-4b6b-a7c5-a80fcb6f75e7" /><br>
 
 Static Timing Analysis:
@@ -206,71 +218,96 @@ OpenLANE is a flow which comprises of many multiple open source EDA tools.The ai
 
 ------Linux commands-------
 cd: change directory
+
 <img width="419" height="63" alt="image" src="https://github.com/user-attachments/assets/e1c885fd-d510-4692-8036-2b82783ce763" /><br>
 
 ls -ltr: list stuff in chronological order
+
 <img width="608" height="99" alt="image" src="https://github.com/user-attachments/assets/7f423327-6318-43ed-9abd-872d8feb5245" /><br>
 
 cmd name --help: instructions on how to use command
+
 <img width="747" height="632" alt="image" src="https://github.com/user-attachments/assets/62ac67da-68ef-4783-b3b0-8f2e1dfb3f23" /><br>
 
 clear: clears terminal
+
 <img width="462" height="31" alt="image" src="https://github.com/user-attachments/assets/c5f5a1e9-b5f2-43e9-8e92-0ea43ff34820" /><br>
 
 cd ../: exit out of current directory
 
 -----Exploring OpenLANE tools-----
+
 <img width="652" height="280" alt="image" src="https://github.com/user-attachments/assets/efcfaf9f-631a-4486-a9cd-e369c70de11f" /><br>
+
 Skywater.pdk: folder that has all the PDK related files (timing libraries, left...)
 open.pdks: scripts and files that migitates issue of open source and foundry compatibility (magic, netgen...)
 sky130A: pdk that is compatible with open source involvement
 
 *inside sky130A*
+
 <img width="755" height="139" alt="image" src="https://github.com/user-attachments/assets/74d5a1d7-7b01-4f64-b8a2-459c700d89d5" /><br>
+
 libs.ref: contains all the process specific files
 libs.tech: files specific to the tools
 
 *inside libs.ref*
+
 <img width="845" height="274" alt="image" src="https://github.com/user-attachments/assets/a150d43e-9793-48ef-bc08-978b736167a7" />
 
 *inside libs.tech*
+
 <img width="844" height="243" alt="image" src="https://github.com/user-attachments/assets/0d8ef984-b33c-4828-a316-75ddaff33fd0" />
 
 -----Get to OpenLANE-----
+
 <img width="673" height="41" alt="image" src="https://github.com/user-attachments/assets/c966db82-041b-45a5-86f0-a01ab2e3ea94" /><br>
 
 ### 8 - Design Preparation Step
 1) After getting into the openLane directory, run docker
+
 <img width="400" height="423" alt="image" src="https://github.com/user-attachments/assets/20f49e8d-2a01-4cc1-b1fa-757bd89c2437" /><br>
 
 2) Run flow interactive:
  - interactive: step by step process details and compares
  - without: runs complete rule
+
 <img width="568" height="237" alt="image" src="https://github.com/user-attachments/assets/e0aa168c-d747-480f-98da-c68d606bdee0" /><br>
 
 3) Download packages
+
 <img width="597" height="258" alt="image" src="https://github.com/user-attachments/assets/7a7a243e-d299-4fa9-80eb-bf3583f1caa9" /><br>
 
 OpenLANE has several designs and for this part, we're going to use picorv32. 
+
 <img width="917" height="273" alt="image" src="https://github.com/user-attachments/assets/2152df09-8f72-41fe-8e67-92408f5c4fff" /><br>
+
 config.tcl: bypasses any contributions that has been done already into a plane
 priority: default, config.tcl, hd_config.tcl
 
 4) Need to prep design because designs only has the 3 default files. Need to set up files specific to the flow; that location needs to be created.
+
 <img width="734" height="417" alt="image" src="https://github.com/user-attachments/assets/be97b09f-402e-4d52-ae09-26a076bdb009" />
+
 <img width="729" height="435" alt="image" src="https://github.com/user-attachments/assets/d535dec6-8ff9-41d8-bb6e-73540682320a" />
 
 Changes after prep
+
 <img width="887" height="196" alt="image" src="https://github.com/user-attachments/assets/d3287e37-24c7-4bc9-a363-28c68b73b0df" />
+
 <img width="928" height="236" alt="image" src="https://github.com/user-attachments/assets/cd3c52d4-106c-4aa3-b6cb-e26ec36fcbb1" />
+
 <img width="934" height="394" alt="image" src="https://github.com/user-attachments/assets/1577a65a-eb3b-4083-a234-7575cdd48ff2" />
 
 ### 9 - Review files after design prep and run synthesis
+
 <img width="931" height="259" alt="image" src="https://github.com/user-attachments/assets/b479a722-fe71-4dca-b98e-02ad72dde9f8" /><br>
+
 Layout; Synthesis is empty right now because nothing has been synthesized. Let's change that!
 
 5) ```%run_synthesis``` to run synthesis
+
 <img width="913" height="420" alt="image" src="https://github.com/user-attachments/assets/d828a8e0-5b34-4d76-8836-08992f7a6d55" /><br>
+
 
 ### 10 - OpenLANE Project Git Link Description
 Github is a remote repository (project) collection and people can access it.
@@ -278,19 +315,24 @@ https://github.com/efabless/openlane
 Has all the documentation you need
 
 ### 11 - Steps to characterize synthesis results
+
 Chip area
+
 <img width="470" height="30" alt="image" src="https://github.com/user-attachments/assets/04277398-7543-4d4f-8a61-964de8e6d34c" /><br>
 
 Number of cells
+
 <img width="349" height="126" alt="image" src="https://github.com/user-attachments/assets/e83c5a58-815b-4deb-a5ac-8c77a1d2859c" /><br>
 
 Number of D-flip flops
+
 <img width="350" height="212" alt="image" src="https://github.com/user-attachments/assets/82bab485-0389-43e6-8109-1ab7c40c3347" /><br>
 
 Using number of flip flops we can calculate our flip flop ratio, which is:
 FLIP FLOP RATIO = # OF DFFs / # OF CELLS * 100
 
 Results of synthesis
+
 <img width="923" height="127" alt="image" src="https://github.com/user-attachments/assets/531c0c6a-b731-493c-8168-64d78e6726b5" />
 <img width="928" height="302" alt="image" src="https://github.com/user-attachments/assets/b88a30ed-7014-4022-9b16-b948ccb813b4" />
 
