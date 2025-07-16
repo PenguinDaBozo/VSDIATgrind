@@ -12,21 +12,19 @@ The design is dependent on the size of logic ages and flip flops so lets convert
 Right now, the dimensions of the standard cell are important so we can ignore the wires. Let's assume the areas of the cells and flipflops.
 <img width="533" height="415" alt="image" src="https://github.com/user-attachments/assets/52c0c8a8-b3e3-4a09-acf4-c5060ef5a2e2" />
 
-with the help of the dimensions, we will calculate the area occupoed by the netlist on a Silicon Wafer by simplifying the netlist to blocks without wires and putting them together like this:
+With the help of the dimensions, we will calculate the area occupied by the netlist on a Silicon Wafer by simplifying the netlist to blocks without wires and putting them together like this:
 <img width="248" height="203" alt="image" src="https://github.com/user-attachments/assets/9413daf6-35b6-48ef-9938-d3f043ce234e" />
 minimum area occupied by netlist
 
+**What is the 'core' and 'die' Section of a chip?**
 <img width="344" height="281" alt="image" src="https://github.com/user-attachments/assets/d19c7d4d-301f-4290-b548-f31db65e032a" />
-
-What is 'core' and 'die' Section of a chip?
 
 <img width="193" height="172" alt="image" src="https://github.com/user-attachments/assets/225ac459-2865-4403-a0bd-2ab706f44dc1" />
 
-Core: section of the chip where fundamental logic of design is place and is located inside a die
-
 <img width="209" height="193" alt="image" src="https://github.com/user-attachments/assets/c3088e8e-2bb7-4e0c-9820-3f10c8ddc062" />
 
-Die: small semiconductor material specimen on which the fundamental cirucit is fabricated. We put multiple die on a wafter to increase its input. 
+Core (second image): section of the chip where fundamental logic of design is place and is located inside a die
+Die (third image): small semiconductor material specimen on which the fundamental cirucit is fabricated. We put multiple die on a wafter to increase its input. 
 
 lets put the netlist inside the core, and boom, the netlist occupies the complete area of the core, so 100%. 
 <img width="225" height="240" alt="image" src="https://github.com/user-attachments/assets/2972311f-e4d6-43d3-a1f6-3b3c4155c8a3" />
