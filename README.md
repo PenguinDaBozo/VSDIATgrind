@@ -17,4 +17,5 @@ GitHub for my VSDIAT adventure!
     - [9 - Review Files After Design Prep and Run Synthesis](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#9---review-files-after-design-prep-and-run-synthesis)
     - [10 - OpenLANE Project Git Link Description](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#10---openlane-project-git-link-description)
     - [11 - Steps to Characterize Synthesis Results](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#11---steps-to-characterize-synthesis-results)
-[Sky130 DAY 2 - 
+
+[Sky130 DAY 2 - Good Floorplan vs Bad Floorplan and Introduction to Library Cells](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#sky130-day-2---good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
