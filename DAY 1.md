@@ -129,13 +129,26 @@ Physical Verifications
 Timing Verification
 - Static Timing Analysis (STA)
 
-
-
-
-
-
-
 ### 5 - Introduction to OpenLANE and Strive chipsets
+Now applying the ASIC design flow, is it easy to build one? Well, kinda if you know what you are doing and have access to industry level applications. 
+
+The problem is tougher when using Open Source EDA. You need to worry about missing tools, tools qualifications, and tools calibration. With the release of open source PDK, EFABEE decided to create an open source ASIC implementation flow: OpenLANE. 
+
+OpenLANE comes with the Apache version 2.0 license. You can use as long as you acknowledge credits and copyrights. OpenLANE started as an Open-Source flow for a true open source tape-out experiment. 
+
+<img width="495" height="375" alt="image" src="https://github.com/user-attachments/assets/dcb58eb3-6fe4-4e4a-9565-f5efb8263053" /><br>
+striVe is a family of open everything SoCs. This family has several members. 
+
+OpenLANE:
+- Main Goal: produce a clean GDSII with no human intervention. By clean, it means no LVS violations, no DRC violations, and possibly no timing violations.
+- Tuned for SkyWater 130nm Open PDK and also supports XFAB180 and GF130G
+- Containerized: functional outside of box. Instructions to build and run natively will follow
+- can be used to harden(generate gds tool/final layout of) macros and chips
+- two modes of operation: autonomous(push button flow, we configure flow and wait) or interactive(evntually run cmd one by one)
+- Design Space Exploration: find best set of flow configs
+- comes with large # of design ex: 43 with best configs and more will be added soon
+
+
 ### 6 - Introduction to OpenLANE detailed ASIC design flow
 
 
