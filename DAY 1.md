@@ -91,25 +91,31 @@ ASIC design flow:
 <img width="568" height="369" alt="image" src="https://github.com/user-attachments/assets/0214c12b-14e7-49ab-a358-3ca12bc78b11" />
 
 Synthesis: 
+
 <img width="553" height="381" alt="image" src="https://github.com/user-attachments/assets/a25f8dba-4267-46b8-ac4b-c25f832a6850" /><br>
 
 - Converts RTL to a circuit out of componetns from the standard cell library (SCL)
 
 FP+PP (Floor and Power Planning): 
+
 <img width="540" height="394" alt="image" src="https://github.com/user-attachments/assets/b2539179-2485-44ff-8c17-4fc7b2a5c4fc" /><br>
 
 - Chip Floor-Planning: partition the chip die btwn different system building blocks and place the I/O Pads
+
 <img width="552" height="384" alt="image" src="https://github.com/user-attachments/assets/1b8cfe21-2bf8-4bb0-a677-64881d472625" /><br>
 
 - Macro Floor-Planning: Dimensions, pin locations, rows definition
+
 <img width="562" height="375" alt="image" src="https://github.com/user-attachments/assets/9d0a39bf-c03d-4e62-8a85-9c5ac669f046" /><br>
 
 - Power Planning: Each chip is powered by multiple VDD VSS pins. The power pins are connected through all rings and vertical horizontal straps. Parallel structures reduces resistance. The distribution network uses upper metal layers as they are thicker than lower metal layers and have less resistance. 
 
 Place:
+
 <img width="537" height="200" alt="image" src="https://github.com/user-attachments/assets/a6cd8180-134c-4fe0-85c9-802d0408aebc" /><br>
 
 For macros, place the cells on the floorplan rows, aligned with the sites. Connected cells should be palced close to each other to reduce the interconnected delay. Also to enable successful routing afterward.
+
 <img width="502" height="202" alt="image" src="https://github.com/user-attachments/assets/6b7334f2-946f-405a-b59d-2303adc8ccc6" /><br>
 
 - Done in 2 Steps: Global and Detailed
@@ -117,12 +123,14 @@ For macros, place the cells on the floorplan rows, aligned with the sites. Conne
 - Detailed: Postitions from global are minimally altered
 
 CTS:
+
 <img width="557" height="198" alt="image" src="https://github.com/user-attachments/assets/024c60af-e3d0-4868-9694-420e599a985e" /><br>
 
 Creates a clock distribution network, which looks like a tree. Clock deliver signal to all components with minimal latency.
 
 Route:
 Implement the interconnect using the available metal layers. The router uses available metal layers as defined by PDK. PDK defines the width, minimun tract, pitch, vias, and thickness. 
+
 <img width="538" height="226" alt="image" src="https://github.com/user-attachments/assets/7ba97f20-6977-4d39-bf09-91032a68c3cb" /><br>
 
 The Sky130 defines 6 layers: Interconnect layer(lowest), 5 aluminum layers after
@@ -164,21 +172,28 @@ OpenLANE:
 
 ### 6 - Introduction to OpenLANE detailed ASIC design flow
 OpenLANE ASIC Flow
+
 <img width="549" height="334" alt="image" src="https://github.com/user-attachments/assets/3f84e6c1-47c7-4caf-9039-b9c0620da385" /><br>
 
 OpenLANE is based on several open source projects.
 
 RTL Synthesis: Flow starts with RTL Synthesis. The RTL is fed to Yosys with time constraints. Yosys translate the RTL into a logic circuit using generic components. This circuit can then be optimized and mapped into cells by abc. abc has to be guided during optimization and this guidance comes in the form of abc script (synthesis strategies).
 
-STA: strategies that targets the least area and best timing. Different designs can use different strategies to achieve objectives, and for that, we have synthesis exploration that can be used to generate plots.<br><img width="529" height="272" alt="image" src="https://github.com/user-attachments/assets/cb355e0b-ad03-496e-bb67-e781dd021b0c" /><br>
+STA: strategies that targets the least area and best timing. Different designs can use different strategies to achieve objectives, and for that, we have synthesis exploration that can be used to generate plots.<br>
+
+<img width="529" height="272" alt="image" src="https://github.com/user-attachments/assets/cb355e0b-ad03-496e-bb67-e781dd021b0c" /><br>
 
 These plots show how the area and delay is affected by the synthesis strategy. Based on this plot, we can decide the best strategy.
 
-Design Exploration: Used to sweep the design configs. There are more than 16 of them and generates reports like this one: <br><img width="527" height="278" alt="image" src="https://github.com/user-attachments/assets/c22f176c-0769-4337-86a3-1065e344adf1" /><br> 
+Design Exploration: Used to sweep the design configs. There are more than 16 of them and generates reports like this one: <br>
+
+<img width="527" height="278" alt="image" src="https://github.com/user-attachments/assets/c22f176c-0769-4337-86a3-1065e344adf1" /><br> 
 
 This report shows different design metrics and violations after generating final layout. Useful for finding best config for design.
 
-Regression Testing: Design exploration can also be used for regression testing. The openLANE team already is running ~70 designs and comparing the results to the best known ones. This will generate a report that shows the design metrics given the configurations and also the number of violations, which will be compared to the bets known results.<br><img width="228" height="236" alt="image" src="https://github.com/user-attachments/assets/c26873b1-3074-4533-ab18-99661a4c435c" /><br>
+Regression Testing: Design exploration can also be used for regression testing. The openLANE team already is running ~70 designs and comparing the results to the best known ones. This will generate a report that shows the design metrics given the configurations and also the number of violations, which will be compared to the bets known results.<br>
+
+<img width="228" height="236" alt="image" src="https://github.com/user-attachments/assets/c26873b1-3074-4533-ab18-99661a4c435c" /><br>
 
 Design for testing(DFT): Optional; Scan insertion, automatic test pattern generation(ATPG), test patterns compaction, fault coverage, fault simulation. This step adds extra logic and this logic scans catchain as fabrication for testing. It can add digitack control, which enables external access to internet catchain.
 
