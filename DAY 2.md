@@ -74,7 +74,7 @@ Black box the boxes, which makes the blocks invisible to top netlist.
 
 *The 4 yellow lines will now behave like outputs for block 1 and inputs for block 2.*
 
-The blocks will be implemented separately and the advantage of this is resuability. 
+The blocks will be implemented separately and the advantage of this is resuability and are preplaced cells. 
 
 <img width="472" height="152" alt="image" src="https://github.com/user-attachments/assets/cb9b268d-ad6b-4a50-ae22-5c9e64f0a7e9" />
 
@@ -82,8 +82,50 @@ There are also other IP's available like memory, clock-gating cell, comparator, 
 
 These pre-placed cells will only be implemented once and can be reused. Then, automated placement and routing tools will place the remaining logical cells in the design onto the chip. Once these cells are placed onto a floorplan, they are fixed and not touched by automated placement and routing tools.
 
+
+So, how do we define the location of these cells?
+
+<img width="508" height="372" alt="image" src="https://github.com/user-attachments/assets/cb0ecbaa-6b4c-4dff-bccd-26bfc559bbe0" />
+
+We define the location of the cells based on the design scenario. For this case, we know the blocks are communciating more with the input so we put it close to the input side. Once they're placed here, they can't be moved. 
+
 ### 14 - De-coupling capacitors
+
+3) Surround pre-placed cells with Decoupling capacitors
+
+<img width="711" height="344" alt="image" src="https://github.com/user-attachments/assets/dc9b5613-5b11-43aa-9f7a-6538136857e7" />
+
+This piece of circuit is part of block a, block c, block b, when the output swicthes from 0 to 1, there is an amount of current needed. whenever there is a transition from 0 to 1, this capacitance has to completely charge to respsernt 1. So the amount of capacitance charge is sent by the supplyu voltage. So it is the responsibility of the supply voltage to supply the logic. 
+
+Whenver 1 to 0 it is vss responsibilty to take that charge. So all the capacitance will get discharged which should be handled by GND. 
+
+In reality, when power supply flows to glogic, there is a drop because of physical dimensions. Anythibng that has physical dimensions has some resistance. Wheenver when this supply tries to flow from + to the gates, there will be voltage drops. VDD- not possible always 1 volt if power supply is 1V and is less. The .7 volt will go into cicuit and will go into logic and if there is an output for 0 to 1, it will be 0.7 volts because thats the amount of supply available. The .7 volts should be wihtin th enoice margin range. 
+
+<img width="614" height="374" alt="image" src="https://github.com/user-attachments/assets/a88c9a17-5220-4647-85b4-edea720881e9" />
+
+If 0.7V lies in the 1 area, we're good but if its in the undefined region, then it is bad. So we can't guarantee power supply so we can solve this using decoupling capacitors.
+
+<img width="706" height="389" alt="image" src="https://github.com/user-attachments/assets/6093a945-9525-4659-8ba7-04b1fdca3d22" />
+
+Decoupling capacitors are huge capacitors. Whenever circuit switches it gets power from Cd and it deocouples ciruit from main power supply.  And since it is placed clsoe to circuit, there will be hardly any voltage drop. When switching is happenning, the capacitor loses charge but when siwtching is not happening, it is resupplying charge using power supply. 
+
+In the chip it will look like this: 
+
+<img width="500" height="387" alt="image" src="https://github.com/user-attachments/assets/163ac17a-d5ef-4295-8219-fe508cb411fc" />
+
+Now there won't be any missing 1 or 0 because the capacitor will make sure it will never go in the undefined region. 
+
 ### 15 - Power planning
+
+4) Power Planning 
+
+
+
+
+
+
+
+
 ### 16-Pin placement and logical cell placement blockage
 ### 17-Steps to run floorplan using OpenLANE
 ### 18-Review floorplan files and steps to view floorplan
@@ -94,12 +136,14 @@ These pre-placed cells will only be implemented once and can be reused. Then, au
 ### 21- Optimize placement using estimated wire-length and capacitance
 ### 22-Final placement optimization
 ### 23-Need for libraries and characterization
-### 24-Congestion aware placement using RePlAce
+### 24-Congestion aware placement using Replace
+
 ## Cell Design and Characterization Flows
 ### 25-Inputs for cell design flow
 ### 26-Circuit design step
 ### 27-Layout design step
 ### 28-Typical characterization flow
+
 ## General Timing Characterization Parameters
 ### 29-Timing threshold definitions
 ### 30-Propagation delay and transition time
