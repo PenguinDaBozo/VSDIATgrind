@@ -72,17 +72,15 @@ Black box the boxes, which makes the blocks invisible to top netlist.
 
 <img width="510" height="142" alt="image" src="https://github.com/user-attachments/assets/8bed4482-109f-4ca8-8a29-94d254b3ade2" />
 
-the 4 yellow lines will now behave like outputs for block 1 and inputs for block 2
-the blocks will be implemented separately and the advantage of this is resuability. 
+*The 4 yellow lines will now behave like outputs for block 1 and inputs for block 2.*
+
+The blocks will be implemented separately and the advantage of this is resuability. 
 
 <img width="472" height="152" alt="image" src="https://github.com/user-attachments/assets/cb9b268d-ad6b-4a50-ae22-5c9e64f0a7e9" />
 
-There are also other IP's availble like memory, clock-gating cell, comparator, mux...
+There are also other IP's available like memory, clock-gating cell, comparator, mux...
 
-These cells will only be implemented once and can be reused. 
-
-automated placement and routing tools will plae the remaining logical cells in the design onto the chip
-once these cells are placed onto a floorplan, theya re fixed and not touched by automated placement and routing tools 
+These pre-placed cells will only be implemented once and can be reused. Then, automated placement and routing tools will place the remaining logical cells in the design onto the chip. Once these cells are placed onto a floorplan, they are fixed and not touched by automated placement and routing tools.
 
 ### 14 - De-coupling capacitors
 ### 15 - Power planning
