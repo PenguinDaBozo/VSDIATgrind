@@ -24,18 +24,22 @@ minimum area occupied by netlist
 
 <img width="209" height="193" alt="image" src="https://github.com/user-attachments/assets/c3088e8e-2bb7-4e0c-9820-3f10c8ddc062" />
 
-Core (second image): section of the chip where fundamental logic of design is place and is located inside a die
-Die (third image): small semiconductor material specimen on which the fundamental cirucit is fabricated. We put multiple die on a wafter to increase its input. 
+- Core (second image): section of the chip where fundamental logic of design is place and is located inside a die
+- Die (third image): small semiconductor material specimen on which the fundamental cirucit is fabricated. We put multiple die on a wafter to increase its input. 
 
-lets put the netlist inside the core, and boom, the netlist occupies the complete area of the core, so 100%. 
+Lets put the netlist inside the core, and boom, the netlist occupies the complete area of the core, so we can say that it is 100% occupied or utilized.
+
 <img width="225" height="240" alt="image" src="https://github.com/user-attachments/assets/2972311f-e4d6-43d3-a1f6-3b3c4155c8a3" />
 
-100% utilization is when the whole core area is occupied. 
-We can calculate the Utilization factor by (area occupied by netlist)/(total area of the core)
+100% utilization is when the whole core area is occupied. We can also calculate the **Utilization Factor** by 
+  (AREA OCCUPIED BY NETLIST)/(TOTAL AREA OF THE CORE)
 
-When ulitilzation facotr is 1, you can't add additional cells because the area is fully occupied. In practice you should go for 50 - 60% utilization or 0.5 - 0.6 ultitization factor.
+When utilization factor = 1, you can't add additional cells because the area is fully occupied. In practice you should go for 50 - 60% utilization or 0.5 - 0.6 ultitization factor.
 
-Aspect ratio is height/width. Wheenver aspect ratio is 1, its a square shape. Other numbers would mean its a rectange. 
+Another important aspect is the aspect ratio, which determines the shape of the die. We can calculate this by 
+  HEIGHT/WIDTH
+
+Whenever the aspect ratio is 1, it's a square. Anything else means a rectange. 
 
 Another example: 
 <img width="733" height="443" alt="image" src="https://github.com/user-attachments/assets/52206b86-4e9f-4490-a3f8-5466d835cc9d" />
