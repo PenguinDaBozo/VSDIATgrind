@@ -8,11 +8,15 @@ A very common Arduino board, yet there's a whole industry that lies within that 
 <img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/0a49e86c-5ae0-4750-ad90-fffbb5ea83a8" /><br>
 
 This board can also be described in the form of a block diagram:
+
 <img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/9f84f641-6a83-483a-a2df-b5ca90e514c0" /><br>
+
 The center is a processor and around it is all the programs that go into the processor. This is a typical diagram of a board.
 
 But the other stuff ain't that important, so let's dive deeper into the chip. 
+
 <img width="371" height="293" alt="image" src="https://github.com/user-attachments/assets/ffa30fdb-2e30-44f8-b65f-2dacf8c8cece" /><br>
+
 This is a chip or in more technical terms: a package. 
 
 The chip is sitting at the center. Wire bunch connects the pins to the boundary of the chip, which allows signals to travel to the chip. 
@@ -24,6 +28,7 @@ The chip is sitting at the center. Wire bunch connects the pins to the boundary 
 - DIE: Silicon that the circuit is fabricated on.
 
 <img width="517" height="275" alt="image" src="https://github.com/user-attachments/assets/59581eb8-a8c5-4f12-b1da-0b3b7a7aaae6" /><br>
+
 The core includes some components like the RISCV SoC, SRAM, adc0, adc1, dac, PLE, and SPI. All performances depend on the foundry, the place where chips get manufactured. Engineers contact foundries.
 - Foundry IP's or Intelligent Property: This need some amount of integllegine to build this block.
 - Macros: Pure digital logic.
@@ -44,6 +49,7 @@ There is another interface that has to be present with RISC-V and layout which i
 These apps run on hardware but how does all of these processes happen?  
 
 <img width="1744" height="1080" alt="image" src="https://github.com/user-attachments/assets/a6ae9135-1b97-4a5b-bce7-f983e03001d6" /><br>
+
 Application Software -> System Software -> Hardware
 
 It starts from the application software which is programmed in its respective language. Next, the code will be dealt with by the OS. In the OS, the compiler will translate the programming language to some instructions that is set by the hardware's manufacturer. Then, the assembler will take those instructions and translate it to a machine lanuage (binary), which will be fed to the hardware. Finally the hardware processes that information and produces a result. 
@@ -89,14 +95,18 @@ ASIC design flow:
 
 Synthesis: 
 <img width="553" height="381" alt="image" src="https://github.com/user-attachments/assets/a25f8dba-4267-46b8-ac4b-c25f832a6850" /><br>
+
 - Converts RTL to a circuit out of componetns from the standard cell library (SCL)
 
 FP+PP (Floor and Power Planning): 
 <img width="540" height="394" alt="image" src="https://github.com/user-attachments/assets/b2539179-2485-44ff-8c17-4fc7b2a5c4fc" /><br>
+
 - Chip Floor-Planning: partition the chip die btwn different system building blocks and place the I/O Pads
 <img width="552" height="384" alt="image" src="https://github.com/user-attachments/assets/1b8cfe21-2bf8-4bb0-a677-64881d472625" /><br>
+
 - Macro Floor-Planning: Dimensions, pin locations, rows definition
 <img width="562" height="375" alt="image" src="https://github.com/user-attachments/assets/9d0a39bf-c03d-4e62-8a85-9c5ac669f046" /><br>
+
 - Power Planning: Each chip is powered by multiple VDD VSS pins. The power pins are connected through all rings and vertical horizontal straps. Parallel structures reduces resistance. The distribution network uses upper metal layers as they are thicker than lower metal layers and have less resistance. 
 
 Place:
