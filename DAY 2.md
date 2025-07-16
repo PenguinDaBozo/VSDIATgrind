@@ -13,7 +13,9 @@ Right now, the dimensions of the standard cell are important so we can ignore th
 <img width="533" height="415" alt="image" src="https://github.com/user-attachments/assets/52c0c8a8-b3e3-4a09-acf4-c5060ef5a2e2" />
 
 With the help of the dimensions, we will calculate the area occupied by the netlist on a Silicon Wafer by simplifying the netlist to blocks without wires and putting them together like this:
+
 <img width="248" height="203" alt="image" src="https://github.com/user-attachments/assets/9413daf6-35b6-48ef-9938-d3f043ce234e" />
+
 minimum area occupied by netlist
 
 **What is the 'core' and 'die' Section of a chip?**
@@ -42,6 +44,7 @@ Another important aspect is the aspect ratio, which determines the shape of the 
 Whenever the aspect ratio is 1, it's a square. Anything else means a rectange. 
 
 Another example: 
+
 <img width="733" height="443" alt="image" src="https://github.com/user-attachments/assets/52206b86-4e9f-4490-a3f8-5466d835cc9d" />
 
 
