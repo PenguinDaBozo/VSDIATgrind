@@ -37,7 +37,7 @@ The C program is first compiled in its assembly language program. which is conve
 
 <img width="798" height="504" alt="image" src="https://github.com/user-attachments/assets/456d4298-3031-4403-8679-ae0152f6079d" /><br>
 
-There is another interface that has to be present with RISC-V and layout which is th eahrdware description language. ou have to implement this architecutre in some rdl which in this case is picorv32 cpu core. This rdl implements specifications of RISC-V architecture and finally from implementaiton to layout it is a standard gds flow. 
+There is another interface that has to be present with RISC-V and layout which is the hardware description language. ou have to implement this architecutre in some rdl which in this case is picorv32 cpu core. This rdl implements specifications of RISC-V architecture and finally from implementaiton to layout it is a standard gds flow. 
 
 ### 2 - From Software Applications to Hardware
 These apps run on hardware but how does all of these processes happen?  
@@ -56,6 +56,35 @@ Hardware
 - Whoever owns the hardware will have the instructions implemented by the company.
 - understands assembler's inputs and engenders output
 
+## SoC design and OpenLANE
+
+### 3 - Introduction to all components of open-source digital asic design
+ASIC requires certain elements that must be present always.
+- RTL IP's: hardware description language register transfer model, all the functions we want to implement
+- EDA Tools: CAD tools used for electronic automation
+- PDK DATA or Process Design Kit: The interface betweem FAB amd designers. Collection of files used to model fabrication process for EDA tools used to design an IC.
+
+<img width="405" height="450" alt="image" src="https://github.com/user-attachments/assets/7a7fb7ba-08a5-4fdd-b7ef-22c6efb92bd5" /><br>
+
+Back in the days, the design of an IC was coupled by only a few companies. Lynn Conway and Carver Mead envisioned need for separating design from technology, pioneering the "structured" design methodolody. This sparked Pure Play Fabs and Fabless design companies.
+
+Until June 30, 2020, there were no open sourced PDK. In June 30, 2020, Google and Skywater made an agreement to open source the FOSS 130nm Production PDK. The PDK had all the information needed for successful ASIC implementation.
+
+Now, we have all three elements for open-source. But isn't 130nm production an old one given it has been around for 20 years? The cutting edge process node is 5nm. The current market share for a 130nm is 7%.
+
+Attributes:
+- civil applications does not need a performance of an advanced node
+- fabrication for 130nm is cheaper when compared to advanced nodes
+
+<img width="517" height="370" alt="image" src="https://github.com/user-attachments/assets/c4a22b73-d944-4f48-b54e-77b686c3d553" /><br>
+
+130 nm is indeed fast! 
+- Example 1: Intel Pentium 4, which was released in 2004, ran at almost 3.46 GHz.
+- Example 2: OSU team reported 327 MHz post-layout clock
+
+### 4 - Simplified RTL2GDS flow
+### 5 - Introduction to OpenLANE and Strive chipsets
+### 6 - Introduction to OpenLANE detailed ASIC design flow
 
 
 
