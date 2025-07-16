@@ -1,8 +1,8 @@
 # VSDIATgrind
 GitHub for my VSDIAT adventure!
 
-[Sky130 DAY 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK](https://github.com/PenguinDaBozo/VSDIATgrind/edit/main/README.md)
-  [How to Talk to Computers]()
+[Sky130 DAY 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK]
+  [How to Talk to Computers]
     [0 - Introduction to QFN-48 Package, chip pads, core, die and IPs]()
     [1 - Introduction to RISC-V]()
     [2 - From Software Applications to Hardware]()
