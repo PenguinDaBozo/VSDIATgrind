@@ -22,7 +22,7 @@ GitHub for my VSDIAT adventure!
 - [Chip Floor planning considerations](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#chip-floor-planning-considerations)
     - [12 - Utilization factor and aspect ratio](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#12---utilization-factor-and-aspect-ratio)
     - [13 - Concept of pre-placed cells](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#13---concept-of-pre-placed-cells)
-    - 14 - De-coupling capacitors
+    - [14 - De-coupling capacitors](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#14---de-coupling-capacitors)
     - 15 - Power planning
     - 16 - Pin placement and logical cell placement blockage
     - 17 - Steps to run floorplan using OpenLANE
