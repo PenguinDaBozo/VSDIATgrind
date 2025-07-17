@@ -49,7 +49,7 @@ GitHub for my VSDIAT adventure!
     - [32 - SPICE deck creation for CMOS inverter](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#32---spice-deck-creation-for-cmos-inverter)
     - [33 - SPICE simulation lab for CMOS inverter](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#32---spice-deck-creation-for-cmos-inverter)
     - [34 - Swtiching Threshold Vm](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#34---swtiching-threshold-vm)
-    - 35 - Static and dynamic simulation of CMOS inverter
+    - [35 - Static and dynamic simulation of CMOS inverter](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#35---static-and-dynamic-simulation-of-cmos-inverter)
     - 36 - Lab steps to git clone vsdstdcelldesign
 - Inception of Layout - CMOS fabrication process
     - 37 - Create Active regions
