@@ -43,7 +43,7 @@ GitHub for my VSDIAT adventure!
     - [29 - Timing threshold definitions](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#29---timing-threshold-definitions)
     - [30 - Propagation delay and transition time](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#30---propagation-delay-and-transition-time)
 
-Sky130 DAY 3 - Design library cell using Magic Layout and ngspice characterization
+[Sky130 DAY 3 - Design library cell using Magic Layout and ngspice characterization](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#sky130-day-3---design-library-cell-using-magic-layout-and-ngspice-characterization)
 - Labs for CMOS inverter ngspice simulations
     - 31 - IO placer revision
     - 32 - SPICE deck creation for CMOS inverter
