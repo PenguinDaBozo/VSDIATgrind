@@ -426,16 +426,22 @@ Doing this command will extract all the parasetic capacitances
 ## Sky130 Tech File
 ### 46 - Lab steps to create final SPICE deck using Sky130 tech
 
-<img width="365" height="264" alt="image" src="https://github.com/user-attachments/assets/fa860dd3-4354-4c8e-b454-b5e9a6e51a7c" />
+<img width="730" height="484" alt="image" src="https://github.com/user-attachments/assets/a51f41fc-4c77-49b7-8ab7-32ece981022a" />
 
 
+<img width="481" height="382" alt="image" src="https://github.com/user-attachments/assets/c2f7f365-46dc-4732-b85b-1b2aff7a67c6" />
 
+We want to create extra supply points and do the following using nano or vim and :wq! to exit
+<img width="855" height="527" alt="image" src="https://github.com/user-attachments/assets/5160124f-b9ea-4303-a54a-4c7eeb88e06d" />
 
-
-
-
+in libs pshort.lib, we see that its called pshort_model
+<img width="678" height="183" alt="image" src="https://github.com/user-attachments/assets/a5262991-5844-4451-b86a-481296389ad2" />
+change the names to pshort_model.0 and nshort_model.0
+<img width="764" height="508" alt="image" src="https://github.com/user-attachments/assets/db0a8431-438f-4919-b53a-ea633c448057" />
 
 ### 47 - Lab steps to characterize inverter using sky130 model files
+
+<img width="1067" height="38" alt="image" src="https://github.com/user-attachments/assets/490e8da0-6f3b-49c1-8a47-7e496becd99c" />
 
 
 
