@@ -65,7 +65,7 @@ GitHub for my VSDIAT adventure!
     - [46 - Lab steps to create final SPICE deck using Sky130 tech](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#46---lab-steps-to-create-final-spice-deck-using-sky130-tech)
     - [47 - Lab steps to characterize inverter using sky130 model files](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#47---lab-steps-to-characterize-inverter-using-sky130-model-files)
     - [48 - Lab introduction to Magic tool options and DRC rules](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#48---lab-introduction-to-magic-tool-options-and-drc-rules)
-    - 49 - Lab introduction to Sky130 pdk's and steps to download labs
+    - [49 - Lab introduction to Sky130 pdk's and steps to download labs](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#49---lab-introduction-to-sky130-pdks-and-steps-to-download-labs)
     - 50 - Lab introduction to Magic and steps to load Sky130 tech-rules
     - 51 - Lab exercise to fix poly.9 error in Sky130 tech-file
     - 52 - Lab exercise to implement poly resistor spacing to diff and tap
