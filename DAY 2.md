@@ -183,15 +183,77 @@ Next step is to make sure none of automated stuff is placed in the die. The edge
 
 ### 17 - Steps to run floorplan using OpenLANE
 
+Set Area -> Set Aspect Ratio -> Localization factor -> Input/Output Cell -> Power Distribution Network -> Macro Placement Standard cells are not placed in floor plan. 
 
+If you open up the README.md file in openLANE directory, you can check the variables of each design step. 
 
+<img width="928" height="435" alt="image" src="https://github.com/user-attachments/assets/4713bba1-efa1-4c68-869c-d72c22cd9620" />
 
+<img width="768" height="67" alt="image" src="https://github.com/user-attachments/assets/349d4942-a822-408a-a338-8e0247a0bfde" />
 
+*FP stands for floor  plan. Core is the area of cell.*
 
+If you open up the floorplan.tcl you can see the parameters that floor plan has been set to. 
+<img width="722" height="505" alt="image" src="https://github.com/user-attachments/assets/22949bea-43d8-43b5-8ccf-98d7cf5c20d5" />
 
+Priority (highest to lowest): floorplan.tcl, config.tcl, sky130A_sky130_fd_sc_hd_config.tcl
+
+If we open up the config.tcl, you can see the IO_VMETAL and IO_HMETAL. In the flow, it will be one more than what config is set to. 
+
+In openlane, after Synthesis, we should run_floorplan to create a floor plan.  
+<img width="915" height="379" alt="image" src="https://github.com/user-attachments/assets/0d1dd1ee-8600-4c87-b46c-4d795a29b9f6" />
 
 ### 18 - Review floorplan files and steps to view floorplan
+
+<img width="1357" height="160" alt="image" src="https://github.com/user-attachments/assets/c69b4124-c0b9-4cdd-aa47-33a80b3835cb" />
+
+<img width="356" height="29" alt="image" src="https://github.com/user-attachments/assets/4db2249d-2d20-4643-bb20-a774cc5e206f" />
+The Vertical Metal Layer and Horizontal layer is indeed 1 more than config.tcl, which means floorplan has overwritten config.tcl. The sky130A file overrided the config.tcl for core util.
+
+<img width="986" height="105" alt="image" src="https://github.com/user-attachments/assets/70be3c7a-88dd-48cb-9ac0-b230243cb4eb" />
+
+<img width="611" height="20" alt="image" src="https://github.com/user-attachments/assets/8dda328d-e856-48fb-b4bb-0f27e42f2149" />
+Using the two numbers, we can calculate the area of the design. 
+
+<img width="976" height="57" alt="image" src="https://github.com/user-attachments/assets/97903c0d-aa5d-4f3a-9a7b-e1222be6f3d8" />
+We can open magic using this command. -T is for tech file and the file is the tech file location. With the magic tech file we need the lef file and that's why we move 2 directories up. Finally we do def read and we don't have to put the def file because we're in the def file. And an & to move next prompt when magic launches. 
+
 ### 19 - Review floorplan layout in Magic
+
+To select: press S 
+To center: S then V 
+
+<img width="1226" height="763" alt="image" src="https://github.com/user-attachments/assets/3855a147-e700-47f4-b93d-588e756fd002" />
+
+To zoom: left-click and then right-click to creat the window you want to zoom to and press Z
+
+<img width="1223" height="734" alt="image" src="https://github.com/user-attachments/assets/e0595fba-66e9-4e02-a3ca-c9109a1fd471" />
+
+We can select a cell by hovering over it and clicking S. Then we can go in the terminal and ask what, which tells us the details. 
+
+<img width="827" height="503" alt="image" src="https://github.com/user-attachments/assets/2bb83101-e7c2-4d0f-913c-e4264a8fe4d4" />
+
+*this one is metal 3*
+
+<img width="930" height="650" alt="image" src="https://github.com/user-attachments/assets/fd243807-e655-47f9-a801-1ed3ebd4d25d" />
+
+*this one is metal 2*
+These should be what is set in one of the tcl files. 
+
+<img width="350" height="227" alt="image" src="https://github.com/user-attachments/assets/1ff35b55-d173-4010-b47b-130331f46819" />
+
+*tax cells: avoid latch up that occur in CMOS devices. Connect the attach ember to vdv and the substrate to the GND, which prevents latch up.*
+If you open the README.md, you can see which tax cell is set. 
+
+Floor plan does not take into consideration the placement of standard cells but standard cells are present here (bottom left). 
+
+<img width="1131" height="566" alt="image" src="https://github.com/user-attachments/assets/45b29047-7939-4d1a-965a-cbf0b0502ff8" />
+
+
+
+
+
+
 
 ## Library Binding and Placement
 
