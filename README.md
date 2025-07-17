@@ -58,7 +58,7 @@ GitHub for my VSDIAT adventure!
     - [40 - Lightly doped drain(LDD) formation](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#40---lightly-doped-drainldd-formation)
     - [41 - Source - drain formation](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#41---source---drain-formation)
     - [42 - Local interconnect formation](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#41---source---drain-formation)
-    - 43 - Higher level metal formation
+    - [43 - Higher level metal formation](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#43---higher-level-metal-formation)
     - 44 - Lab introduction to Sky130 basic layers layout and LEF using inverter
     - 45 - Lab steps to create std cell layout and extract spice netlist
 - Sky130 Tech File
