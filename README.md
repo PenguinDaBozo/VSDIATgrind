@@ -24,21 +24,21 @@ GitHub for my VSDIAT adventure!
     - [13 - Concept of pre-placed cells](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#13---concept-of-pre-placed-cells)
     - [14 - De-coupling capacitors](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#14---de-coupling-capacitors)
     - [15 - Power planning](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#15---power-planning)
-    - 16 - [Pin placement and logical cell placement blockage](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#16---pin-placement-and-logical-cell-placement-blockage)
-    - 17 - Steps to run floorplan using OpenLANE
-    - 18 - Review floorplan files and steps to view floorplan
-    - 19 - Review floorplan layout in Magic
-- Library Binding and Placement
-    - 20 - Netlist binding and initial place design
-    - 21 - Optimize placement using estimated wire-length and capacitance
-    - 22 - Final placement optimization
-    - 23 - Need for libraries and characterization
-    - 24 - Congestion aware placement using RePlAce
-- Cell Design and Characterization Flows
-    - 25 - Inputs for cell design flow
-    - 26 - Circuit design step
-    - 27 - Layout design step
-    - 28 - Typical characterization flow
-- General Timing Characterization Parameters
-    - 29 - Timing threshold definitions
-    - 30 - Propagation delay and transition time
+    - [16 - Pin placement and logical cell placement blockage](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#16---pin-placement-and-logical-cell-placement-blockage)
+    - [17 - Steps to run floorplan using OpenLANE](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#17---steps-to-run-floorplan-using-openlane)
+    - [18 - Review floorplan files and steps to view floorplan](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#18---review-floorplan-files-and-steps-to-view-floorplan)
+    - [19 - Review floorplan layout in Magic](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#19---review-floorplan-layout-in-magic)
+- [Library Binding and Placement](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#library-binding-and-placements)
+    - [20 - Netlist binding and initial place design](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#20---netlist-binding-and-initial-place-design)
+    - [21 - Optimize placement using estimated wire-length and capacitance](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#21---optimize-placement-using-estimated-wire-length-and-capacitance)
+    - [22 - Final placement optimization](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#22---final-placement-and-optimization)
+    - [23 - Need for libraries and characterization](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#23---need-for-libraries-and-characterization)
+    - [24 - Congestion aware placement using RePlAce](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#24---congestion-aware-placement-using-replace)
+- [Cell Design and Characterization Flows](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#cell-design-and-characterization-flows)
+    - [25 - Inputs for cell design flow](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#25---inputs-for-cell-design-flow)
+    - [26 - Circuit design step](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#26---circuit-design-step)
+    - [27 - Layout design step](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#27---layout-design-step)
+    - [28 - Typical characterization flow](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#28---typical-characterization-flow)
+- [General Timing Characterization Parameters](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#general-timing-characterization-parameters)
+    - [29 - Timing threshold definitions](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#29---timing-threshold-definitions)
+    - [30 - Propagation delay and transition time](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#30---propagations-delay-and-transition-time)
