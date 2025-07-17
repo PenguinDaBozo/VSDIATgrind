@@ -19,7 +19,7 @@ GitHub for my VSDIAT adventure!
     - [11 - Steps to Characterize Synthesis Results](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%201.md#11---steps-to-characterize-synthesis-results)
 
 [Sky130 DAY 2 - Good Floorplan vs Bad Floorplan and Introduction to Library Cells](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#sky130-day-2---good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
-- Chip Floor planning considerations
+- [Chip Floor planning considerations](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#chip-floor-planning-considerations)
     - 12 - Utilization factor and aspect ratio
     - 13 - Concept of pre-placed cells
     - 14 - De-coupling capacitors
