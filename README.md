@@ -55,7 +55,7 @@ GitHub for my VSDIAT adventure!
     - [37 - Create Active regions](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#37---create-active-regions)
     - [38 - Formation of N-well and P-well](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#38---formation-of-n-well-and-p-well)
     - [39 - Formation of gate terminal](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#39---formation-of-gate-terminal)
-    - 40 - Lightly doped drain(LDD) formation
+    - [40 - Lightly doped drain(LDD) formation](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#40---lightly-doped-drainldd-formation)
     - 41 - Source - drain formation
     - 42 - Local interconnect formation
     - 43 - Higher level metal formation
