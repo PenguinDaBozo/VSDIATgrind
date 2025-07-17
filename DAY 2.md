@@ -194,6 +194,7 @@ If you open up the README.md file in openLANE directory, you can check the varia
 *FP stands for floor  plan. Core is the area of cell.*
 
 If you open up the floorplan.tcl you can see the parameters that floor plan has been set to. 
+
 <img width="722" height="505" alt="image" src="https://github.com/user-attachments/assets/22949bea-43d8-43b5-8ccf-98d7cf5c20d5" />
 
 Priority (highest to lowest): floorplan.tcl, config.tcl, sky130A_sky130_fd_sc_hd_config.tcl
@@ -201,6 +202,7 @@ Priority (highest to lowest): floorplan.tcl, config.tcl, sky130A_sky130_fd_sc_hd
 If we open up the config.tcl, you can see the IO_VMETAL and IO_HMETAL. In the flow, it will be one more than what config is set to. 
 
 In openlane, after Synthesis, we should run_floorplan to create a floor plan.  
+
 <img width="915" height="379" alt="image" src="https://github.com/user-attachments/assets/0d1dd1ee-8600-4c87-b46c-4d795a29b9f6" />
 
 ### 18 - Review floorplan files and steps to view floorplan
@@ -208,14 +210,17 @@ In openlane, after Synthesis, we should run_floorplan to create a floor plan.
 <img width="1357" height="160" alt="image" src="https://github.com/user-attachments/assets/c69b4124-c0b9-4cdd-aa47-33a80b3835cb" />
 
 <img width="356" height="29" alt="image" src="https://github.com/user-attachments/assets/4db2249d-2d20-4643-bb20-a774cc5e206f" />
+
 The Vertical Metal Layer and Horizontal layer is indeed 1 more than config.tcl, which means floorplan has overwritten config.tcl. The sky130A file overrided the config.tcl for core util.
 
 <img width="986" height="105" alt="image" src="https://github.com/user-attachments/assets/70be3c7a-88dd-48cb-9ac0-b230243cb4eb" />
 
 <img width="611" height="20" alt="image" src="https://github.com/user-attachments/assets/8dda328d-e856-48fb-b4bb-0f27e42f2149" />
+
 Using the two numbers, we can calculate the area of the design. 
 
 <img width="976" height="57" alt="image" src="https://github.com/user-attachments/assets/97903c0d-aa5d-4f3a-9a7b-e1222be6f3d8" />
+
 We can open magic using this command. -T is for tech file and the file is the tech file location. With the magic tech file we need the lef file and that's why we move 2 directories up. Finally we do def read and we don't have to put the def file because we're in the def file. And an & to move next prompt when magic launches. 
 
 ### 19 - Review floorplan layout in Magic
@@ -249,19 +254,131 @@ Floor plan does not take into consideration the placement of standard cells but 
 
 <img width="1131" height="566" alt="image" src="https://github.com/user-attachments/assets/45b29047-7939-4d1a-965a-cbf0b0502ff8" />
 
-
-
-
-
-
-
 ## Library Binding and Placement
 
 ### 20 - Netlist binding and initial place design
+
+**Placement and Routing**
+
+1) Bind netlist with physical cells
+
+Shape of this gate represents functionality of the gate. For example, or gate. 
+
+<img width="498" height="430" alt="image" src="https://github.com/user-attachments/assets/7f2cdc49-cbc8-4b2e-b775-60411898a0eb" />
+
+We don't have specific shapes but we do have boxes. Take the components and give physical dimentsions.
+
+<img width="662" height="438" alt="image" src="https://github.com/user-attachments/assets/7af895db-1a96-4d9c-b468-23c27aace26c" />
+
+<img width="156" height="279" alt="image" src="https://github.com/user-attachments/assets/7a4fb3e9-21e1-4b0a-91dd-2900789a8462" />
+
+*This is a shelf called library. The library also has the timing, width, height, required conditions of cell, and particular shapes of cell.*
+
+<img width="811" height="281" alt="image" src="https://github.com/user-attachments/assets/4acf7aa1-dd6e-4d41-885d-cebffb65e2a0" />
+*library got different flavors. bigger = faster since less resistance*
+
+2) Placement: Once we have given proper shape and sizes to the gates, we have to place them. 
+
+<img width="835" height="345" alt="image" src="https://github.com/user-attachments/assets/22f9b1b6-e2b7-4521-8e0f-47c03fc48f11" />
+
+We have to place the netlist to the floorplan. 
+
+<img width="588" height="411" alt="image" src="https://github.com/user-attachments/assets/2ac43299-ed6e-49fa-8f1f-c6704ca83b68" />
+
+This is our floor plan we previously created.
+
+<img width="848" height="428" alt="image" src="https://github.com/user-attachments/assets/6b7cdade-26f6-4067-95ba-da4582d03597" />
+
+You place the cells close to its respective input/output so the delay is mininal. 
+
 ### 21 - Optimize placement using estimated wire-length and capacitance
+
+<img width="848" height="415" alt="image" src="https://github.com/user-attachments/assets/98b95bcd-6ec1-42c8-a514-61a8de8fa377" />
+
+The input/output is kind of far but is diagonal, so we place diagonally.
+
+<img width="837" height="409" alt="image" src="https://github.com/user-attachments/assets/672455d8-7a77-4766-911c-9981f7a53a29" />
+
+There's a bunch of preplaced cells blocking so we have to sort of wrap around it while making sure the cells are close to their respective input/output. 
+
+And this arises a question of distance.
+
+The solution is...
+
+3) Optimize Placement
+
+Now we shall perform estimations. This is the part where we estimate wire length and capacitance and, based on that, insert repeaters. Repeaters are buffers that will recondition your original signal by making a new signal that replicates original signal. More and more repeaters will take up area. Slew, time of signal transition, is dependent upon the value of capacitor and is used to decide the placement of the repeaters. 
+
+<img width="841" height="367" alt="image" src="https://github.com/user-attachments/assets/a2a032bd-9bd8-4d82-ae57-0f0ccabae7d1" />
+
+The distances btwn each cell is pretty reasonable so we don't need to add repeaters.
+
+<img width="842" height="419" alt="image" src="https://github.com/user-attachments/assets/b96e1345-60a0-4890-825c-ee0ca92b413c" />
+
+We placed buffers since the distance would be too large. The buffers will recieve the signal and replicate it to the next. The yellow blocks are close to each other, which means minimum delay. 
+
 ### 22 - Final placement optimization
+
+<img width="838" height="413" alt="image" src="https://github.com/user-attachments/assets/9e660021-98f9-408b-9ed6-962fd5d05471" />
+
+Placed a buffer between FF2 and 2 because the distance is a bit far. 
+
+<img width="847" height="412" alt="image" src="https://github.com/user-attachments/assets/d4925bf2-687e-4418-a5ab-9aa58c3123a9" />
+
+The connection btwn FF1 and 1 criss cross with the blue blocks, which does cause a problem that we will address latter. Same with the yellow and green blocks but that can be solved by putting the green blocks on a different layer than yellow blocks. 
+
 ### 23 - Need for libraries and characterization
+
+<img width="763" height="431" alt="image" src="https://github.com/user-attachments/assets/0fe9772c-e476-45c5-b479-0ea41547efbe" />
+
+LOGIC SYNTHESIS: First part of IC design flow is logic synthesis.
+
+<img width="760" height="352" alt="image" src="https://github.com/user-attachments/assets/590a3ab1-c9c4-4be7-943b-cadd18e1eebe" />
+
+FLOOR PLANNING: Next step is the floorplanning in which we decide the dimensions of the core and the die, which are dependent on the size of the gates. 
+
+<img width="752" height="364" alt="image" src="https://github.com/user-attachments/assets/fb7317ec-6274-42ce-a0b2-206b41b8548f" />
+
+PLACEMENT: Then, we have the placement and we place the cells close to its respective pin so that we get the best timing possible. But if it is not possible to keep them close, then we add buffers. 
+
+<img width="664" height="288" alt="image" src="https://github.com/user-attachments/assets/cacd3210-aae3-420e-b2e9-32d23a8c7a29" />
+
+CTS: Next, we have the clock tree synthesis (CTS), which is the cells recieve logic at an equal time because of the clock being spread across. It is an edge tree that will take care of each and every clock endpoints. The buffers (triangles) will make sure that the clock signals have equal rise and fall.
+
+<img width="754" height="288" alt="image" src="https://github.com/user-attachments/assets/b01a25f1-70e8-46fa-ad16-d1a48f2aedd2" />
+
+ROUTING: Routes the stuff together. Dependent on the characters of the cells. 
+
+<img width="507" height="342" alt="image" src="https://github.com/user-attachments/assets/8c64dc24-a841-4439-a39a-2e09ccd7c60f" />
+
+STATIC TIMING ANALYSIS: You see the setup time, arrival time, max achievable frequency of a circuit. 
+
+One thing is common across all stages: the Cells or Gates.
+
+<img width="200" height="243" alt="image" src="https://github.com/user-attachments/assets/5a326941-a001-440c-b17c-12f126ee1fac" />
+
+If you place any of this gate in some area, then it is referred to as your library. These gates have to be placed in a way the EDA understands them but how?
+
+How do we design, characterize or model these cells?
+
 ### 24 - Congestion aware placement using Replace
+
+Placement in OpenLANE occurs in two stages: global and detailed. 
+
+Global: a course placement; no legalizations happening. Legalization makes sure the standard cells are placed in rows and are exactly inside them with no overlap. 
+
+run_placement runs global placement and the main objective is to reduce wire length.
+
+<img width="911" height="403" alt="image" src="https://github.com/user-attachments/assets/3fc2e5c6-80b0-4653-816b-dd467418f1b9" />
+
+<img width="892" height="70" alt="image" src="https://github.com/user-attachments/assets/20eb6d82-9583-44fc-a91b-74e1c9ba457d" />
+
+<img width="966" height="589" alt="image" src="https://github.com/user-attachments/assets/f78dd242-2d37-41be-810e-b236671c4614" />
+
+<img width="812" height="551" alt="image" src="https://github.com/user-attachments/assets/5d3bebf4-0bf6-4daa-bd8b-cc84d497792c" />
+*all the standard cells are now placed in rows*
+
+The power distribution network is created during floor plan. But in OpenFLOW, the order is a little different so the floor plan does not create PDN. Post floor plan and post placement CTS create power ground condition. Power ground is not done currently. 
 
 ## Cell Design and Characterization Flows
 ### 25 - Inputs for cell design flow
