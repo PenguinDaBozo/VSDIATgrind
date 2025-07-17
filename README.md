@@ -63,8 +63,8 @@ GitHub for my VSDIAT adventure!
     - [45 - Lab steps to create std cell layout and extract spice netlist](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#45---lab-steps-to-create-std-cell-layout-and-extract-spice-netlist)
 - [Sky130 Tech File](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#sky130-tech-file)
     - [46 - Lab steps to create final SPICE deck using Sky130 tech](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#46---lab-steps-to-create-final-spice-deck-using-sky130-tech)
-    - 47 - Lab steps to characterize inverter using sky130 model files
-    - 48 - Lab introduction to Magic tool options and DRC rules
+    - [47 - Lab steps to characterize inverter using sky130 model files](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#47---lab-steps-to-characterize-inverter-using-sky130-model-files)
+    - [48 - Lab introduction to Magic tool options and DRC rules](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#48---lab-introduction-to-magic-tool-options-and-drc-rules)
     - 49 - Lab introduction to Sky130 pdk's and steps to download labs
     - 50 - Lab introduction to Magic and steps to load Sky130 tech-rules
     - 51 - Lab exercise to fix poly.9 error in Sky130 tech-file
