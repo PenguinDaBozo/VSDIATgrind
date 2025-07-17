@@ -396,9 +396,37 @@ As you go from bottom to top the thickness of the metal increases
 
 
 ### 44 - Lab introduction to Sky130 basic layers layout and LEF using inverter
+
+These are the layers. If you hover over them the name appears on the top.
+
+<img width="82" height="553" alt="image" src="https://github.com/user-attachments/assets/570d35ad-9660-4c8b-8ddb-2cbfc2236bb4" />
+
+If you press S two times when hovering over a compoent the connections get highlighted too
+
+<img width="207" height="355" alt="image" src="https://github.com/user-attachments/assets/882483b2-6aa7-401b-be93-f8f2ed74dabd" />
+
+
 ### 45 - Lab steps to create std cell layout and extract spice netlist
+
+If there is an error click DRC and find next error and it will direct you to the area where it has an error. If you want to see the specific error check the magic terminal.
+
+<img width="701" height="113" alt="image" src="https://github.com/user-attachments/assets/698a1f5f-d6fe-44e0-a1aa-5c8d06fcfbff" />
+
+<img width="650" height="169" alt="image" src="https://github.com/user-attachments/assets/8ca55c66-c18d-412e-9b27-2fc535e9e686" />
+
+
+Doing this command will extract all the parasetic capacitances 
+
+<img width="353" height="57" alt="image" src="https://github.com/user-attachments/assets/e3e57961-c3c0-45a6-933c-61bf23cebc32" />
+
+<img width="389" height="101" alt="image" src="https://github.com/user-attachments/assets/5dfc6d44-3f49-4f81-8a8b-318af0d39968" />
+
+<img width="842" height="193" alt="image" src="https://github.com/user-attachments/assets/35eab44c-13b9-4310-9bc8-0b7880ada486" />
+
 ## Sky130 Tech File
 ### 46 - Lab steps to create final SPICE deck using Sky130 tech
+
+
 ### 47 - Lab steps to characterize inverter using sky130 model files
 ### 48 - Lab introduction to Magic tool options and DRC rules
 ### 49 - Lab introduction to Sky130 pdk's and steps to download labs
