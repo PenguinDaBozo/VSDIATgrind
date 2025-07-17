@@ -59,7 +59,7 @@ GitHub for my VSDIAT adventure!
     - [41 - Source - drain formation](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#41---source---drain-formation)
     - [42 - Local interconnect formation](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#41---source---drain-formation)
     - [43 - Higher level metal formation](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#43---higher-level-metal-formation)
-    - 44 - Lab introduction to Sky130 basic layers layout and LEF using inverter
+    - [44 - Lab introduction to Sky130 basic layers layout and LEF using inverter](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#44---lab-introduction-to-sky130-basic-layers-layout-and-lef-using-inverter)
     - 45 - Lab steps to create std cell layout and extract spice netlist
 - Sky130 Tech File
     - 46 - Lab steps to create final SPICE deck using Sky130 tech
