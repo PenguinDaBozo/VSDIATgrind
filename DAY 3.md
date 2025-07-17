@@ -9,6 +9,7 @@ We can use openLANE to change the layout of the IO.
 <img width="978" height="69" alt="image" src="https://github.com/user-attachments/assets/2480c54d-9562-4a70-ad54-44e2db2dbb31" />
 
 <img width="519" height="487" alt="image" src="https://github.com/user-attachments/assets/943d8f3b-dadd-49a9-ad2c-6b9435667f43" />
+
 This is our core currently.
 
 To modify the floorplan, we can go into floorplan.tcl file and pick the command we want to change. 
@@ -20,6 +21,7 @@ To modify the floorplan, we can go into floorplan.tcl file and pick the command 
 <img width="913" height="146" alt="image" src="https://github.com/user-attachments/assets/48de2060-ccaf-4ad5-a14e-c70144cd0551" />
 
 This is our core after we changed the IO pins
+
 <img width="510" height="495" alt="image" src="https://github.com/user-attachments/assets/f2bb3cf9-8a98-4dc3-8574-3c898ee35dbf" />
 
 
@@ -62,6 +64,7 @@ Before entering the simulations,
 6) Next we can use simulation commands
 
 <img width="340" height="78" alt="image" src="https://github.com/user-attachments/assets/816560d7-5500-4782-9aea-1ff66e0a6d2e" />
+
 *sweeping the Vin from 0-2.5 in steps of 0.05 and measuring output waveform*
 
 7) Finally we describe model file
@@ -142,9 +145,84 @@ Verify its been copied
 <img width="969" height="594" alt="image" src="https://github.com/user-attachments/assets/99b42829-335c-47c0-a0c2-64b5f993ca98" />
 
 ## Inception of Layout - CMOS fabrication process
+
 ### 37 - Create Active regions
+
+16-mask CMOS process
+
+1) Selecting a substrate
+
+<img width="741" height="214" alt="image" src="https://github.com/user-attachments/assets/b37d3f9f-04fc-417c-a76b-5e4a8f9d6a0f" />
+
+2) Creating active region for transistors
+- This is the region where you see your PMOS and NMOS
+
+We are going to create some pockets and create isolation between pockets. 
+
+<img width="757" height="347" alt="image" src="https://github.com/user-attachments/assets/3ee237e3-189e-4a9a-9b34-3c3a6f70edcf" />
+
+<img width="745" height="350" alt="image" src="https://github.com/user-attachments/assets/aa193eee-5e45-4fb1-b22a-2b867e9d37d1" />
+
+Photoresist is a film on which we are going to do some process to clearly define region. Any layout is converted to Mask. 
+
+<img width="848" height="402" alt="image" src="https://github.com/user-attachments/assets/07f6ea5f-a394-4817-847d-8e125edae288" />
+
+There will be no chemical reaction under the places where the mask (red) is. Then we wash out the solution not under the mask.
+
+<img width="601" height="359" alt="image" src="https://github.com/user-attachments/assets/425be430-4ef8-4d75-8b76-013d10feb50a" />
+
+Remove mask
+
+<img width="607" height="323" alt="image" src="https://github.com/user-attachments/assets/fb65e1aa-b0e3-4eb2-9924-a430e438240f" />
+
+<img width="713" height="300" alt="image" src="https://github.com/user-attachments/assets/e5ce00f6-a313-49be-bbd6-19b8e3a8b6cf" />
+
+Next is to remove the photoresist layer because the silicon itself will act as a good protection layer to grow oxide area.
+
+<img width="591" height="229" alt="image" src="https://github.com/user-attachments/assets/2a06899e-002f-4be4-8eed-6cab78b2c5a6" />
+
+When we put it in oxidation furnace, only the areas not under a silicion will grow. 
+
+<img width="737" height="311" alt="image" src="https://github.com/user-attachments/assets/e39abba1-4c71-4625-8a45-38ad2f5fbfc5" />
+
+This process is called LOCOS (Local Oxidation of Silicon)
+
+<img width="729" height="372" alt="image" src="https://github.com/user-attachments/assets/2e97204b-0934-4a11-8569-d8b27bbf0e22" />
+
+The next step is to strip the silicon using hot phosphoric acid
+
+<img width="717" height="294" alt="image" src="https://github.com/user-attachments/assets/63751635-fba6-49c2-ab4f-6d3a6fa51094" />
+
 ### 38 - Formation of N-well and P-well
+
+3) N-Well and P-Well formation
+
+We need to protect one area while we fabricate other
+
+Cross section
+
+<img width="674" height="354" alt="image" src="https://github.com/user-attachments/assets/a2c74a56-c959-4383-835c-9baccae8b606" />
+
+<img width="624" height="380" alt="image" src="https://github.com/user-attachments/assets/10fef629-f473-445f-afdb-c5b4e76381cc" />
+
+Finally, you have to create a P-Well over here which is done using boron and diffused into it using a prcoess called ion implantation
+
+<img width="785" height="404" alt="image" src="https://github.com/user-attachments/assets/87948f7f-d96a-4000-b58f-01bd1250811c" />
+
+The same thing for N-well happens but we use phosphorous instead
+
+<img width="622" height="398" alt="image" src="https://github.com/user-attachments/assets/6d715d93-eedd-462c-824e-248eee44b637" />
+
+<img width="615" height="323" alt="image" src="https://github.com/user-attachments/assets/713e7215-1ead-4cf5-8426-7bb65732c812" />
+
+Next we take this substrate into a high temperature furnace and that will cause drive-in diffusion
+
+<img width="684" height="411" alt="image" src="https://github.com/user-attachments/assets/2b15aa2b-eb54-4c49-bc29-180e686ab1aa" />
+
 ### 39 - Formation of gate terminal
+
+4) Formation of "gate"
+
 ### 40 - Lightly doped drain(LDD) formation
 ### 41 - Source - drain formation
 ### 42 - Local interconnect formation
