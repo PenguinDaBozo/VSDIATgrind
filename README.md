@@ -21,7 +21,7 @@ GitHub for my VSDIAT adventure!
 [Sky130 DAY 2 - Good Floorplan vs Bad Floorplan and Introduction to Library Cells](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#sky130-day-2---good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
 - [Chip Floor planning considerations](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#chip-floor-planning-considerations)
     - [12 - Utilization factor and aspect ratio](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#12---utilization-factor-and-aspect-ratio)
-    - 13 - Concept of pre-placed cells
+    - [13 - Concept of pre-placed cells](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#13---concept-of-pre-placed-cells)
     - 14 - De-coupling capacitors
     - 15 - Power planning
     - 16 - Pin placement and logical cell placement blockage
