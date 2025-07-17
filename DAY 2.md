@@ -376,15 +376,131 @@ run_placement runs global placement and the main objective is to reduce wire len
 <img width="966" height="589" alt="image" src="https://github.com/user-attachments/assets/f78dd242-2d37-41be-810e-b236671c4614" />
 
 <img width="812" height="551" alt="image" src="https://github.com/user-attachments/assets/5d3bebf4-0bf6-4daa-bd8b-cc84d497792c" />
+
 *all the standard cells are now placed in rows*
 
 The power distribution network is created during floor plan. But in OpenFLOW, the order is a little different so the floor plan does not create PDN. Post floor plan and post placement CTS create power ground condition. Power ground is not done currently. 
 
 ## Cell Design and Characterization Flows
+
 ### 25 - Inputs for cell design flow
+
+<img width="755" height="404" alt="image" src="https://github.com/user-attachments/assets/13d64171-5228-4fe7-9eb9-6a4128ca89dd" />
+
+Library is where you keep your standard cells.  
+
+<img width="725" height="424" alt="image" src="https://github.com/user-attachments/assets/f1f41986-662f-4709-8b91-fdc40f46339a" />
+
+
+Library also has cells with different functionality, different sizes, and different voltages.
+
+Lets look at this inverter. This inverter has to be interpretted of its shape, power... This small inverter has to go through a cell design flow. 
+
+<img width="720" height="423" alt="image" src="https://github.com/user-attachments/assets/f776d54c-ea3f-49ae-a349-00cc108eb6d6" />
+
+**Inputs: PDK, DRC & LVS rules, SPICE models, library & user-defined specs:**
+
+DRC & LVS rules provides you a tech file with rules:
+
+<img width="753" height="442" alt="image" src="https://github.com/user-attachments/assets/a054e846-0f0c-4e9b-9b59-02dc6499a410" />
+
+SPICE model: parameters
+
+<img width="776" height="439" alt="image" src="https://github.com/user-attachments/assets/fcc9fa58-ed5d-4f3c-8373-214468cfa4cd" />
+
+library & users-defined specs: The separation btwn the GND rail and power rail decides the cell height and it is the responsibility of the library developer that the cell height is maintained. It goes neither below the arrows or above. The cell width is dependent on the timing and formation. The library developer also has to take care of the noise margin range that the supply voltage operates at. Metal layers are also user-defined. Library developer has to decide the pin location. Also drawn gate-length. 
+
+<img width="756" height="399" alt="image" src="https://github.com/user-attachments/assets/ee0fa8bb-ca7a-42ae-80e2-5f2ad7df785a" />
+
+<img width="745" height="428" alt="image" src="https://github.com/user-attachments/assets/03a3ff2c-6224-4c23-8e7f-bc8023345afd" />
+
+
 ### 26 - Circuit design step
+
+**Design: Circuit Design, layout design, characterization**
+
+Circuit Design: Implement function itself and model PMOS and NMOS in such a fashion it meets library requirements and required current.
+
+<img width="766" height="417" alt="image" src="https://github.com/user-attachments/assets/7e8c140b-3234-4b8d-9b4e-17f8bae2f6c0" />
+
+Output of Circuit Design: circuit description language (CDL)
+
+Layout design: Once you come up with a circuit design, implement that into a layout design. First is to get the function implemented through NMOS and PMOS transistors. The second is to get a PMOS and NMOS network graph. Third obtain euler's path. 
+
+<img width="713" height="437" alt="image" src="https://github.com/user-attachments/assets/58ad8358-1357-4cb6-ab22-62f0aa71fbdf" />
+
 ### 27 - Layout design step
+
+<img width="427" height="290" alt="image" src="https://github.com/user-attachments/assets/a2ec4082-89e3-4717-9e1e-f3150979c1ea" />
+
+After draw a stick diagram of it. 
+
+<img width="490" height="267" alt="image" src="https://github.com/user-attachments/assets/929bff21-95c2-4dc6-86fd-0b4021b5788c" />
+
+Convert stick diagram into a proper layout according to the DRC. 
+
+Take layout and put into tool (Magic).
+
+<img width="272" height="309" alt="image" src="https://github.com/user-attachments/assets/05cbd9ec-abdc-4349-b25a-3ac851e57acc" />
+
+Output of the layout: GDSII (layout file), LEF (defines height and width of cell), extracted spice netlist(.cir) (parasetics of resonance and capacitance of each and every element extracted out of this layout)
+
+Characterization: help you get timing, noise, power.libs.
+
 ### 28 - Typical characterization flow
+
+<img width="260" height="295" alt="image" src="https://github.com/user-attachments/assets/5014eadd-1a3d-4969-b36f-cd7d4484334d" />
+buffer
+
+<img width="736" height="403" alt="image" src="https://github.com/user-attachments/assets/c259bb82-6089-4d83-adc7-9bb0b83330d2" />
+description of buffer
+
+<img width="241" height="222" alt="image" src="https://github.com/user-attachments/assets/1f1cc6e1-8867-4a2c-8a7e-f210ac8e72c3" />
+spice netlist extracted out of layout
+
+<img width="551" height="239" alt="image" src="https://github.com/user-attachments/assets/54486574-82d7-4f8b-82d7-3c530023859f" />
+inverter - includes NMOS and PMOS and has been called from multiple subcircuits. 
+
+<img width="754" height="427" alt="image" src="https://github.com/user-attachments/assets/cf332d53-b600-49de-9ba0-8d22aba4ecba" />
+
+NMOS and PMOS spice model
+
+**Characterization flow**
+1) Read the model file and tech file
+
+<img width="753" height="280" alt="image" src="https://github.com/user-attachments/assets/c40d4905-9cde-4678-a9ec-14ab038a847d" />
+
+2) Read the extracted spice netlist
+
+<img width="565" height="183" alt="image" src="https://github.com/user-attachments/assets/b17e7e87-212d-464e-be40-ebfab56ef370" />
+
+3) Define or recognize behavior of buffer
+
+<img width="733" height="398" alt="image" src="https://github.com/user-attachments/assets/ca0fc842-1057-4d9e-b567-ac1d2eb3ac3a" />
+
+4) Read subcircuit of inverter
+
+<img width="283" height="114" alt="image" src="https://github.com/user-attachments/assets/e5b0fbb4-fc9e-4c30-a847-2486919d1838" />
+
+5) Attach designary power sources
+
+<img width="410" height="164" alt="image" src="https://github.com/user-attachments/assets/19e6ac70-5cd5-4dfb-89be-1ff2ec609979" />
+
+6) apply stimulus
+
+<img width="158" height="207" alt="image" src="https://github.com/user-attachments/assets/0a6af4e1-1792-44a0-8af4-5af6a7588473" />
+
+7) provide necessary output capacitance
+
+<img width="175" height="207" alt="image" src="https://github.com/user-attachments/assets/0a93a7ef-c647-4cfb-97cb-b42d3c83b5c2" />
+
+8) provide necessary simulation commands
+
+<img width="245" height="149" alt="image" src="https://github.com/user-attachments/assets/b406e016-1f63-4710-9644-0b5eb5ff06df" />
+
+Next is to feed steps 1-8 into this configuration file of GUNA, which will generate timing, noise, power.libs, function
+
+We have 3 characterizations: Timing Characterization, Power Characterization, and Noise Characterization
 
 ## General Timing Characterization Parameters
 ### 29 - Timing threshold definitions
