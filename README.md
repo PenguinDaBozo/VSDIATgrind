@@ -62,7 +62,7 @@ GitHub for my VSDIAT adventure!
     - [44 - Lab introduction to Sky130 basic layers layout and LEF using inverter](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#44---lab-introduction-to-sky130-basic-layers-layout-and-lef-using-inverter)
     - [45 - Lab steps to create std cell layout and extract spice netlist](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#45---lab-steps-to-create-std-cell-layout-and-extract-spice-netlist)
 - [Sky130 Tech File](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#sky130-tech-file)
-    - 46 - Lab steps to create final SPICE deck using Sky130 tech
+    - [46 - Lab steps to create final SPICE deck using Sky130 tech](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#46---lab-steps-to-create-final-spice-deck-using-sky130-tech)
     - 47 - Lab steps to characterize inverter using sky130 model files
     - 48 - Lab introduction to Magic tool options and DRC rules
     - 49 - Lab introduction to Sky130 pdk's and steps to download labs
