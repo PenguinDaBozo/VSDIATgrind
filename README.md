@@ -45,7 +45,7 @@ GitHub for my VSDIAT adventure!
 
 [Sky130 DAY 3 - Design library cell using Magic Layout and ngspice characterization](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#sky130-day-3---design-library-cell-using-magic-layout-and-ngspice-characterization)
 - [Labs for CMOS inverter ngspice simulations](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#labs-for-cmos-inverter-ngspice-simulations)
-    - 31 - IO placer revision
+    - [31 - IO placer revision](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#31---io-placer-revision)
     - 32 - SPICE deck creation for CMOS inverter
     - 33 - SPICE simulation lab for CMOS inverter
     - 34 - Swtiching Threshold Vm
