@@ -426,8 +426,19 @@ Doing this command will extract all the parasetic capacitances
 ## Sky130 Tech File
 ### 46 - Lab steps to create final SPICE deck using Sky130 tech
 
+<img width="365" height="264" alt="image" src="https://github.com/user-attachments/assets/fa860dd3-4354-4c8e-b454-b5e9a6e51a7c" />
+
+
+
+
+
+
+
 
 ### 47 - Lab steps to characterize inverter using sky130 model files
+
+
+
 ### 48 - Lab introduction to Magic tool options and DRC rules
 ### 49 - Lab introduction to Sky130 pdk's and steps to download labs
 ### 50 - Lab introduction to Magic and steps to load Sky130 tech-rules
