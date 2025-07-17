@@ -275,6 +275,7 @@ We don't have specific shapes but we do have boxes. Take the components and give
 *This is a shelf called library. The library also has the timing, width, height, required conditions of cell, and particular shapes of cell.*
 
 <img width="811" height="281" alt="image" src="https://github.com/user-attachments/assets/4acf7aa1-dd6e-4d41-885d-cebffb65e2a0" />
+
 *library got different flavors. bigger = faster since less resistance*
 
 2) Placement: Once we have given proper shape and sizes to the gates, we have to place them. 
