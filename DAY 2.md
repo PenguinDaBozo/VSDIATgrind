@@ -450,15 +450,19 @@ Characterization: help you get timing, noise, power.libs.
 ### 28 - Typical characterization flow
 
 <img width="260" height="295" alt="image" src="https://github.com/user-attachments/assets/5014eadd-1a3d-4969-b36f-cd7d4484334d" />
+
 buffer
 
 <img width="736" height="403" alt="image" src="https://github.com/user-attachments/assets/c259bb82-6089-4d83-adc7-9bb0b83330d2" />
+
 description of buffer
 
 <img width="241" height="222" alt="image" src="https://github.com/user-attachments/assets/1f1cc6e1-8867-4a2c-8a7e-f210ac8e72c3" />
+
 spice netlist extracted out of layout
 
 <img width="551" height="239" alt="image" src="https://github.com/user-attachments/assets/54486574-82d7-4f8b-82d7-3c530023859f" />
+
 inverter - includes NMOS and PMOS and has been called from multiple subcircuits. 
 
 <img width="754" height="427" alt="image" src="https://github.com/user-attachments/assets/cf332d53-b600-49de-9ba0-8d22aba4ecba" />
@@ -503,5 +507,104 @@ Next is to feed steps 1-8 into this configuration file of GUNA, which will gener
 We have 3 characterizations: Timing Characterization, Power Characterization, and Noise Characterization
 
 ## General Timing Characterization Parameters
+
 ### 29 - Timing threshold definitions
+
+To begin looking at timing characterization, we look at the spice. We got this and that but what's important is understanding the different timing thresholds of the waveforms, which we call the timing threshold definitions. These are the variables that are related to any waveform you see. 
+
+<img width="520" height="425" alt="image" src="https://github.com/user-attachments/assets/952e2eb5-2848-4d9b-b50e-67d9f466a7b5" />
+
+<img width="383" height="404" alt="image" src="https://github.com/user-attachments/assets/5071e063-4e70-4539-be10-acbccc4e6824" />
+
+We will use these waveforms to understand the variables. 
+
+Whenever we say low, it means its close to power supply.
+- Slew_low_rise_thr: if you want to calculate the slope of this waveform you need to have two points
+
+<img width="736" height="408" alt="image" src="https://github.com/user-attachments/assets/9f0748f3-241a-4860-b64a-7ac3193c78e6" />
+
+Let's assume 20% but it's not enough to calculate the slew and so we need the slew_high_rise_thr as well.
+
+- Slew_high_rise_thr:
+
+<img width="369" height="254" alt="image" src="https://github.com/user-attachments/assets/48400a6a-3335-4efb-aeeb-65b6a1c7a65e" />
+
+Let's also assume 20% and now we can take the difference between time to determine slew.
+
+- Slew_low_fall_thr:
+
+<img width="595" height="340" alt="image" src="https://github.com/user-attachments/assets/462119e5-b71a-4999-ae8b-9354ad7b1bf2" />
+
+- Slew_high_fall_thr:
+
+<img width="543" height="311" alt="image" src="https://github.com/user-attachments/assets/70d31f94-78dc-4d8f-8fc6-93278c73b365" />
+
+What are the other 4?
+
+Rise waveform: 
+
+<img width="657" height="374" alt="image" src="https://github.com/user-attachments/assets/627b7c76-7a68-4e15-9112-25a8a9a77afe" />
+
+- in_rise_thr
+
+<img width="609" height="322" alt="image" src="https://github.com/user-attachments/assets/30feaa8f-290d-4d9e-95d6-39fc85008f26" />
+
+If you want to calculate the delay, you need some points as well. You can take points from different waveforms. 
+
+- out_rise_thr
+
+<img width="624" height="391" alt="image" src="https://github.com/user-attachments/assets/452a7b63-3a3f-4eae-8451-f9740bf7b2ea" />
+
+If you want to claculate the delay, you can take the difference of the two time periods. 
+
+Fall waveforms:
+
+<img width="368" height="385" alt="image" src="https://github.com/user-attachments/assets/d47d9b58-2745-4475-b17d-f5160380013b" />
+
+- in_fall_thr
+
+<img width="586" height="308" alt="image" src="https://github.com/user-attachments/assets/f3db4806-856b-4d9f-ba8c-0d70b92dcbc1" />
+
+- out_fall_thr
+
+<img width="541" height="332" alt="image" src="https://github.com/user-attachments/assets/9860a0cb-7a0e-4880-9c64-cea25a3a1f0e" />
+
+If you want to claculate the delay, you can take the difference of the two time periods. 
+
+Based on the 8 values, we can calculate a lot of things. 
+
+<img width="212" height="235" alt="image" src="https://github.com/user-attachments/assets/e6ea25b9-9726-4cb1-97f9-9012c3c45a1a" />
+
 ### 30 - Propagation delay and transition time
+
+**Delay**
+> time(out_*_thr) - time(in_*_thr)
+Out comes later and in comes earlier and thats why out - in. 
+
+<img width="609" height="300" alt="image" src="https://github.com/user-attachments/assets/87f3c30c-f7d8-41d1-a511-73bea650e82d" />
+
+<img width="623" height="275" alt="image" src="https://github.com/user-attachments/assets/72a6ea7b-4434-485f-b487-58d8f2d821a2" />
+
+*output comes before input. can't have negative delay and this is why picking the right threshold points is important*
+
+
+
+
+<img width="743" height="363" alt="image" src="https://github.com/user-attachments/assets/7fd53e8d-0015-468c-ae18-2e926b05203f" />
+
+<img width="476" height="208" alt="image" src="https://github.com/user-attachments/assets/5062580a-102f-4bc0-9079-2338ba1a31d6" />
+
+
+*even with proper choice of threshold, if a circuit is not desinged properly, the output can come before input which causes a negative delay*
+
+**Transition Time**
+
+Rising waveform
+> time(slew_high_rise_thr) - time(slew_low_rise_thr)
+
+Falling Waveform
+> time(slew_high_fall_thr) - time(slew_low_fall_thr)
+
+
+<img width="765" height="362" alt="image" src="https://github.com/user-attachments/assets/319dd936-106c-4d41-bad4-31d27af4a9c5" />
+
