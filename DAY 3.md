@@ -223,10 +223,178 @@ Next we take this substrate into a high temperature furnace and that will cause 
 
 4) Formation of "gate"
 
+<img width="899" height="471" alt="image" src="https://github.com/user-attachments/assets/e01c5bfe-7442-49c8-a18a-42ba5f1942bb" />
+
+Threshold voltage controls function 
+
+<img width="747" height="394" alt="image" src="https://github.com/user-attachments/assets/f8e4aff5-3f99-4f28-a97e-a260ea0eee5c" />
+
+<img width="677" height="401" alt="image" src="https://github.com/user-attachments/assets/c030a8c2-eaa2-45d4-997e-0e94af019d47" />
+
+Area exposed to boron with low energy 
+
+<img width="635" height="347" alt="image" src="https://github.com/user-attachments/assets/f98f6f7c-5756-42d3-936b-1a32f57b4752" />
+
+<img width="604" height="399" alt="image" src="https://github.com/user-attachments/assets/bc2262f8-da3c-4e07-b324-ac056ac68f44" />
+
+<img width="789" height="329" alt="image" src="https://github.com/user-attachments/assets/9b71f612-6564-4409-9e33-acd5aebdc2d2" />
+
+<img width="783" height="352" alt="image" src="https://github.com/user-attachments/assets/43f84cff-f5e3-4e05-980d-4194e84c7d45" />
+
+Then we put a silicon layer
+
+<img width="760" height="342" alt="image" src="https://github.com/user-attachments/assets/ccc98bdf-1cce-472e-92c1-9eb67e65e212" />
+
+<img width="727" height="399" alt="image" src="https://github.com/user-attachments/assets/09e13871-fc0b-4840-a184-1ca0793bd62c" />
+
+<img width="610" height="395" alt="image" src="https://github.com/user-attachments/assets/aae4b59e-4b7d-45d6-80e2-9eab58ea631a" />
+
+<img width="629" height="340" alt="image" src="https://github.com/user-attachments/assets/8807337e-59ee-449d-a519-1e6d93069034" />
+
+<img width="629" height="289" alt="image" src="https://github.com/user-attachments/assets/306ac059-945c-47be-aa23-951e1a885d78" />
+
 ### 40 - Lightly doped drain(LDD) formation
+5) Lightly doped drain(LDD) formation
+
+<img width="730" height="294" alt="image" src="https://github.com/user-attachments/assets/b3af52ae-1adf-4694-8cbe-b501f99aca7e" />
+
+Why do we need this P- and N-?
+- hot electron effect: when device size reduces, power supply not reduced so electric field increases
+  - causes high energy carriers to break Si-Si bonds
+  - energy might be so high that it breaks the Si conduction band and enters the oxide layer
+- short channel effect: when device size reduces, drain field penetrates channel so gate hard to control
+
+<img width="728" height="376" alt="image" src="https://github.com/user-attachments/assets/e3f13662-0270-44e4-828c-65b4beec20ba" />
+
+<img width="609" height="397" alt="image" src="https://github.com/user-attachments/assets/a18f8f25-3a00-49c1-aa0c-6c46968ca606" />
+
+Use n type impurity to implant to create n doped
+
+<img width="685" height="351" alt="image" src="https://github.com/user-attachments/assets/26454be4-eac7-43a5-9572-fbd884786f58" />
+
+<img width="633" height="389" alt="image" src="https://github.com/user-attachments/assets/e0ca3fa6-0449-4e14-91b6-2e51d923887a" />
+
+Use p type impurity to create p doped
+
+<img width="752" height="343" alt="image" src="https://github.com/user-attachments/assets/46ef65d3-6b2f-4f20-8cb1-4a8534f20bc4" />
+
+<img width="752" height="338" alt="image" src="https://github.com/user-attachments/assets/38f5baeb-8a33-4955-ad8e-b69b948e962b" />
+
+helps prevent extra stuff from being etched away
+
+<img width="752" height="352" alt="image" src="https://github.com/user-attachments/assets/dd87e668-b86a-491f-a66c-b8f320f3d85a" />
+
+these side-wall spacers help to maintain the implants
+
 ### 41 - Source - drain formation
+6) Source and drain formation
+
+<img width="753" height="363" alt="image" src="https://github.com/user-attachments/assets/5ff9cd5b-6770-420d-baa1-be8f60784da3" />
+
+<img width="738" height="358" alt="image" src="https://github.com/user-attachments/assets/52eebaff-00a0-43e9-92a2-6880a15b2175" />
+
+<img width="683" height="382" alt="image" src="https://github.com/user-attachments/assets/97a6d2e0-e605-4516-941c-c7b74d9efe56" />
+
+Now there's a N+ implant
+
+<img width="617" height="391" alt="image" src="https://github.com/user-attachments/assets/059fdfa5-f40c-4d66-9689-2157db1ee2dc" />
+
+Same thing for other side
+
+<img width="657" height="366" alt="image" src="https://github.com/user-attachments/assets/9224f377-6df2-4fe2-badd-ebea3dbd2f49" />
+
+<img width="703" height="378" alt="image" src="https://github.com/user-attachments/assets/6a588531-1c0b-44fe-8e5c-534c8cbabcfc" />
+
+<img width="603" height="392" alt="image" src="https://github.com/user-attachments/assets/cd1d98b9-a9a8-4b5f-9896-0a411f02a75e" />
+
+<img width="675" height="400" alt="image" src="https://github.com/user-attachments/assets/86b08911-cd55-4e88-9cc5-060c53dc695a" />
+
+High temperature annealing will increase the P+ and N+
+
+<img width="668" height="395" alt="image" src="https://github.com/user-attachments/assets/7aef77ea-dc0e-4dc3-8410-7b03b4212843" />
+
 ### 42 - Local interconnect formation
+
+7) Steps to form contacts and interconnects(local)
+
+<img width="767" height="363" alt="image" src="https://github.com/user-attachments/assets/5b44d60a-9368-4e3a-bb40-2aabbb8f3263" />
+
+<img width="737" height="360" alt="image" src="https://github.com/user-attachments/assets/50543ff5-59a9-4c49-b6c7-4333bf4f21bb" />
+
+Now we shall deposit titanium on wafer surface using sputtering, which is the particles of a metal gets depposited out into the substrate after being exposed to another element
+
+<img width="676" height="316" alt="image" src="https://github.com/user-attachments/assets/2e01e14b-a551-4110-bf7c-1678c91dbf75" />
+
+<img width="763" height="376" alt="image" src="https://github.com/user-attachments/assets/b1362a00-fa07-4b73-86d9-9d396f0884ea" />
+
+<img width="732" height="367" alt="image" src="https://github.com/user-attachments/assets/4eb1f278-0788-449b-b824-cad0bd1931fe" />
+
+<img width="594" height="405" alt="image" src="https://github.com/user-attachments/assets/d5e8a09b-9129-4a54-8114-8a01f626a689" />
+
+<img width="623" height="342" alt="image" src="https://github.com/user-attachments/assets/aceb3c5c-7d8a-4293-ac43-ca568d8664af" />
+
+<img width="707" height="385" alt="image" src="https://github.com/user-attachments/assets/b609e7df-3d45-4664-b412-a6e00a490d83" />
+
+<img width="588" height="384" alt="image" src="https://github.com/user-attachments/assets/f37369e6-d3d4-45af-a188-8cd795632a98" />
+
 ### 43 - Higher level metal formation
+8) Higher level metal formation
+
+<img width="613" height="292" alt="image" src="https://github.com/user-attachments/assets/ebc8185a-0f08-49cd-bc9e-867fae627dbc" />
+
+You can't use this for photography so we have to add some extra stuff
+
+<img width="743" height="398" alt="image" src="https://github.com/user-attachments/assets/e519ff28-eef3-4ed2-a7fa-959a23451594" />
+
+Phosphorous acts as a barrier and boron will reduce temperature of surface. Next we polish
+
+<img width="733" height="383" alt="image" src="https://github.com/user-attachments/assets/e7fc256e-5cea-4248-808e-6350c7d9f10d" />
+
+<img width="629" height="333" alt="image" src="https://github.com/user-attachments/assets/524abeb4-a8f8-471e-acdc-6fc19983e495" />
+
+<img width="627" height="438" alt="image" src="https://github.com/user-attachments/assets/50b7c262-60c0-4099-92aa-e2e7d5af965f" />
+
+<img width="675" height="393" alt="image" src="https://github.com/user-attachments/assets/87b79344-057a-4de8-93ef-d028ce4cc901" />
+
+<img width="613" height="311" alt="image" src="https://github.com/user-attachments/assets/9cb0b000-6c3f-4322-946b-cf9196276f6e" />
+
+<img width="653" height="376" alt="image" src="https://github.com/user-attachments/assets/e662683f-0084-4bf2-b45b-15cc262e6307" />
+
+We add a titanium layer because it acts as a good barrier for the bottom layers and addition layer
+
+<img width="736" height="397" alt="image" src="https://github.com/user-attachments/assets/a159420e-237c-45de-9add-c868ccda736b" />
+
+<img width="751" height="395" alt="image" src="https://github.com/user-attachments/assets/65059f9c-3122-4fa2-83b8-30a67c3aa42c" />
+
+<img width="727" height="379" alt="image" src="https://github.com/user-attachments/assets/85fb3633-de8d-40dd-9edc-7bdc63f4adf5" />
+
+<img width="647" height="461" alt="image" src="https://github.com/user-attachments/assets/7e533e67-3953-4aac-95f7-9295615e62d2" />
+
+<img width="742" height="406" alt="image" src="https://github.com/user-attachments/assets/5f063017-61e8-4a86-a65c-d2de79f22a51" />
+
+<img width="619" height="363" alt="image" src="https://github.com/user-attachments/assets/1e74def3-919c-4bb0-83aa-e5f672999b3c" />
+
+<img width="743" height="397" alt="image" src="https://github.com/user-attachments/assets/5dcb64eb-e95d-492d-8769-ec4044218b62" />
+
+<img width="752" height="397" alt="image" src="https://github.com/user-attachments/assets/5845984e-67c7-4898-9c61-4a74d6ce20a1" />
+
+<img width="730" height="405" alt="image" src="https://github.com/user-attachments/assets/e16476c1-ba6c-49aa-a328-712a72c686ad" />
+
+TiN acts a good barrier and addition
+
+<img width="727" height="396" alt="image" src="https://github.com/user-attachments/assets/3e586faa-7b07-4456-9a52-0c7e1dc0f5d5" />
+
+<img width="718" height="447" alt="image" src="https://github.com/user-attachments/assets/cc0403d1-3f15-4b4c-b7fd-fea0aad5211a" />
+
+As you go from bottom to top the thickness of the metal increases
+
+<img width="743" height="448" alt="image" src="https://github.com/user-attachments/assets/e7e66b99-da51-4f53-ad88-29ad0ab4d00f" />
+
+<img width="740" height="485" alt="image" src="https://github.com/user-attachments/assets/895878d0-dae1-40b4-b553-fae17c4562f0" />
+
+<img width="608" height="481" alt="image" src="https://github.com/user-attachments/assets/137e2203-e590-46a2-b19b-7c36320a4626" />
+
+
 ### 44 - Lab introduction to Sky130 basic layers layout and LEF using inverter
 ### 45 - Lab steps to create std cell layout and extract spice netlist
 ## Sky130 Tech File
