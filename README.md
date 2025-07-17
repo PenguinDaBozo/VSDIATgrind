@@ -69,7 +69,7 @@ GitHub for my VSDIAT adventure!
     - [50 - Lab introduction to Magic and steps to load Sky130 tech-rules](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#50---lab-introduction-to-magic-and-steps-to-load-sky130-tech-rules)
     - [51 - Lab exercise to fix poly.9 error in Sky130 tech-file](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#51---lab-exercise-to-fix-poly9-error-in-sky130-tech-file)
     - [52 - Lab exercise to implement poly resistor spacing to diff and tap](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#52---lab-exercise-to-implement-poly-resistor-spacing-to-diff-and-tap)
-    - 53 - Lab challenge exercise to describe DRC error as geometrical construct
+    - [53 - Lab challenge exercise to describe DRC error as geometrical construct](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#53---lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
     - 54 - Lab challenge to find missing or incorrect rules and fix them
   
 Sky130 DAY 4 - Pre-layout timing analysis and importance of good clock tree
