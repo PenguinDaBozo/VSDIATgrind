@@ -23,8 +23,8 @@ GitHub for my VSDIAT adventure!
     - [12 - Utilization factor and aspect ratio](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#12---utilization-factor-and-aspect-ratio)
     - [13 - Concept of pre-placed cells](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#13---concept-of-pre-placed-cells)
     - [14 - De-coupling capacitors](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#14---de-coupling-capacitors)
-    - 15 - Power planning
-    - 16 - Pin placement and logical cell placement blockage
+    - [15 - Power planning](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#15---power-planning)
+    - 16 - [Pin placement and logical cell placement blockage](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%202.md#16---pin-placement-and-logical-cell-placement-blockage)
     - 17 - Steps to run floorplan using OpenLANE
     - 18 - Review floorplan files and steps to view floorplan
     - 19 - Review floorplan layout in Magic
