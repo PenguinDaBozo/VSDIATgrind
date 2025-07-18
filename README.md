@@ -73,7 +73,7 @@ GitHub for my VSDIAT adventure!
     - [54 - Lab challenge to find missing or incorrect rules and fix them](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#54---lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
   
 [Sky130 DAY 4 - Pre-layout timing analysis and importance of good clock tree](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#sky130-day-4---pre-layout-timing-analysis-and-importance-of-good-clock-tree)
-- Timing modelling using delay tables
+- [Timing modelling using delay tables](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#timing-modelling-using-delay-tables)
     - 55 - Labs steps to convert grid info to track info
     - 56 - Lab steps to convert magic layout to std cell LEF
     - 57 - Intoduction to timing libs and steps to include new cell in synthesis
