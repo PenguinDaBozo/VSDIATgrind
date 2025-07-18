@@ -72,7 +72,7 @@ GitHub for my VSDIAT adventure!
     - [53 - Lab challenge exercise to describe DRC error as geometrical construct](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#53---lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
     - [54 - Lab challenge to find missing or incorrect rules and fix them](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%203.md#54---lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
   
-Sky130 DAY 4 - Pre-layout timing analysis and importance of good clock tree
+[Sky130 DAY 4 - Pre-layout timing analysis and importance of good clock tree](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#sky130-day-4---pre-layout-timing-analysis-and-importance-of-good-clock-tree)
 - Timing modelling using delay tables
     - 55 - Labs steps to convert grid info to track info
     - 56 - Lab steps to convert magic layout to std cell LEF
