@@ -558,8 +558,19 @@ to save press esc and then :wq
 
 <img width="531" height="108" alt="image" src="https://github.com/user-attachments/assets/ecf7543f-1287-4a4b-80d1-defc9adf53a7" />
 
+<img width="1009" height="506" alt="image" src="https://github.com/user-attachments/assets/a208d106-65a4-4de7-a506-c0ae943b1659" />
 
+rerun drc check
 
 ### 52 - Lab exercise to implement poly resistor spacing to diff and tap
+
+<img width="680" height="347" alt="image" src="https://github.com/user-attachments/assets/6042545b-cc2d-49fe-93f7-1689990ff435" />
+
+poly.1a - change the size of poly rule
+
+<img width="1437" height="751" alt="image" src="https://github.com/user-attachments/assets/bba38760-2390-4889-97d5-aa715630b754" />
+
+
+
 ### 53 - Lab challenge exercise to describe DRC error as geometrical construct
 ### 54 - Lab challenge to find missing or incorrect rules and fix them
