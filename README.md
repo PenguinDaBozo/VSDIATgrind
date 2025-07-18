@@ -74,21 +74,21 @@ GitHub for my VSDIAT adventure!
   
 [Sky130 DAY 4 - Pre-layout timing analysis and importance of good clock tree](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#sky130-day-4---pre-layout-timing-analysis-and-importance-of-good-clock-tree)
 - [Timing modelling using delay tables](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#timing-modelling-using-delay-tables)
-    - 55 - Labs steps to convert grid info to track info
-    - 56 - Lab steps to convert magic layout to std cell LEF
-    - 57 - Intoduction to timing libs and steps to include new cell in synthesis
-    - 58 - Introduction to delay tables
-    - 59 - Delay table usage Part 1
-    - 60 - Delay table usage Part 2
-    - 61 - Lab steps to configure synthesis settings to fix slack and include vsdinv
-- Timing analysis with ideal clocks using openSTA
-    - 62 - Setup timing analysis and introduction to flip-flop setup time
-    - 63 - Introduction to clock jitter and uncertainty
-    - 64 - Lab steps to configure OpenSTA for post-synth timing analysis
-    - 65 - Lab steps to optimize synthesis to reduce setup violations
-    - 66 - Lab steps to do basic timing ECO
-- Clock tree synthesis TritonCTS and signal integrity
-    - 67 - Clock tree routing and buffering using H-Tree algorithm
+    - [55 - Lab steps to convert grid info to track info](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#55---lab-steps-to-convert-grid-info-to-track-info)
+    - [56 - Lab steps to convert magic layout to std cell LEF](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#56---lab-steps-to-convert-magic-layout-to-std-cell-lef)
+    - [57 - Introduction to timing libs and steps to include new cell in synthesis](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#57---introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
+    - [58 - Introduction to delay tables](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#58---introduction-to-delay-tables)
+    - [59 - Delay table usage Part 1](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#59---delay-table-usage-part-1)
+    - [60 - Delay table usage Part 2](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#60---delay-table-usage-part-2)
+    - [61 - Lab steps to configure synthesis settings to fix slack and include vsdinv](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#61---lab-steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
+- [Timing analysis with ideal clocks using openSTA](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#timing-analysis-with-ideal-clocks-using-opensta)
+    - [62 - Setup timing analysis and introduction to flip-flop setup time](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#62---setup-timing-analysis-and-introduction-to-flip-flop-setup-time)
+    - [63 - Introduction to clock jitter and uncertainty](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#63---introduction-to-clock-jitter-and-uncertainty)
+    - [64 - Lab steps to configure OpenSTA for post-synth timing analysis](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#64---lab-steps-to-configure-opensta-for-post-synth-timing-analysis)
+    - [65 - Lab steps to optimize synthesis to reduce setup violations](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#65--labs-steps-to-optimize-synthesis-to-reduce-setup-violations)
+    - [66 - Lab steps to do basic timing ECO](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#66---lab-steps-to-do-basic-timing-eco)
+- [Clock tree synthesis TritonCTS and signal integrity](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#clock-tree-synthesis-tritoncts-and-signal-integrity)
+    - [67 - Clock tree routing and buffering using H-Tree algorithm](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#67---clock-tree-routing-and-buffering-using-h-tree-algorithm)
     - 68 - Crosstalk and clock net shielding
     - 69 - Lab steps to run CTS using TritonCTS
     - 70 - Lab steps to verify CTS runs
