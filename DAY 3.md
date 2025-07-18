@@ -439,16 +439,127 @@ in libs pshort.lib, we see that its called pshort_model
 change the names to pshort_model.0 and nshort_model.0
 <img width="764" height="508" alt="image" src="https://github.com/user-attachments/assets/db0a8431-438f-4919-b53a-ea633c448057" />
 
+a few other things have to be changed as well
+
+<img width="1219" height="646" alt="image" src="https://github.com/user-attachments/assets/6cbe0e35-a8bc-4cdb-86ba-ac48bea3ecbf" />
+
+
 ### 47 - Lab steps to characterize inverter using sky130 model files
 
 <img width="1067" height="38" alt="image" src="https://github.com/user-attachments/assets/490e8da0-6f3b-49c1-8a47-7e496becd99c" />
 
+This should be what you see after running ngspice
 
+<img width="1052" height="623" alt="image" src="https://github.com/user-attachments/assets/efca61cb-21ee-4d2f-bbad-651c92750f24" />
+
+> ngspice 1 -> plot y vs time a
+This will generate a waveform
+
+<img width="656" height="734" alt="image" src="https://github.com/user-attachments/assets/d9787dd6-7a13-4034-914f-b8402f8d81ee" />
+
+<img width="1141" height="690" alt="image" src="https://github.com/user-attachments/assets/c68249a9-23a6-46f5-be9f-9d925e718777" />
+
+So we go edit some stuff
+
+*note: i edited other stuff to match the tutorial*
+<img width="991" height="651" alt="image" src="https://github.com/user-attachments/assets/1e484aed-5831-479b-ad3c-e49a027c2498" />
+
+then in ngspice
+> plot y vs time a
+
+<img width="1148" height="742" alt="image" src="https://github.com/user-attachments/assets/79678112-4d2b-47e3-a29a-bfa785319ee7" />
+
+and to zoom in right click to create a box and then fullscreen window
+
+<img width="1150" height="734" alt="image" src="https://github.com/user-attachments/assets/846d7594-93ef-4815-9ef6-300bf6f29e49" />
+
+<img width="1110" height="657" alt="image" src="https://github.com/user-attachments/assets/1283e73d-3c81-4349-8c9d-87d9bc74a13c" />
+
+click on a point and it will give the position in terminal
+
+<img width="296" height="53" alt="image" src="https://github.com/user-attachments/assets/fa394814-0692-4485-8186-2864dbcc8ffd" />
+
+this is the 20%
+
+next we are going to find 80%
+
+<img width="267" height="27" alt="image" src="https://github.com/user-attachments/assets/c8a33a88-c216-4720-b296-2618cab31af6" />
+
+the difference between the two x will give you rise time
+
+now we are going to find cell rise delay
+
+<img width="305" height="69" alt="image" src="https://github.com/user-attachments/assets/0585c9f6-1797-429d-876d-d789e08023ef" />
+
+Subtract the two x
 
 ### 48 - Lab introduction to Magic tool options and DRC rules
+
+[Magic documentation](http://opencircuitdesign.com/magic/) -> tells you how to use magic
+
+
 ### 49 - Lab introduction to Sky130 pdk's and steps to download labs
+
+[Skywater documentation](https://skywater-pdk.readthedocs.io/en/main/) <- this website might not exist anymore
+
+Magic tech file should be created first. To get the full pdk you need to install the github.
+
+To start the lab you should cd to /home/USER/drc_tests
+
+[we need this for the lab](http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz)
+
+Then we extract the files using tar xfz drc_tests.tgz
+
+And then we go into the directory by cd drc_tests and open magic using magic -d XR
+
+<img width="1193" height="403" alt="image" src="https://github.com/user-attachments/assets/6a7a53d7-0bee-4898-b2e7-aa44e5cac7b1" />
+
+<img width="440" height="39" alt="image" src="https://github.com/user-attachments/assets/a3539410-d026-40ad-949c-a0e66c570157" />
+
 ### 50 - Lab introduction to Magic and steps to load Sky130 tech-rules
+You can open met3.mag by file -> open -> met3.mag
+
+<img width="947" height="550" alt="image" src="https://github.com/user-attachments/assets/a56fc57c-57b9-4137-a6c8-c3c2d571dd1b" />
+
+On the periphery rules, you can find the rules for each metal
+
+use a colon to enter commands into the terminal
+
+<img width="830" height="891" alt="image" src="https://github.com/user-attachments/assets/971a1e8e-f8db-4c87-a815-eef8ef09e219" />
+
+<img width="184" height="74" alt="image" src="https://github.com/user-attachments/assets/835b633e-0161-4587-b78f-19764c5f2bf7" />
+
+<img width="217" height="89" alt="image" src="https://github.com/user-attachments/assets/163e4d43-96a3-43b2-a287-d152752d8ea0" />
+
+<img width="811" height="943" alt="image" src="https://github.com/user-attachments/assets/2c68e010-2136-4a16-976d-215303d74ac6" />
+
+<img width="536" height="577" alt="image" src="https://github.com/user-attachments/assets/37aee6a0-62a1-4244-a38c-9e82810c7863" />
+
+snap int - aligns the box to the edges
+box - can be used to measure distance
+
 ### 51 - Lab exercise to fix poly.9 error in Sky130 tech-file
+
+<img width="1026" height="717" alt="image" src="https://github.com/user-attachments/assets/dad47382-8de4-4618-810b-3424c3d4f9b4" />
+
+<img width="791" height="563" alt="image" src="https://github.com/user-attachments/assets/6e7dfcea-1277-43d2-a995-700a07fb602a" />
+
+To see the file go vi sky130A.tech in drc_tests
+
+<img width="802" height="847" alt="image" src="https://github.com/user-attachments/assets/6e8357e6-c561-43e1-99f8-b5b497827a9b" />
+
+to find stuff use / and whatever you want to find
+
+to edit the file, use i to insert stuff
+
+to save press esc and then :wq
+
+<img width="713" height="318" alt="image" src="https://github.com/user-attachments/assets/7da9e9f1-66a8-4931-b685-73e53200a91b" />
+
+<img width="531" height="108" alt="image" src="https://github.com/user-attachments/assets/ecf7543f-1287-4a4b-80d1-defc9adf53a7" />
+
+
+
 ### 52 - Lab exercise to implement poly resistor spacing to diff and tap
 ### 53 - Lab challenge exercise to describe DRC error as geometrical construct
 ### 54 - Lab challenge to find missing or incorrect rules and fix them
