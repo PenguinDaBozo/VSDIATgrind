@@ -1,8 +1,8 @@
 # Sky130 DAY 4 - Pre-layout timing analysis and importance of good clock tree
 ## Timing modelling using delay tables
-### 55 - Labs steps to convert grid info to track info
+### 55 - Lab steps to convert grid info to track info
 ### 56 - Lab steps to convert magic layout to std cell LEF
-### 57 - Intoduction to timing libs and steps to include new cell in synthesis
+### 57 - Introduction to timing libs and steps to include new cell in synthesis
 ### 58 - Introduction to delay tables
 ### 59 - Delay table usage Part 1
 ### 60 - Delay table usage Part 2
