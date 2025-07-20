@@ -571,6 +571,123 @@ poly.1a - change the size of poly rule
 <img width="1437" height="751" alt="image" src="https://github.com/user-attachments/assets/bba38760-2390-4889-97d5-aa715630b754" />
 
 
-
 ### 53 - Lab challenge exercise to describe DRC error as geometrical construct
+
+cifmaxwidth - part of rule set that check layers exactly as how they are in the gds output even though those layers aren't something you can draw directly in the layout
+
+there are several more cif drc rules with width and spacing but cifmaxwidth is the most convenient
+
+here width is 0 and bend is illegal 
+
+<img width="857" height="353" alt="image" src="https://github.com/user-attachments/assets/0ca9b663-1dc9-4ce4-9a59-258156b87e3f" />
+
+all that matters is using layer name which in this case is nwell_missing dnwell
+
+<img width="808" height="403" alt="image" src="https://github.com/user-attachments/assets/31d202d4-1e22-45fb-9245-3a79e8e7a9ac" />
+
+all the heavy lifting is done in cifoutput
+
+<img width="444" height="377" alt="image" src="https://github.com/user-attachments/assets/bbfc07cc-ca9d-4c7b-8a91-d419b8ed80e3" />
+
+in nwell.mag, you can see that the edge of the deep nwell needs to be covered by a regular ring of nwell
+the outside distance rule can be implemented with a surround drc rule but the inside can't be captured with an edge type rule
+
+let's go find where this layer is described in the cif output section
+
+first we need to go find the style called drc
+
+the way the cif max width drc rule is implemented with equalt ot 0 implies that the nwell_missing layer is what's leftover if either the inside or outside dimension of nwell overlapping deep nwell doesn't reach the required distance
+
+*NOTE: everything implemented in the cif is a templayer rather than a layer*
+
+temp layers have the unique feature where they can be used as building blocks of other layers
+
+since the drc file does not produce any gds output theres no point in creating normal layers in it and so everything is a temp layer
+
+<img width="689" height="177" alt="image" src="https://github.com/user-attachments/assets/61ba307c-5333-43fb-8538-4747862987b6" />
+
+the templayer dnwell_shrink is shrunk 1030 nm and is the required distance that the nwell must overlap the well on the inside
+
+dnwell_shrink represents the largest open area that you can have inside the area of deep n well
+
+the nwell_missing templayer starts with the dnwell layer then grows it by 400, which is the distance required by the surround rules in nm -> gives you the smallest nwell area that is needed to cover the deep nwell layer
+
+next the rule does a and-not operation on dnwell_shrink -> contains least possible amount of nwell that satisfy both the outside surround and the inside overlap rules
+
+this means that if any of the area that does not contain nwell then one of the two rules is being violated
+
+so the last operation rule is to do and-not nwell which will result in something leftover if any rules are violated
+
+now that leftover bit gets passed back to the cifmaxwidth rule and if theres anything leftover, that gets flagged as an error
+
+in the layout, by putting cursor box around the nwell.6 drawing 
+
+first you need to do the command cif ostyle drc because you can only see the layers for the cif output layers 
+
+<img width="1155" height="598" alt="image" src="https://github.com/user-attachments/assets/ec2c5054-cc09-4271-81bd-33c7319ae123" />
+
+then cif see dnwell_shrink to see that area
+
+then clear it with feed clear
+
+then cif see nwell_missing
+
+feed clear
+
+<img width="973" height="608" alt="image" src="https://github.com/user-attachments/assets/e36a6e82-ff47-450a-bb62-2c0b9efc32bd" />
+
+make sure use right style because only one can be used at a time 
+
+*NOTE: any edge based rule could in principle be made of the cif operators but also be aware that **generating these layers is very compute intensive** and will slow magic down*
+
+TO keep magic from getting bugged down, it's best to use the drc simple edge based rules whenever possible and to put cif output rules in a separate style variant that can be ran on demand but can be prevented from running most of the time during interactive layout so it doesnt slow things down
+
+those rules are best left to a batch style drc process, but they can be checked by the user from time to time if needed
+
+<img width="540" height="296" alt="image" src="https://github.com/user-attachments/assets/9ed1b191-4f33-49bd-85bf-919ffe022e13" />
+
+in this tech file the two variants are named drc fast and drc full 
+- drc fast is intended for backend metal layers and large synthesized digital design without forcing magic to check all layers below 
+- drc full will check everything, which can keep up with the interactive use as long as its in a relatively small layout
+
+you can switch between them by using drc style, drc fast, and drc full
+
 ### 54 - Lab challenge to find missing or incorrect rules and fix them
+
+<img width="513" height="389" alt="image" src="https://github.com/user-attachments/assets/b6ab85b1-8cfb-47c5-aeb8-5f8fc506a289" />
+
+The rule is stated that all nwell must contain metal contacted taps. The rule only checks licon on tap (every nwell must have a n type layer contact, which in magic is called n contact or nsc inside it somewhere)
+
+Since there's no distance associated with the rule, it's possible to write this as a simple edge based drc rule but does lend itself to a cif output rule very easily
+
+The general idea of the rule is this: 
+- take all ntype contacts and expand the area of any nwell beneath
+
+for that, there's a cif output operator called bloat-all
+
+after applying the bloat-all operator, you have a set of all nwell that contains tap so all you ahve to do is take the set of all nwell and remove all nwell that contains tap and whatever is leftover is an error 
+
+<img width="780" height="275" alt="image" src="https://github.com/user-attachments/assets/9657140a-cfff-4f1b-ae42-37be8af3e497" />
+
+<img width="404" height="333" alt="image" src="https://github.com/user-attachments/assets/e5cceb56-d2d6-4f72-8e86-24cd947f2fe8" />
+
+all nwell geometry subtracted by nwell tapped geometry, leaving only those who are untapped
+
+<img width="397" height="32" alt="image" src="https://github.com/user-attachments/assets/9c90c181-53ee-4666-b0a8-c1be63bae89b" />
+
+
+this rule is only checked when drc style is full, all the rules below it are checked for all drc style
+
+<img width="1033" height="476" alt="image" src="https://github.com/user-attachments/assets/6106f2da-749f-4af7-bdb9-d2da96199304" />
+
+<img width="906" height="407" alt="image" src="https://github.com/user-attachments/assets/8bdccfea-de5c-43c9-802f-5d91799b84e3" />
+
+<img width="686" height="350" alt="image" src="https://github.com/user-attachments/assets/7c37d7b4-6e15-420b-bea7-9e1eb5822cdb" />
+
+
+
+
+
+
+
+
