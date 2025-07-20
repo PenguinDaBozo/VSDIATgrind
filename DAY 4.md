@@ -36,20 +36,78 @@ Pins lie at the intersection of the grid in A and Y
 
 ### 56 - Lab steps to convert magic layout to std cell LEF
 
+<img width="731" height="424" alt="image" src="https://github.com/user-attachments/assets/3d91c9f0-a009-4a58-a35d-ff02f0621558" />
 
+This white line define the area boundry and there are 3 boxes between the white lines
 
+<img width="731" height="424" alt="image" src="https://github.com/user-attachments/assets/0be6080c-5a0b-47d3-b660-0b7ecb18c281" />
 
+Other guideline is it should be in the odd multiple of the x pinch
 
+Same thing is required for the height of the standard cell
 
+<img width="817" height="550" alt="image" src="https://github.com/user-attachments/assets/29c606d4-7974-44f3-b82f-3e09cdd7fe96" />
 
+Port definition is required when you want to extract from lef file
 
+So when you extract the lef file, these ports are the pins of the macro
 
+How to convert your label 
 
+- select your label -> edit -> text
 
+<img width="847" height="505" alt="image" src="https://github.com/user-attachments/assets/caa0e683-8059-438b-97e0-d9458270e25e" />
 
+A and Y - locali layer
+GND and power - metal1
 
+Next we have to define the purpose of the port
+
+<img width="847" height="748" alt="image" src="https://github.com/user-attachments/assets/8a469ce7-7823-464a-afd0-fa513a4a9f2c" />
+
+Now we will extract the lef file
+
+before we do that let's give it a name:
+
+<img width="919" height="489" alt="image" src="https://github.com/user-attachments/assets/0d596813-e9a2-499b-9cb3-7e65217439e7" />
+
+well guess we can't anyways
+
+<img width="937" height="500" alt="image" src="https://github.com/user-attachments/assets/788ec757-b52d-42b7-bd7d-97e5c86bf591" />
+
+<img width="889" height="245" alt="image" src="https://github.com/user-attachments/assets/672ab0dc-3151-457d-9bad-2454ef8e33ef" />
+
+<img width="435" height="479" alt="image" src="https://github.com/user-attachments/assets/9e00dddc-de6d-49d9-903f-a1bca39cf562" />
+
+pin a is first because we set it to 0 earlier
 
 ### 57 - Introduction to timing libs and steps to include new cell in synthesis
+
+<img width="970" height="345" alt="image" src="https://github.com/user-attachments/assets/4344453e-13f6-4459-8cf8-ae9924ed2378" />
+
+we need to synthesize our custom cell and for that we need a library
+
+<img width="973" height="486" alt="image" src="https://github.com/user-attachments/assets/bb5bb189-4335-4242-bcaf-89fed4424102" />
+
+library for every cell
+
+theres a fast, slow, and typical for different temperatures. it is the first line of each lib file:
+- type / temperature / voltage
+
+<img width="978" height="63" alt="image" src="https://github.com/user-attachments/assets/54d9a430-9f7e-4e81-815e-6b95db9b3e14" />
+
+we need to modify config.tcl file
+
+<img width="977" height="393" alt="image" src="https://github.com/user-attachments/assets/96298a51-d7e7-4017-98f6-49bce733d6a5" />
+
+
+
+
+
+
+
+
+
 ### 58 - Introduction to delay tables
 ### 59 - Delay table usage Part 1
 ### 60 - Delay table usage Part 2
