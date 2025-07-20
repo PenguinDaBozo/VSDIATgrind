@@ -35,6 +35,20 @@ Pins lie at the intersection of the grid in A and Y
 
 
 ### 56 - Lab steps to convert magic layout to std cell LEF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 57 - Introduction to timing libs and steps to include new cell in synthesis
 ### 58 - Introduction to delay tables
 ### 59 - Delay table usage Part 1
