@@ -108,15 +108,89 @@ then run_synthesis
 
 <img width="321" height="80" alt="image" src="https://github.com/user-attachments/assets/218e9437-65b7-425c-b6c9-66fb5e4ac40b" />
 
-
-
-
-
-
 ### 58 - Introduction to delay tables
+
+<img width="468" height="295" alt="image" src="https://github.com/user-attachments/assets/ae8adf48-3f2d-4888-bb4d-35f40bb49550" />
+
+AND gate:
+- when top is 1, clock will be propagated
+- when the top pin is 0, the clock will be blocked
+OR gate:
+- when 0, propagated
+- when 1, blocked
+
+Advantage: There will be no switching or short circuit power that will be consumed by the clock tree during that period of time 
+
+<img width="315" height="254" alt="image" src="https://github.com/user-attachments/assets/adcb818e-8dba-47fd-a33d-826ce8d03e2a" />
+
+<img width="289" height="254" alt="image" src="https://github.com/user-attachments/assets/4ebade4c-7b20-46e6-9e71-85e2c06dafca" />
+
+Will everything still work if we swtich it? Well, we have to look at the timing.
+
+<img width="787" height="278" alt="image" src="https://github.com/user-attachments/assets/4095641f-df79-49b2-9f28-33410a62bc47" />
+
+The load of the output will vary at each level. -> and that's why we use delay tables
+
+There's a delay table for each cell and those became the timing model for the respective buffers
+
+<img width="395" height="237" alt="image" src="https://github.com/user-attachments/assets/c207b664-831a-46f1-8b9b-0116b6013716" />
+
+
 ### 59 - Delay table usage Part 1
+
+<img width="388" height="452" alt="image" src="https://github.com/user-attachments/assets/b6d73c91-3dd8-4ce7-a6a9-de3f293e95c3" />
+
+We take the input slew and then look at the output load and wherever intersect is the delay
+
+<img width="383" height="230" alt="image" src="https://github.com/user-attachments/assets/a88a6e2a-b781-4002-8cfa-40cd6993b6ab" />
+
+pmos nmos size will correlate to the size of the number of the delay table
+
+as you increase the size of the nmos pmos, you reduce resistance and by varying resistance you have varying rc(delay output).
+
+<img width="343" height="460" alt="image" src="https://github.com/user-attachments/assets/423229da-8aae-4a55-be76-385e7b12a5a7" />
+
+<img width="310" height="160" alt="image" src="https://github.com/user-attachments/assets/7eeee53d-6972-4042-b433-4a165cfa43cc" />
+
+We're going to call A x9' because it lies between 50fF and 70fF so it lies between x9 and x10
+
+
 ### 60 - Delay table usage Part 2
+
+<img width="382" height="229" alt="image" src="https://github.com/user-attachments/assets/de6f6640-e211-4ac8-b4d8-b7287ac589b5" />
+
+<img width="262" height="240" alt="image" src="https://github.com/user-attachments/assets/09d38831-f7a7-4326-a60e-c1ce2a2574a6" />
+
+<img width="462" height="237" alt="image" src="https://github.com/user-attachments/assets/0c7089d6-ca81-4e2c-8d40-4db77e6612b2" />
+
+Skew is 0 because each node is driving the same load otherwise it will have different delays for each output
+
+It is important to setup the two observations early on so that it doesn't propagate through your big circuit in the future.
+
 ### 61 - Lab steps to configure synthesis settings to fix slack and include vsdinv
+
+<img width="315" height="65" alt="image" src="https://github.com/user-attachments/assets/8ad90972-f4e3-4a18-bcc0-5763d45e7051" />
+
+wns is the maximum slack
+tns is the total layer slack
+
+let's make the synthesis more time driven
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Timing analysis with ideal clocks using openSTA
 ### 62 - Setup timing analysis and introduction to flip-flop setup time
 ### 63 - Introduction to clock jitter and uncertainty
