@@ -71,11 +71,8 @@ Now we will extract the lef file
 
 before we do that let's give it a name:
 
-<img width="919" height="489" alt="image" src="https://github.com/user-attachments/assets/0d596813-e9a2-499b-9cb3-7e65217439e7" />
+<img width="378" height="300" alt="image" src="https://github.com/user-attachments/assets/683f9d39-fac9-4cf9-8cd4-80877d0c2da2" />
 
-well guess we can't anyways
-
-<img width="937" height="500" alt="image" src="https://github.com/user-attachments/assets/788ec757-b52d-42b7-bd7d-97e5c86bf591" />
 
 <img width="889" height="245" alt="image" src="https://github.com/user-attachments/assets/672ab0dc-3151-457d-9bad-2454ef8e33ef" />
 
