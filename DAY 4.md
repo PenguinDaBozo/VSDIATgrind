@@ -100,8 +100,13 @@ we need to modify config.tcl file
 
 <img width="977" height="393" alt="image" src="https://github.com/user-attachments/assets/96298a51-d7e7-4017-98f6-49bce733d6a5" />
 
+<img width="883" height="396" alt="image" src="https://github.com/user-attachments/assets/1ec3f6b4-7109-4843-b9d9-e1e961fc511e" />
 
+<img width="782" height="268" alt="image" src="https://github.com/user-attachments/assets/92857f79-0462-4073-a823-174d383b93f4" />
 
+then run_synthesis
+
+<img width="321" height="80" alt="image" src="https://github.com/user-attachments/assets/218e9437-65b7-425c-b6c9-66fb5e4ac40b" />
 
 
 
