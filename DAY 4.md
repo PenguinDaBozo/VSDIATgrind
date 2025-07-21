@@ -58,7 +58,7 @@ How to convert your label
 
 - select your label -> edit -> text
 
-<img width="847" height="505" alt="image" src="https://github.com/user-attachments/assets/caa0e683-8059-438b-97e0-d9458270e25e" />
+<img width="650" height="553" alt="image" src="https://github.com/user-attachments/assets/71260a4a-a64e-4b84-b456-5258d7429e63" />
 
 A and Y - locali layer
 GND and power - metal1
