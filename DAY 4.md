@@ -36,11 +36,13 @@ Pins lie at the intersection of the grid in A and Y
 
 ### 56 - Lab steps to convert magic layout to std cell LEF
 
-<img width="731" height="424" alt="image" src="https://github.com/user-attachments/assets/3d91c9f0-a009-4a58-a35d-ff02f0621558" />
+<img width="589" height="470" alt="image" src="https://github.com/user-attachments/assets/78129eb8-8461-463b-a67f-6d82879d9748" />
+
 
 This white line define the area boundry and there are 3 boxes between the white lines
 
-<img width="731" height="424" alt="image" src="https://github.com/user-attachments/assets/0be6080c-5a0b-47d3-b660-0b7ecb18c281" />
+<img width="595" height="393" alt="image" src="https://github.com/user-attachments/assets/08403920-a2e8-4364-9451-d5c3d27b5d7e" />
+
 
 Other guideline is it should be in the odd multiple of the x pinch
 
