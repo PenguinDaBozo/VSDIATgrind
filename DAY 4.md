@@ -176,6 +176,23 @@ tns is the total layer slack
 
 let's make the synthesis more time driven
 
+<img width="319" height="327" alt="image" src="https://github.com/user-attachments/assets/46614137-80ac-4799-9b35-577c3d1c0c79" />
+
+<img width="318" height="82" alt="image" src="https://github.com/user-attachments/assets/d170b70d-4ee8-4de0-a0c7-3c84d102eab6" />
+
+The slack should have been reduced and now we will run floorplan.
+
+<img width="991" height="285" alt="image" src="https://github.com/user-attachments/assets/a217a6de-8579-4af7-b5c4-612985b5a079" />
+
+confirms placement can be run
+
+'''run_placement'''
+
+OVFL should decrease to 0
+
+<img width="982" height="145" alt="image" src="https://github.com/user-attachments/assets/79758ca1-b4e0-4de7-ad6c-6326552670dc" />
+
+<img width="399" height="412" alt="image" src="https://github.com/user-attachments/assets/046781b2-4f83-496a-8aaf-30bb496b7cdf" />
 
 
 
