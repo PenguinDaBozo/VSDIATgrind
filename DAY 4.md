@@ -194,19 +194,9 @@ OVFL should decrease to 0
 
 <img width="399" height="412" alt="image" src="https://github.com/user-attachments/assets/046781b2-4f83-496a-8aaf-30bb496b7cdf" />
 
+then in terminal enter the command expand after selecting a cell
 
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="765" height="457" alt="image" src="https://github.com/user-attachments/assets/67fa5e88-4100-4241-adce-c771f3fb6275" />
 
 ## Timing analysis with ideal clocks using openSTA
 ### 62 - Setup timing analysis and introduction to flip-flop setup time
