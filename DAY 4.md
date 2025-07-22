@@ -185,6 +185,8 @@ let's make the synthesis more time driven
 
 The slack should have been reduced and now we will run floorplan.
 
+'''run_floorplan'''
+
 <img width="991" height="285" alt="image" src="https://github.com/user-attachments/assets/a217a6de-8579-4af7-b5c4-612985b5a079" />
 
 confirms placement can be run
@@ -194,6 +196,8 @@ confirms placement can be run
 OVFL should decrease to 0
 
 <img width="982" height="145" alt="image" src="https://github.com/user-attachments/assets/79758ca1-b4e0-4de7-ad6c-6326552670dc" />
+
+<img width="950" height="78" alt="image" src="https://github.com/user-attachments/assets/53e1ec62-29b7-40ad-83ab-a9c09102763f" />
 
 <img width="399" height="412" alt="image" src="https://github.com/user-attachments/assets/046781b2-4f83-496a-8aaf-30bb496b7cdf" />
 
