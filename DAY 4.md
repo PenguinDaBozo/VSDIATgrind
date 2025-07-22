@@ -104,7 +104,8 @@ we need to modify config.tcl file
 
 <img width="883" height="396" alt="image" src="https://github.com/user-attachments/assets/1ec3f6b4-7109-4843-b9d9-e1e961fc511e" />
 
-<img width="782" height="268" alt="image" src="https://github.com/user-attachments/assets/92857f79-0462-4073-a823-174d383b93f4" />
+<img width="479" height="70" alt="image" src="https://github.com/user-attachments/assets/0642e7d0-6f9f-4510-88ab-20e77681e07e" />
+
 
 then run_synthesis
 
