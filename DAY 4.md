@@ -84,7 +84,7 @@ pin a is first because we set it to 0 earlier
 
 ### 57 - Introduction to timing libs and steps to include new cell in synthesis
 
-<img width="970" height="345" alt="image" src="https://github.com/user-attachments/assets/4344453e-13f6-4459-8cf8-ae9924ed2378" />
+<img width="956" height="40" alt="image" src="https://github.com/user-attachments/assets/ed270ea3-37a2-452c-b4f1-5330c56ee2f8" />
 
 we need to synthesize our custom cell and for that we need a library
 
