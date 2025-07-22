@@ -2,7 +2,8 @@
 ## Timing modelling using delay tables
 ### 55 - Lab steps to convert grid info to track info
 
-<img width="209" height="375" alt="image" src="https://github.com/user-attachments/assets/1871c4a5-bd0b-472f-9717-9ccf3996e373" />
+<img width="765" height="536" alt="image" src="https://github.com/user-attachments/assets/e92c6d60-f378-44b1-8bfb-26654f460845" />
+
 
 This is where lef comes in because it has all the information. The guidelines to be followed while making a standard cell are -:
 
