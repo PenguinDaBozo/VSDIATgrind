@@ -74,7 +74,8 @@ before we do that let's give it a name:
 <img width="378" height="300" alt="image" src="https://github.com/user-attachments/assets/683f9d39-fac9-4cf9-8cd4-80877d0c2da2" />
 
 
-<img width="889" height="245" alt="image" src="https://github.com/user-attachments/assets/672ab0dc-3151-457d-9bad-2454ef8e33ef" />
+<img width="810" height="282" alt="image" src="https://github.com/user-attachments/assets/c632b8fb-f244-4b0f-81a8-f6102180507c" />
+
 
 <img width="435" height="479" alt="image" src="https://github.com/user-attachments/assets/9e00dddc-de6d-49d9-903f-a1bca39cf562" />
 
