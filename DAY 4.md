@@ -28,7 +28,7 @@ How to change dimension of grid
 
 <img width="849" height="528" alt="image" src="https://github.com/user-attachments/assets/09db21a4-b45b-45e0-95ea-38f4b21daba7" />
 
-<img width="541" height="493" alt="image" src="https://github.com/user-attachments/assets/0974c344-ab09-4f22-b678-81277eff9a42" />
+<img width="759" height="539" alt="image" src="https://github.com/user-attachments/assets/5423b4c2-c10a-4e39-897b-2797c4fd9346" />
 
 Pins lie at the intersection of the grid in A and Y
 
