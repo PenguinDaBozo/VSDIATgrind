@@ -100,7 +100,7 @@ GitHub for my VSDIAT adventure!
     - 75 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
 
 [Sky130 DAY 5 - Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#sky130-day-5---final-steps-for-rtl2gds-using-tritonroute-and-opensta)
-- Routing and design rule check (DRC)
+- [Routing and design rule check (DRC)](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#routing-and-design-rule-check-drc)
     - 76 - Introduction to Maze-Routing - Lee's Algorithm
     - 77 - Lee's Algorithm conclusion
     - 78 - Design Rule Check
