@@ -357,14 +357,77 @@ By shielding, we break the coupling capacitor link
 
 As it tries to go from 0 to 1, theres a drop and this will cause a bumpy delay
 
-
-
-
 ### 69 - Lab steps to run CTS using TritonCTS
 ### 70 - Lab steps to verify CTS runs
 ## Timing analysis with real clocks using openSTA
 ### 71 - Setup timing analysis using real clocks
+
+<img width="856" height="491" alt="image" src="https://github.com/user-attachments/assets/0e9f1b50-97d7-4227-ad94-d40abcfef1af" />
+
+<img width="841" height="474" alt="image" src="https://github.com/user-attachments/assets/807c2ccb-67c9-4345-8e3c-87a71add8af8" />
+
+<img width="885" height="482" alt="image" src="https://github.com/user-attachments/assets/3af92145-fce5-4f89-8af3-68dd4a23c453" />
+
+delta1 = 1 + 2
+delta2 = 3 + 4 - from 1 to capture flop
+
+<img width="874" height="548" alt="image" src="https://github.com/user-attachments/assets/06d999ed-ad50-40cf-97cf-bb84d2b89d71" />
+
+<img width="154" height="114" alt="image" src="https://github.com/user-attachments/assets/e5735bbe-1bc5-4a9a-97e0-3c096ea33309" />
+
+<img width="211" height="65" alt="image" src="https://github.com/user-attachments/assets/7f4351ee-e399-42bf-a28c-fb98a41de0d3" />
+
+<img width="527" height="121" alt="image" src="https://github.com/user-attachments/assets/56c87bf8-9611-45ac-9795-b91ea7a326d4" />
+
+<img width="571" height="119" alt="image" src="https://github.com/user-attachments/assets/5c46bd41-5c7c-4506-9b2c-cf6041e7c716" />
+
+It's ready tfor 1GHz.
+
+left is data arrival time and the right is data required time
+
+data required time - data arrival time = slack (should be +ve or 0)
+
+**Hold analysis**
+
+<img width="878" height="476" alt="image" src="https://github.com/user-attachments/assets/63cbcad5-3389-4e54-a6b9-4391db6d6282" />
+
+Hold refers to second mux 
+
+<img width="818" height="337" alt="image" src="https://github.com/user-attachments/assets/2b6c188f-a68b-433b-bb1d-f2c2261b8a6f" />
+
+The time required to send this capture delay out is mux2. Capture flop doesnt expect any data to arrive while it is sending data out and sends message to hold data until it sends out data.
+
+<img width="875" height="532" alt="image" src="https://github.com/user-attachments/assets/6084808c-b65d-4639-971e-4270b56e16af" />
+
+<img width="230" height="78" alt="image" src="https://github.com/user-attachments/assets/9bb32849-24a6-4e45-ac4b-7a88dcba9ec3" />
+
 ### 72 - Hold timing analysis using real clocks
+
+<img width="165" height="173" alt="image" src="https://github.com/user-attachments/assets/75cc6df9-1ab4-4362-85e6-7609dd0cd195" />
+
+<img width="270" height="73" alt="image" src="https://github.com/user-attachments/assets/aa2a74b5-149b-4d42-8abb-1a0fef045ae4" />
+
+Need to mention a uncertainty value (U) so the capture flop holds data for hold time plus some uncertainty value
+
+<img width="403" height="92" alt="image" src="https://github.com/user-attachments/assets/15134541-d7bb-445d-9fde-ef8a297ba8ac" />
+
+<img width="259" height="154" alt="image" src="https://github.com/user-attachments/assets/4e9c1e2f-64fd-42f4-b463-8b32eff997b6" />
+
+Slack should be +ve or '0'
+
+If it is negative it means the delay is very fast and we need to slow that down
+
+Single Clock
+
+<img width="1035" height="594" alt="image" src="https://github.com/user-attachments/assets/71d28846-d385-4fb9-a985-c62ee973b793" />
+
+<img width="1012" height="589" alt="image" src="https://github.com/user-attachments/assets/c639b736-4477-43a0-b5f4-839acd3ee52c" />
+
+
+delta2 is the basically delta 1 but flipped
+
+<img width="1031" height="623" alt="image" src="https://github.com/user-attachments/assets/c7e55cab-f9f1-462c-a3de-63f68eef4d1a" />
+
 ### 73 - Lab steps to analyze timing with real clocks using OpenSTA
 ### 74 - Lab steps to execute OpenSTA with right timinig libraries and CTS assignment
 ### 75 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
