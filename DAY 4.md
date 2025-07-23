@@ -359,6 +359,8 @@ As it tries to go from 0 to 1, theres a drop and this will cause a bumpy delay
 
 ### 69 - Lab steps to run CTS using TritonCTS
 ### 70 - Lab steps to verify CTS runs
+
+
 ## Timing analysis with real clocks using openSTA
 ### 71 - Setup timing analysis using real clocks
 
