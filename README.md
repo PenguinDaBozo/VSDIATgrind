@@ -99,7 +99,7 @@ GitHub for my VSDIAT adventure!
     - 74 - Lab steps to execute OpenSTA with right timinig libraries and CTS assignment
     - 75 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
 
-Sky130 DAY 5 - Final steps for RTL2GDS using tritonRoute and openSTA
+[Sky130 DAY 5 - Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#sky130-day-5---final-steps-for-rtl2gds-using-tritonroute-and-opensta)
 - Routing and design rule check (DRC)
     - 76 - Introduction to Maze-Routing - Lee's Algorithm
     - 77 - Lee's Algorithm conclusion
