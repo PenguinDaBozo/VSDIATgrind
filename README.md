@@ -97,7 +97,7 @@ GitHub for my VSDIAT adventure!
     - [72 - Hold timing analysis using real clocks](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#72---hold-timing-analysis-using-real-clocks)
     - [73 - Lab steps to analyze timing with real clocks using OpenSTA](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#73---lab-steps-to-analyze-timing-with-real-clocks-using-opensta)
     - [74 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#74---lab-steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
-    - 75 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
+    - [75 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#72---lab-steps-to-observe-impact-of-bigger-cts-buffers-on-setup-and-hold-timing)
 
 [Sky130 DAY 5 - Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#sky130-day-5---final-steps-for-rtl2gds-using-tritonroute-and-opensta)
 - [Routing and design rule check (DRC)](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#routing-and-design-rule-check-drc)
