@@ -286,8 +286,30 @@ Where he got the commands from
 
 <img width="1244" height="367" alt="image" src="https://github.com/user-attachments/assets/715e1e04-dfac-4af4-bfa2-1d50d5fafe56" />
 
+<img width="825" height="23" alt="image" src="https://github.com/user-attachments/assets/ca4ac13e-c9a0-41b0-adb9-5d7da5db5241" />
+
+<img width="677" height="369" alt="image" src="https://github.com/user-attachments/assets/e36fbc9e-a4b0-4dd5-9b17-bff0355f003d" />
+
 ### 65 - Lab steps to optimize synthesis to reduce setup violations
+
+Look for places where the delays are high, which are contributed to fanout.
+
+<img width="1328" height="263" alt="image" src="https://github.com/user-attachments/assets/791099a7-2142-45a7-8210-d471d54cb724" />
+
+<img width="343" height="90" alt="image" src="https://github.com/user-attachments/assets/d68f0956-fc2c-4b37-aed0-afc892b3adcb" />
+
+<img width="619" height="186" alt="image" src="https://github.com/user-attachments/assets/8847d4d3-d523-4cdf-8428-fc3dc6f3f669" />
+
+<img width="440" height="86" alt="image" src="https://github.com/user-attachments/assets/83bafcd6-3ff5-419f-b72f-8b2e44f12424" />
+
+<img width="666" height="39" alt="image" src="https://github.com/user-attachments/assets/41f5496a-66c6-415c-9215-5a8e3af3df37" />
+
+expands the report to more decimal points
+
 ### 66 - Lab steps to do basic timing ECO
+
+try to get slack to positive number by altering the buffers and stuff
+
 ## Clock tree synthesis TritonCTS and signal integrity
 ### 67 - Clock tree routing and buffering using H-Tree algorithm
 ### 68 - Crosstalk and clock net shielding
