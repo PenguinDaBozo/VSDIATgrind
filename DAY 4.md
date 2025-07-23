@@ -206,8 +206,80 @@ then in terminal enter the command expand after selecting a cell
 
 ## Timing analysis with ideal clocks using openSTA
 ### 62 - Setup timing analysis and introduction to flip-flop setup time
+
+<img width="192" height="132" alt="image" src="https://github.com/user-attachments/assets/62ac4e3a-e9cf-4732-986e-f88094ce45b3" />
+
+<img width="737" height="492" alt="image" src="https://github.com/user-attachments/assets/57e9f392-c2f5-4989-8b3c-26bf07ddae65" />
+
+Send the edge to the launch flop and on the t it reaches capture flop
+
+Assume the delay has theta which is less than T
+
+<img width="174" height="282" alt="image" src="https://github.com/user-attachments/assets/56b8e530-fd71-4c7f-9f58-04c8aa3aadda" />
+
+<img width="514" height="277" alt="image" src="https://github.com/user-attachments/assets/08defefc-33ef-4cf6-8e23-96d91eda2107" />
+
+At logic 1, it doesn't go back to mux 1 and goes to mux 2
+
+<img width="820" height="518" alt="image" src="https://github.com/user-attachments/assets/7aebd212-bcec-42b9-b251-f92ec3d2b94b" />
+
+There is some amount of time s, setup time, the amount of time needed to set up capture flop
+
+| theta < (T-S)
+
+<img width="918" height="525" alt="image" src="https://github.com/user-attachments/assets/81fb3c03-4d64-4fa5-b554-eb4bf93be729" />
+
 ### 63 - Introduction to clock jitter and uncertainty
+
+There is a clock source expected to send clock but it has variations so it might notbe able to produce clock signal exactly at 0 or T
+
+<img width="920" height="470" alt="image" src="https://github.com/user-attachments/assets/f0acff1b-54b2-4c88-bbff-e6e5d9ab0bbd" />
+
+Jitter - temporary variation of clock period
+
+<img width="875" height="484" alt="image" src="https://github.com/user-attachments/assets/4c0f7b5c-f524-46e7-924a-b3154f6dbd6b" />
+
+It sends a clock signal at the edges near 0 or T so we have to model
+
+<img width="674" height="230" alt="image" src="https://github.com/user-attachments/assets/f87990ac-de9c-479e-909f-927c5a33305b" />
+
+<img width="961" height="478" alt="image" src="https://github.com/user-attachments/assets/d523ffc2-396f-41f7-99c0-05e93d374d45" />
+
+<img width="912" height="504" alt="image" src="https://github.com/user-attachments/assets/d4a5b234-8a2e-46ba-a1d2-4123ec3fbe51" />
+
+<img width="912" height="441" alt="image" src="https://github.com/user-attachments/assets/b545186c-ce91-4027-9aa7-bbd47825cb85" />
+
+*Combinational delays*
+
 ### 64 - Lab steps to configure OpenSTA for post-synth timing analysis
+
+We need to ensure slack is reduced. If there is a timing violation, we carry out the analysis in a separate tool for synthesis prime time. 
+
+
+
+<img width="1405" height="219" alt="image" src="https://github.com/user-attachments/assets/ad1b158f-3058-4d29-be80-736098fb40eb" />
+
+This is where the libraries come into play
+
+You will see a new verilog file here
+
+<img width="1399" height="587" alt="image" src="https://github.com/user-attachments/assets/d7fcc6a3-09fe-433b-8d62-367efda10b4c" />
+
+<img width="1250" height="79" alt="image" src="https://github.com/user-attachments/assets/c36a91ff-018d-4af9-bb79-8ba2773f25ff" />
+
+<img width="1023" height="116" alt="image" src="https://github.com/user-attachments/assets/3f4b23f6-415a-4101-bc63-8783092c04dd" />
+
+<img width="1007" height="576" alt="image" src="https://github.com/user-attachments/assets/e95012ee-0f27-48e6-a500-1f192c87971d" />
+
+<img width="568" height="40" alt="image" src="https://github.com/user-attachments/assets/00991558-91fb-4033-812e-962f34afb8d6" />
+
+We need the capacitance load
+
+<img width="766" height="243" alt="image" src="https://github.com/user-attachments/assets/e2d7aa4b-55d9-4158-a9fe-45e99ddc0820" />
+
+
+
+
 ### 65 - Lab steps to optimize synthesis to reduce setup violations
 ### 66 - Lab steps to do basic timing ECO
 ## Clock tree synthesis TritonCTS and signal integrity
