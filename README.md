@@ -87,7 +87,7 @@ GitHub for my VSDIAT adventure!
     - [64 - Lab steps to configure OpenSTA for post-synth timing analysis](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#64---lab-steps-to-configure-opensta-for-post-synth-timing-analysis)
     - [65 - Lab steps to optimize synthesis to reduce setup violations](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#65--labs-steps-to-optimize-synthesis-to-reduce-setup-violations)
     - [66 - Lab steps to do basic timing ECO](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#66---lab-steps-to-do-basic-timing-eco)
-- [Clock tree synthesis TritonCTS and signal integrity](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#clock-tree-synthesis-tritoncts-and-signal-integrity)
+- [Clock tree synthesis TritonCTS and signal integrity](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#timing-analysis-with-real-clocks-using-opensta)
     - [67 - Clock tree routing and buffering using H-Tree algorithm](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#67---clock-tree-routing-and-buffering-using-h-tree-algorithm)
     - [68 - Crosstalk and clock net shielding](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#68---crosstalk-and-clock-net-shielding)
     - [69 - Lab steps to run CTS using TritonCTS](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#69---lab-steps-to-run-cts-using-tritoncts)
