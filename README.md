@@ -101,15 +101,15 @@ GitHub for my VSDIAT adventure!
 
 [Sky130 DAY 5 - Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#sky130-day-5---final-steps-for-rtl2gds-using-tritonroute-and-opensta)
 - [Routing and design rule check (DRC)](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#routing-and-design-rule-check-drc)
-    - 76 - Introduction to Maze-Routing - Lee's Algorithm
-    - 77 - Lee's Algorithm conclusion
-    - 78 - Design Rule Check
-- Power Distribution Network and routing
-    - 79 - Lab steps to build power distribution network
-    - 80 - Lab steps from power straps to std cell power
-    - 81 - Basics of global and detail routing and configure TritonRoute
-- TritonRoute Features
-    - 82 - TritonRoute feature 1 - honors pre-processed route guides
+    - [76 - Introduction to Maze-Routing - Lee's Algorithm](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#76---introduction-to-maze-routing---lees-algorithm)
+    - [77 - Lee's Algorithm conclusion](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#77---lees-algorithm-conclusion)
+    - [78 - Design Rule Check](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#78---design-rule-check)
+- [Power Distribution Network and routing](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#power-distribution-network-and-routing)
+    - [79 - Lab steps to build power distribution network](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#79---lab-steps-to-build-power-distribution-network)
+    - [80 - Lab steps from power straps to std cell power](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#80---lab-steps-from-power-straps-to-std-cell-power)
+    - [81 - Basics of global and detail routing and configure TritonRoute](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#81---basics-of-global-and-detail-routing-and-configure-tritonroute)
+- [TritonRoute Features](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#tritonroute-features)
+    - [82 - TritonRoute feature 1 - honors pre-processed route guides](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#82-tritonroute-feature-1---honors-pre-prcoessed-route-guides)
     - 83 - TritonRoute Feature 2 & 3 - Inter-guide connectivity adn intra - & inter-layer routing
     - 84 - TritonRoute Method to handle connectivity
     - 85 - Routing topology algorithm and final files list post-route
