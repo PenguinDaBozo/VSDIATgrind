@@ -90,7 +90,7 @@ GitHub for my VSDIAT adventure!
 - [Clock tree synthesis TritonCTS and signal integrity](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#clock-tree-synthesis-tritoncts-and-signal-integrity)
     - [67 - Clock tree routing and buffering using H-Tree algorithm](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#67---clock-tree-routing-and-buffering-using-h-tree-algorithm)
     - [68 - Crosstalk and clock net shielding](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#68---crosstalk-and-clock-net-shielding)
-    - 69 - Lab steps to run CTS using TritonCTS
+    - [69 - Lab steps to run CTS using TritonCTS](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#69---lab-steps-to-run-cts-using-tritoncts)
     - 70 - Lab steps to verify CTS runs
 - Timing analysis with real clocks using openSTA
     - 71 - Setup timing analysis using real clocks
