@@ -431,5 +431,5 @@ delta2 is the basically delta 1 but flipped
 <img width="1031" height="623" alt="image" src="https://github.com/user-attachments/assets/c7e55cab-f9f1-462c-a3de-63f68eef4d1a" />
 
 ### 73 - Lab steps to analyze timing with real clocks using OpenSTA
-### 74 - Lab steps to execute OpenSTA with right timinig libraries and CTS assignment
+### 74 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment
 ### 75 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
