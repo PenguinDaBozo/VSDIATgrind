@@ -308,11 +308,58 @@ expands the report to more decimal points
 
 ### 66 - Lab steps to do basic timing ECO
 
-try to get slack to positive number by altering the buffers and stuff
+try to get slack as closet to 0 as possible by altering the buffers and stuff
 
 ## Clock tree synthesis TritonCTS and signal integrity
 ### 67 - Clock tree routing and buffering using H-Tree algorithm
+
+<img width="1048" height="535" alt="image" src="https://github.com/user-attachments/assets/cf0e5ad7-03fc-45f5-954c-6b51e43d3dec" />
+
+<img width="864" height="452" alt="image" src="https://github.com/user-attachments/assets/86a35c5f-c593-47ef-a7e3-f10576f8cdd9" />
+
+<img width="1015" height="530" alt="image" src="https://github.com/user-attachments/assets/389b1bfe-aecb-4150-a1d2-e4c1b26c2ae3" />
+
+It's a bad tree because t1 and t2 are not very close to each other
+
+we want skew as close to 0 as possible to reduce latency
+
+Midpoint strategy
+
+<img width="1031" height="577" alt="image" src="https://github.com/user-attachments/assets/b03a4df0-3147-4af0-9217-33117957440b" />
+
+<img width="1025" height="546" alt="image" src="https://github.com/user-attachments/assets/d28608fc-1363-4550-a9bb-193e86b42f9d" />
+
+Now we have to do buffering because of distance which causes resistance and voltage drops
+
+<img width="551" height="217" alt="image" src="https://github.com/user-attachments/assets/b2be3260-a46d-4e7d-8364-a81c5e431110" />
+
+<img width="742" height="519" alt="image" src="https://github.com/user-attachments/assets/f688cacc-7109-4134-bb8e-2e04fc2a0c51" />
+
 ### 68 - Crosstalk and clock net shielding
+
+We have to shield the clock net to protect from outside so it doesnt couple 
+
+<img width="715" height="506" alt="image" src="https://github.com/user-attachments/assets/285c1fab-935f-4471-b17a-8a0aa7710a4f" />
+
+If it does couple then there are problems
+
+1) glitch - any activity happening at a will happen at v, which causes a dip in the voltage
+
+<img width="556" height="306" alt="image" src="https://github.com/user-attachments/assets/26665d52-f820-4d7d-b9b7-766aa10893dd" />
+
+<img width="581" height="373" alt="image" src="https://github.com/user-attachments/assets/0567e010-e322-450a-b3bb-bcbe5f1ba24e" />
+
+By shielding, we break the coupling capacitor link
+
+2) Crosstalk
+
+<img width="973" height="542" alt="image" src="https://github.com/user-attachments/assets/ccc082ff-2740-4429-8b9c-8048a3eb3e5e" />
+
+As it tries to go from 0 to 1, theres a drop and this will cause a bumpy delay
+
+
+
+
 ### 69 - Lab steps to run CTS using TritonCTS
 ### 70 - Lab steps to verify CTS runs
 ## Timing analysis with real clocks using openSTA
