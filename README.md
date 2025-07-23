@@ -91,12 +91,12 @@ GitHub for my VSDIAT adventure!
     - [67 - Clock tree routing and buffering using H-Tree algorithm](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#67---clock-tree-routing-and-buffering-using-h-tree-algorithm)
     - [68 - Crosstalk and clock net shielding](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#68---crosstalk-and-clock-net-shielding)
     - [69 - Lab steps to run CTS using TritonCTS](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#69---lab-steps-to-run-cts-using-tritoncts)
-    - 70 - Lab steps to verify CTS runs
-- Timing analysis with real clocks using openSTA
-    - 71 - Setup timing analysis using real clocks
-    - 72 - Hold timing analysis using real clocks
-    - 73 - Lab steps to analyze timing with real clocks using OpenSTA
-    - 74 - Lab steps to execute OpenSTA with right timinig libraries and CTS assignment
+    - [70 - Lab steps to verify CTS runs](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#70---lab-steps-to-verify-cts-runs)
+- [Timing analysis with real clocks using openSTA](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#timing-analysis-using-real-clocks-using-opensta)
+    - [71 - Setup timing analysis using real clocks](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#71---setup-timing-analysis-using-real-clocks)
+    - [72 - Hold timing analysis using real clocks](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#72---hold-timing-analysis-using-real-clocks)
+    - [73 - Lab steps to analyze timing with real clocks using OpenSTA](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#73---lab-steps-to-analyze-timing-with-real-clocks-using-opensta)
+    - [74 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%204.md#74---lab-steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
     - 75 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
 
 [Sky130 DAY 5 - Final steps for RTL2GDS using tritonRoute and openSTA](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#sky130-day-5---final-steps-for-rtl2gds-using-tritonroute-and-opensta)
