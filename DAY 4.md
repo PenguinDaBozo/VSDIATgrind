@@ -277,8 +277,14 @@ We need the capacitance load
 
 <img width="766" height="243" alt="image" src="https://github.com/user-attachments/assets/e2d7aa4b-55d9-4158-a9fe-45e99ddc0820" />
 
+And then put the capacitance load next to SYNTH_CAP_LOAD
 
+Where he got the commands from
+<img width="931" height="53" alt="image" src="https://github.com/user-attachments/assets/a065ae94-7625-41d6-b158-2f03ed36be1b" />
 
+<img width="1027" height="509" alt="image" src="https://github.com/user-attachments/assets/3c7ed99a-314d-46ee-b3cc-669501bd7e09" />
+
+<img width="1244" height="367" alt="image" src="https://github.com/user-attachments/assets/715e1e04-dfac-4af4-bfa2-1d50d5fafe56" />
 
 ### 65 - Lab steps to optimize synthesis to reduce setup violations
 ### 66 - Lab steps to do basic timing ECO
