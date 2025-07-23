@@ -111,5 +111,5 @@ GitHub for my VSDIAT adventure!
 - [TritonRoute Features](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#tritonroute-features)
     - [82 - TritonRoute feature 1 - honors pre-processed route guides](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#82---tritonroute-feature-1---honors-pre-processed-route-guides)
     - [83 - TritonRoute Feature 2 & 3 - Inter-guide connectivity adn intra - & inter-layer routing](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#83---tritonroute-feature-2--3---inter-guide-connectivity-adn-intra----inter-layer-routing)
-    - 84 - TritonRoute Method to handle connectivity
+    - [84 - TritonRoute Method to handle connectivity](https://github.com/PenguinDaBozo/VSDIATgrind/blob/main/DAY%205.md#84---tritonroute-method-to-handle-connectivity)
     - 85 - Routing topology algorithm and final files list post-route
