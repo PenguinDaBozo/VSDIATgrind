@@ -180,7 +180,8 @@ tns is the total layer slack
 
 let's make the synthesis more time driven
 
-<img width="330" height="274" alt="image" src="https://github.com/user-attachments/assets/c71a56de-2a74-48de-9ac1-7ef77abbcfa5" />
+<img width="329" height="283" alt="image" src="https://github.com/user-attachments/assets/4c3f899e-0d99-4b34-9533-45b8390cda8f" />
+
 
 <img width="318" height="82" alt="image" src="https://github.com/user-attachments/assets/d170b70d-4ee8-4de0-a0c7-3c84d102eab6" />
 
