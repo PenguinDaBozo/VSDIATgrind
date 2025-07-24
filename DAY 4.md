@@ -214,7 +214,7 @@ confirms placement can be run
 
 OVFL should decrease to 0
 
-<img width="950" height="78" alt="image" src="https://github.com/user-attachments/assets/53e1ec62-29b7-40ad-83ab-a9c09102763f" />
+<img width="824" height="76" alt="image" src="https://github.com/user-attachments/assets/b679dde4-f96e-45cd-a592-43844484cb44" />
 
 <img width="502" height="504" alt="image" src="https://github.com/user-attachments/assets/56ec2117-589d-4c68-9f5d-21cd5d8de4a8" />
 
