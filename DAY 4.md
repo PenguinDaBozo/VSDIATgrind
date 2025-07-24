@@ -205,10 +205,6 @@ NOTE : If any error comes related to macro placement, temporary solution is to c
 
 > detailed_placement
 
-<img width="991" height="285" alt="image" src="https://github.com/user-attachments/assets/a217a6de-8579-4af7-b5c4-612985b5a079" />
-
-confirms placement can be run
-
 '''run_placement'''
 
 
