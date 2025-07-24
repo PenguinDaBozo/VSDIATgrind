@@ -101,7 +101,7 @@ we need to modify config.tcl file
 
 <img width="977" height="393" alt="image" src="https://github.com/user-attachments/assets/96298a51-d7e7-4017-98f6-49bce733d6a5" />
 
-<img width="693" height="247" alt="image" src="https://github.com/user-attachments/assets/9e20faa2-868d-47b5-b325-248bff8c34da" />
+<img width="885" height="500" alt="image" src="https://github.com/user-attachments/assets/d74fcb75-6ef0-4ec4-a23f-522dff3e1084" />
 
 <img width="883" height="396" alt="image" src="https://github.com/user-attachments/assets/1ec3f6b4-7109-4843-b9d9-e1e961fc511e" />
 
