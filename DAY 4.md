@@ -188,11 +188,26 @@ The slack should have been reduced and now we will run floorplan.
 
 '''run_floorplan'''
 
+NOTE : If any error comes related to macro placement, temporary solution is to comment basic_macro_placement inside the file OpenLane/scripts/tcl_commands/floorplan.tcl (this is okay since we are not adding any macro to the design).
+
+> We can also execute the following commands:-
+
+> init_floorplan
+
+> place_io
+
+> global_placement_or
+
+> detailed_placement
+
+> tap_decap_or
+
 <img width="991" height="285" alt="image" src="https://github.com/user-attachments/assets/a217a6de-8579-4af7-b5c4-612985b5a079" />
 
 confirms placement can be run
 
 '''run_placement'''
+
 
 OVFL should decrease to 0
 
