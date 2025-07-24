@@ -214,9 +214,16 @@ OVFL should decrease to 0
 
 <img width="502" height="504" alt="image" src="https://github.com/user-attachments/assets/56ec2117-589d-4c68-9f5d-21cd5d8de4a8" />
 
+Use this for finding select cells. Use ctrl + z to zoom to the cell
+
+<img width="699" height="513" alt="image" src="https://github.com/user-attachments/assets/3997cba1-54f1-4236-8250-baa4fd1026f2" />
+
+<img width="516" height="93" alt="image" src="https://github.com/user-attachments/assets/7cffbf9d-f1f6-48ee-840b-a6dbb55a4bd8" />
+
 then in terminal enter the command expand after selecting a cell
 
-<img width="764" height="512" alt="image" src="https://github.com/user-attachments/assets/49c39940-deae-441d-9ef3-70b72601de05" />
+<img width="537" height="635" alt="image" src="https://github.com/user-attachments/assets/84c89f5f-c8a4-416a-812a-c3a4da6f39e3" />
+
 
 ## Timing analysis with ideal clocks using openSTA
 ### 62 - Setup timing analysis and introduction to flip-flop setup time
