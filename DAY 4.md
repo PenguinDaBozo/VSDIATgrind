@@ -276,13 +276,12 @@ It sends a clock signal at the edges near 0 or T so we have to model
 
 We need to ensure slack is reduced. If there is a timing violation, we carry out the analysis in a separate tool for synthesis prime time. 
 
+This is where the libraries come into play. We create a new file called pre_sta.conf in openlane directory
 
+<img width="806" height="28" alt="image" src="https://github.com/user-attachments/assets/e2f7b82a-bf4d-46c6-a4f8-95e90d323ec6" />
 
 <img width="1405" height="219" alt="image" src="https://github.com/user-attachments/assets/ad1b158f-3058-4d29-be80-736098fb40eb" />
 
-This is where the libraries come into play
-
-You will see a new verilog file here
 
 <img width="1399" height="587" alt="image" src="https://github.com/user-attachments/assets/d7fcc6a3-09fe-433b-8d62-367efda10b4c" />
 
