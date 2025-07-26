@@ -312,17 +312,12 @@ Where he got the commands from
 
 ### 65 - Lab steps to optimize synthesis to reduce setup violations
 
-Look for places where the delays are high, which are contributed to fanout.
+Look for places where the delays are high, which are contributed to fanout. The delay of any cell is the input slew minus the output load. 
 
 <img width="1328" height="263" alt="image" src="https://github.com/user-attachments/assets/791099a7-2142-45a7-8210-d471d54cb724" />
 
-<img width="343" height="90" alt="image" src="https://github.com/user-attachments/assets/d68f0956-fc2c-4b37-aed0-afc892b3adcb" />
+We will go to the openlane flow and optimize the fanout value.
 
-<img width="619" height="186" alt="image" src="https://github.com/user-attachments/assets/8847d4d3-d523-4cdf-8428-fc3dc6f3f669" />
-
-<img width="440" height="86" alt="image" src="https://github.com/user-attachments/assets/83bafcd6-3ff5-419f-b72f-8b2e44f12424" />
-
-<img width="666" height="39" alt="image" src="https://github.com/user-attachments/assets/41f5496a-66c6-415c-9215-5a8e3af3df37" />
 
 expands the report to more decimal points
 
