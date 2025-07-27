@@ -328,7 +328,7 @@ To display the connections of the nets, you can **report_net -connections _14635
 
 To replace cells **replace_cell _14635_ CELL_TYPE**
 
-<img width="501" height="34" alt="image" src="https://github.com/user-attachments/assets/96f5ffe5-4a17-4619-a93f-53baa0a4a55d" />
+<img width="432" height="50" alt="image" src="https://github.com/user-attachments/assets/dd32e223-6424-452e-9619-2718f8b48498" />
 
 To open the report again but with decimal points:
 <img width="584" height="39" alt="image" src="https://github.com/user-attachments/assets/caef3ebc-704f-4e0c-b246-61b19f8c5141" />
