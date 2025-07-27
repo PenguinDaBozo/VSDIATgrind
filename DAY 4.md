@@ -391,6 +391,16 @@ By shielding, we break the coupling capacitor link
 As it tries to go from 0 to 1, theres a drop and this will cause a bumpy delay
 
 ### 69 - Lab steps to run CTS using TritonCTS
+
+After you get close to 0 slack, you want to save the pre_sta.config by overriding the verilog file.
+
+<img width="738" height="60" alt="image" src="https://github.com/user-attachments/assets/057cbc75-1287-4308-bacf-ce7842f6d7e3" />
+
+
+
+
+
+
 ### 70 - Lab steps to verify CTS runs
 
 
