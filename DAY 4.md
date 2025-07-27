@@ -331,7 +331,9 @@ To replace cells **replace_cell _14635_ CELL_TYPE**
 <img width="432" height="50" alt="image" src="https://github.com/user-attachments/assets/dd32e223-6424-452e-9619-2718f8b48498" />
 
 To open the report again but with decimal points:
-<img width="584" height="39" alt="image" src="https://github.com/user-attachments/assets/caef3ebc-704f-4e0c-b246-61b19f8c5141" />
+
+<img width="554" height="26" alt="image" src="https://github.com/user-attachments/assets/81a9ec92-fb75-47c7-b119-ffc938c02dd5" />
+
 
 ### 66 - Lab steps to do basic timing ECO
 
