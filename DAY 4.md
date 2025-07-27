@@ -299,7 +299,7 @@ We need the capacitance load
 
 And then put the capacitance load next to SYNTH_CAP_LOAD
 
-Where he got the commands from
+Where he got the commands from(make sure to copy and paste from here or incomplete line error)
 <img width="931" height="53" alt="image" src="https://github.com/user-attachments/assets/a065ae94-7625-41d6-b158-2f03ed36be1b" />
 
 <img width="1027" height="509" alt="image" src="https://github.com/user-attachments/assets/3c7ed99a-314d-46ee-b3cc-669501bd7e09" />
@@ -318,12 +318,30 @@ Look for places where the delays are high, which are contributed to fanout. The 
 
 We will go to the openlane flow and optimize the fanout value.
 
+<img width="1242" height="152" alt="image" src="https://github.com/user-attachments/assets/ec3da455-5db3-4228-99e7-3485bc629c5d" />
 
-expands the report to more decimal points
+<img width="339" height="86" alt="image" src="https://github.com/user-attachments/assets/525863b4-0a9b-4908-afae-7432765bab92" />
+
+To display the connections of the nets, you can **report_net -connections _14635_**.
+
+<img width="405" height="157" alt="image" src="https://github.com/user-attachments/assets/060a5c2e-a48d-4315-88d6-e8d0fec6d5ce" />
+
+To replace cells **replace_cell _14635_ CELL_TYPE**
+
+<img width="501" height="34" alt="image" src="https://github.com/user-attachments/assets/96f5ffe5-4a17-4619-a93f-53baa0a4a55d" />
+
+To open the report again but with decimal points:
+<img width="584" height="39" alt="image" src="https://github.com/user-attachments/assets/caef3ebc-704f-4e0c-b246-61b19f8c5141" />
 
 ### 66 - Lab steps to do basic timing ECO
 
-try to get slack as closet to 0 as possible by altering the buffers and stuff
+Try to get slack as closet to 0 as possible by altering the buffers and stuff. This is often done in iterations until we reach the desired slack in a process known as Timing ECO [Engineering Change Order]
+
+general rule of thumb:
+- Large delay on a cell:	Use a higher drive version (e.g., *_2, *_4, *_8)
+- High fanout:	Consider inserting a buffer
+- High slew:	Replace driving cell or improve load
+- Delay mostly on net, not gate:	Consider resizing fanout sinks, or buffer insertion
 
 ## Clock tree synthesis TritonCTS and signal integrity
 ### 67 - Clock tree routing and buffering using H-Tree algorithm
