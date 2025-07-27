@@ -596,8 +596,12 @@ MAX
 
 <img width="866" height="454" alt="image" src="https://github.com/user-attachments/assets/59406971-1cf0-410f-8141-192e7f938e89" />
 
+<img width="959" height="490" alt="image" src="https://github.com/user-attachments/assets/267760a5-c577-43ff-a448-58b4b3304d24" />
+
+
 When OpenLANE is building CTS, it is trying to meet the skew value by inserting the buffers in this list from left to right. You always want the skew value to be 10% of the clock_period.
 
+<img width="979" height="37" alt="image" src="https://github.com/user-attachments/assets/fe90b3e2-27ca-4a5e-bade-4d98c34e7a0a" />
 
 
 
