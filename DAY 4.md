@@ -437,8 +437,15 @@ Current def value is the one obtained after cts
 
 <img width="737" height="113" alt="image" src="https://github.com/user-attachments/assets/60a791b9-273d-46b0-a2ad-f71961f79db6" />
 
-Then we pass the sdc value and then the clock tree synthesis. The max_slew is 10% of the clock period.
+Then we pass the sdc value and then the clock tree synthesis. 
 
+<img width="709" height="187" alt="image" src="https://github.com/user-attachments/assets/93bf162d-fd2b-4320-aaff-bb3ae86ba9a8" />
+
+Some variables include: 
+
+> The max_slew is 10% of the clock period.
+> max cap value of the root buffer
+> buffer list is a list of cells that will be used in the clock tree branches
 
 
 ## Timing analysis with real clocks using openSTA
@@ -511,5 +518,89 @@ delta2 is the basically delta 1 but flipped
 <img width="1031" height="623" alt="image" src="https://github.com/user-attachments/assets/c7e55cab-f9f1-462c-a3de-63f68eef4d1a" />
 
 ### 73 - Lab steps to analyze timing with real clocks using OpenSTA
+
+Initally, when we did timing analysis post-synthesis, we were outside of the openLANE flow and were using the pre_sta.conf file
+
+The aim is to analyze the CTS. The steps for analysis of timings are:
+
+1) Open openroad
+
+> Note: We enter into openraod instead of entering another openSTA tool because openSTA already did it inside openroad.
+> The benefit of this is so we can use the environemental variables previously mentioned
+
+<img width="927" height="75" alt="image" src="https://github.com/user-attachments/assets/1057e10d-b936-4d8e-ae60-6502046d39a7" />
+
+In openroad, timing analysis is done in a different way. We first create a db, which is created from a def file, and in our analysis, we use this db. Once we create a db, it can be reused.
+
+
+2) Create a db file through read_lef
+
+<img width="854" height="109" alt="image" src="https://github.com/user-attachments/assets/642098e4-7599-48a4-bd5a-aac74f7bb413" />
+
+
+3) Read the def file
+
+<img width="985" height="147" alt="image" src="https://github.com/user-attachments/assets/51d218c3-786a-4172-a191-fe9acd95607f" />
+
+4) Create a db file through **write_db DESIGN_NAME.db**
+
+<img width="721" height="402" alt="image" src="https://github.com/user-attachments/assets/f9ab0b19-58d7-49ee-a3ac-611a2fd969bb" />
+
+5) Read the db, verilog, library, and sdc
+
+<img width="979" height="43" alt="image" src="https://github.com/user-attachments/assets/09de2914-604b-4de3-9be2-7bda466d78cc" />
+
+<img width="362" height="82" alt="image" src="https://github.com/user-attachments/assets/3b251785-4882-42fd-a604-a59a9810bd0c" />
+
+<img width="577" height="78" alt="image" src="https://github.com/user-attachments/assets/b0b71a0c-a9db-46df-9a97-d9adb63f18d2" />
+
+Now the clocks are numbered
+
+6) Set the propagated clocks
+
+<img width="328" height="28" alt="image" src="https://github.com/user-attachments/assets/e8466117-edc1-4720-97ed-a2d1d782f3fb" />
+
+
+7) Check timings
+
+<img width="677" height="18" alt="image" src="https://github.com/user-attachments/assets/a98b69a2-e764-4ca2-a801-b2269215541f" />
+
+MIN
+
+<img width="675" height="863" alt="image" src="https://github.com/user-attachments/assets/efc8052a-70b1-4955-b1c2-ff93dd64a8c0" />
+
+MAX
+
+<img width="654" height="801" alt="image" src="https://github.com/user-attachments/assets/426a8902-b93c-4d7d-8c91-7672969355ce" />
+
+<img width="650" height="399" alt="image" src="https://github.com/user-attachments/assets/236c77b5-7025-485f-b5b4-359de7fa8043" />
+
+CTS is ordered by routing. Routing is where the actual metal traces are being laid, which will increase delay.
+
+
 ### 74 - Lab steps to execute OpenSTA with right timing libraries and CTS assignment
+
+This analysis is incorrect because TritonCTS is optimized for one corner. We built the clock tree for the typical but we're using it for min and max corner, so this analysis is incorrect. 
+
+Thus, we exit from openroad and repeat the process again but this time, we read LIB_SYNTH_COMPLETE and link the design
+
+<img width="1036" height="468" alt="image" src="https://github.com/user-attachments/assets/13515458-e098-4853-9dd0-c45b228ef3e5" />
+
+
+MIN
+<img width="863" height="377" alt="image" src="https://github.com/user-attachments/assets/76098325-1183-4ae7-b177-e9b81bd8aa6a" />
+
+<img width="903" height="308" alt="image" src="https://github.com/user-attachments/assets/bf2f0659-dee4-45cf-8aee-3b0bdfd086f3" />
+
+MAX
+
+<img width="866" height="454" alt="image" src="https://github.com/user-attachments/assets/59406971-1cf0-410f-8141-192e7f938e89" />
+
+When OpenLANE is building CTS, it is trying to meet the skew value by inserting the buffers in this list from left to right. You always want the skew value to be 10% of the clock_period.
+
+
+
+
+
+
 ### 75 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
