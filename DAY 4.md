@@ -394,16 +394,51 @@ As it tries to go from 0 to 1, theres a drop and this will cause a bumpy delay
 
 ### 69 - Lab steps to run CTS using TritonCTS
 
+*Note: I tried my hardest to get it to 0 slack by upgrading all the or drivers to max and I don't know how to change the buffers :( because it seems like there are none in pre_sta.conf*
+
+<img width="172" height="104" alt="image" src="https://github.com/user-attachments/assets/607c92f1-5213-4ca5-af82-0a2c28b17f7c" />
+
 After you get close to 0 slack, you want to save the pre_sta.config by overriding the verilog file.
 
 <img width="738" height="60" alt="image" src="https://github.com/user-attachments/assets/057cbc75-1287-4308-bacf-ce7842f6d7e3" />
 
+Now we run floorplan and placement in the flow. Do not run synthesis otherwise it will reset all netlist values.
 
+<img width="1368" height="288" alt="image" src="https://github.com/user-attachments/assets/550cedc1-63b6-43dc-b61c-d0f8941ec0c3" />
 
+run_cts
 
+<img width="1123" height="106" alt="image" src="https://github.com/user-attachments/assets/333a27e5-044c-4fd1-ab47-ec658359241f" />
+
+After cts finishes, we can see a new file is added
+
+<img width="1214" height="141" alt="image" src="https://github.com/user-attachments/assets/e1c6600f-4fc6-45c6-b9c7-11b96bac33ab" />
 
 
 ### 70 - Lab steps to verify CTS runs
+
+OpenLANE takes procedures from Desktop/work/tools/openlane_working_dir/openlane/scripts/tcl_commands
+
+<img width="940" height="322" alt="image" src="https://github.com/user-attachments/assets/116d5e92-000b-48b0-b475-80bcaac25481" />
+
+When you do run_cts, it does this proc block:
+
+<img width="1365" height="471" alt="image" src="https://github.com/user-attachments/assets/e6df931f-1c26-4274-b793-3ce5de0b6e55" />
+
+This is where the command gets passed to
+
+<img width="877" height="327" alt="image" src="https://github.com/user-attachments/assets/0387181c-8323-4d13-b214-e8c6e620720d" />
+
+If we open the or_cts.tcl file, there are a lot of variables 
+
+<img width="704" height="513" alt="image" src="https://github.com/user-attachments/assets/d6580011-24b1-4f96-9f77-452502c97b2b" />
+
+Current def value is the one obtained after cts
+
+<img width="737" height="113" alt="image" src="https://github.com/user-attachments/assets/60a791b9-273d-46b0-a2ad-f71961f79db6" />
+
+Then we pass the sdc value and then the clock tree synthesis. The max_slew is 10% of the clock period.
+
 
 
 ## Timing analysis with real clocks using openSTA
