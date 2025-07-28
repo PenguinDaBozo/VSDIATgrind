@@ -254,6 +254,15 @@ To find the errors, read **/openLANE_flow/designs/picorv32a/runs/RUN/reports/rou
 
 <img width="1196" height="45" alt="image" src="https://github.com/user-attachments/assets/2282fbd6-a05d-4b4d-ab00-50552cceee0a" />
 
+You can check the results with magic:
+
+*note: the date is different because I had to redo everything again*
+
+<img width="1847" height="35" alt="image" src="https://github.com/user-attachments/assets/a39d7a02-2907-4527-9f8a-69968c1c4b14" />
+
+<img width="1437" height="728" alt="image" src="https://github.com/user-attachments/assets/ab5787d5-4d91-4977-9080-450517421937" />
+
+
 **Parasitic extraction**
 
 The extractor has not been included in OpenLANE so we will do extraction outside of openLANE. We need to go to work/tools/openlane/scripts to go to extractor.
