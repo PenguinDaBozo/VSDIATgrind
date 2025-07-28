@@ -288,6 +288,22 @@ We will use this as the read_verilog netlist in the post sta analysis. Then we u
 
 The last stage will be to extract the GDSII file ready for fabrication run_magic
 
+*NOTE: the date is different because i messed up and restarted my vm on a separate date*
+
+To write the GDSII file, we go into magic of routing
+
+<img width="659" height="80" alt="image" src="https://github.com/user-attachments/assets/adf8031b-8f7a-403a-b3f6-c7e979b639cb" />
+
+in the tkcon terminal:
+
+- lef read ../../tmp/merged.lef
+- def read picorv32a.def
+- gds read /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds
+- gds write ../magic/picorv32a.gds
+
+
+
+
 This uses Magic to stream the GDSII file and creates picorv32a.gds. This GDSII file can then be read by Magic
 
 
