@@ -622,4 +622,27 @@ There are some skipping so you should kill the process by going into **~/Desktop
 
 <img width="958" height="116" alt="image" src="https://github.com/user-attachments/assets/c149afaf-50df-432c-a45d-702f1ca8d8c3" />
 
+Make sure buffer 1 is not there
+
+<img width="951" height="119" alt="image" src="https://github.com/user-attachments/assets/fd164c66-1b01-40c8-92b7-a043429a568d" />
+
+run_cts
+
+<img width="952" height="503" alt="image" src="https://github.com/user-attachments/assets/05778a64-e436-4ddf-9b7c-a3d1395fd556" />
+
+run the whole process again
+
+<img width="1044" height="541" alt="image" src="https://github.com/user-attachments/assets/786f20a7-8f18-4c0b-9003-a0fa9949f3f7" />
+
+<img width="962" height="530" alt="image" src="https://github.com/user-attachments/assets/8facb720-2366-418c-a902-cc8989f5e563" />
+
+<img width="922" height="524" alt="image" src="https://github.com/user-attachments/assets/e6ae5283-6c1b-4568-a77c-ed8c6ac9745b" />
+
+<img width="287" height="287" alt="image" src="https://github.com/user-attachments/assets/ad16be1b-c797-4f64-bee5-2abf73316fa9" />
+
+how to insert the buffer back in
+
+<img width="951" height="144" alt="image" src="https://github.com/user-attachments/assets/2a0ffa35-1909-4a3a-837a-793a16482522" />
+
+
 
