@@ -162,7 +162,7 @@ The last thing is routing with **run_routing**
 
 > *Note: from the video, which is a bit outdated and as such there is no routing strategy no more*
 >
-> <img width="1161" height="550" alt="image" src="https://github.com/user- attachments/assets/34d827b4-b0de-462f-a243-eaf8345b32ab" />
+<img width="1161" height="550" alt="image" src="https://github.com/user- attachments/assets/34d827b4-b0de-462f-a243-eaf8345b32ab" />
 >
 > We will focus on routing strategy. There are 4 routing strategies. 
 >
