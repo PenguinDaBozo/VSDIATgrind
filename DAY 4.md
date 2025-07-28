@@ -603,6 +603,12 @@ When OpenLANE is building CTS, it is trying to meet the skew value by inserting 
 
 <img width="979" height="37" alt="image" src="https://github.com/user-attachments/assets/fe90b3e2-27ca-4a5e-bade-4d98c34e7a0a" />
 
+let's try to see what happens when we remove one
+
+<img width="949" height="51" alt="image" src="https://github.com/user-attachments/assets/cd4e265b-ec2f-479d-8dce-a99d420271c8" />
+
+
+<img width="723" height="76" alt="image" src="https://github.com/user-attachments/assets/7dc61c5e-c803-4864-811d-545b09f404b0" />
 
 
 
