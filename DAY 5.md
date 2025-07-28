@@ -127,7 +127,66 @@ Power goes through the straps and gets distributed to the stdcell rails.
 
 
 ### 80 - Lab steps from power straps to std cell power
+
+<img width="679" height="450" alt="image" src="https://github.com/user-attachments/assets/2ef5667a-9234-43e9-ad30-940a35477f73" />
+
+The green box is picorv32a. The yellow boxes are IO pads. The corners are the corner pads. The red pad is the power pad and the blue pad is the ground pad. 
+
+The power is coming into the blue and red pads. From the pads, the power gets supplied to the ring. The places where there are x's are plces where the vias are connecting the pads to the ring. Similarly, the ground pad has an inner ring. 
+
+Now the power can reach the ring from the pads, but we have to ensure that the power reaches from the pads to the chip. For that, we have the straps which are the blue and red lines in the green area. 
+
+Power goes from pads to the ring and from ring to the straps. After the power reaches the picorv32a, we have to make sure it reaches the standard cells. 
+
+There are the power and ground rails:
+
+<img width="549" height="34" alt="image" src="https://github.com/user-attachments/assets/cd22290b-aa49-4ea3-9e16-103834bed7f9" />
+
+<img width="513" height="71" alt="image" src="https://github.com/user-attachments/assets/489ea35b-118a-4a4f-88a7-9ea663d01adf" />
+
+Similarly, for macro
+
+<img width="134" height="208" alt="image" src="https://github.com/user-attachments/assets/22394673-7acf-46b4-99d6-e49becf62e50" />
+
+<img width="700" height="201" alt="image" src="https://github.com/user-attachments/assets/401c9fa3-75be-471f-a347-0431b53fe790" />
+
+
+The cts.def has changed into a pdn.def and this includes both cts and pdn
+
+<img width="681" height="42" alt="image" src="https://github.com/user-attachments/assets/8b312883-6a4c-4645-aaa8-6ea03ac6b059" />
+
+
 ### 81 - Basics of global and detail routing and configure TritonRoute
+
+The last thing is routing with **run_routing**
+
+> *Note: from the video, which is a bit outdated and as such there is no routing strategy no more*
+>
+> <img width="1161" height="550" alt="image" src="https://github.com/user- attachments/assets/34d827b4-b0de-462f-a243-eaf8345b32ab" />
+>
+> We will focus on routing strategy. There are 4 routing strategies. 
+>
+> For the purpose of this workshop we will use ROUTING_STRATEGY 0
+
+<img width="133" height="28" alt="image" src="https://github.com/user-attachments/assets/7ce3bdf8-f5e1-4753-ad55-274b48430671" />
+
+This will take a while... in the meantime
+
+
+
+<img width="1029" height="457" alt="image" src="https://github.com/user-attachments/assets/412afa55-0ca3-4b7c-8335-a0f91f826c1d" />
+
+Routing is divided into two steps (fast/global route and detail route)
+- global route is done by fast route
+- detail route is done by TritonRoute
+
+In global route, the entire routing region is divided into grid cells (top left) . Then it is converted to a graph (top right). The fast route is followed by the detail route. The detail route should ensure that the segments and vias are in accordance to the global route. 
+
+The four dots are four pins (bottom left). Detail route creates a routing guide after fast route. In detail route, we use some algorithm to find the best connectivity among these points, which is one of the strategy. 
+
+Global route output is a set of routing guides for each of the nets. Detail route uses that global route and do connectivity between the points. 
+
+
 ## TritonRoute Features
 ### 82 - TritonRoute feature 1 - honors pre-processed route guides
 ### 83 - TritonRoute Feature 2 & 3 - Inter-guide connectivity adn intra - & inter-layer routing
