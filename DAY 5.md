@@ -100,6 +100,32 @@ We're just putting vias to fix the issue
 
 ## Power Distribution Network and routing
 ### 79 - Lab steps to build power distribution network
+
+1) go to openlane directory
+
+2) ./flow.tcl -interactive
+
+3) package require openlane 0.9
+
+4) prep -design picorv32a -tag [RUN_NAME]
+
+5) echo $::env(CURRENT_DEF) and it should be the cts.def file
+
+<img width="1033" height="638" alt="image" src="https://github.com/user-attachments/assets/b1fceda5-653c-429d-85df-4ae7f76ccb8b" />
+
+6) gen_pdn
+
+<img width="1177" height="484" alt="image" src="https://github.com/user-attachments/assets/5b7ab5b3-6425-4fa0-ad48-5d05b3a5813b" />
+
+The PDN will read the lef and def file. Then it will create the grid and transfer the power. The standard cells are placed in rows so they need power and ground lines where standard cells are placed.
+
+> If you want your cell to fit between the two rails, you have to set the  pitch to the height of the cell. 
+
+Power goes through the straps and gets distributed to the stdcell rails. 
+
+<img width="1190" height="633" alt="image" src="https://github.com/user-attachments/assets/c29d8680-ffa7-4b74-9554-8a3b0bfbd7f8" />
+
+
 ### 80 - Lab steps from power straps to std cell power
 ### 81 - Basics of global and detail routing and configure TritonRoute
 ## TritonRoute Features
