@@ -563,7 +563,7 @@ Now the clocks are numbered
 
 7) Check timings
 
-<img width="677" height="18" alt="image" src="https://github.com/user-attachments/assets/a98b69a2-e764-4ca2-a801-b2269215541f" />
+<img width="693" height="32" alt="image" src="https://github.com/user-attachments/assets/db709905-4f4a-4fc7-a1d6-17f9f3f877e8" />
 
 MIN
 
