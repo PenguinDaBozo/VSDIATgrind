@@ -189,6 +189,25 @@ Global route output is a set of routing guides for each of the nets. Detail rout
 
 ## TritonRoute Features
 ### 82 - TritonRoute feature 1 - honors pre-processed route guides
+
+TritonRoute is the engine used for Detail routing.
+
+<img width="924" height="481" alt="image" src="https://github.com/user-attachments/assets/cc7fcc37-29e0-4bbb-a62c-262fcee8af27" />
+
+Intra layer means within the layer, panel routing is parallel. Inter layer means between layers, panel routing is sequential. Via placement will only happen when upper routing placement.
+
+
+<img width="893" height="603" alt="image" src="https://github.com/user-attachments/assets/e4137614-091a-45be-afff-b1efdeada1e5" />
+
+After the fast routing, we have a connectivity between A and B. Blue is metal 1 and pink is M2. The preferred direction for M1 is vertical but the initial route guide isn't, so we split the non-vertical route guide. Then some of the pieces that has an edge touching with a vertical routing guide will merge with the vertical routes. Then we bridge horizontally with metal 2. And finally we make the nonpreferred direction to the preferred direction.
+
+The benefit of this is that the route guide will be in parallel with metal 2. This will form a parallel connection with capacitor and will result in greater signals. 
+
+<img width="882" height="479" alt="image" src="https://github.com/user-attachments/assets/44641079-f494-46e2-8584-abe842db1e14" />
+
 ### 83 - TritonRoute Feature 2 & 3 - Inter-guide connectivity adn intra - & inter-layer routing
+
+<img width="882" height="479" alt="image" src="https://github.com/user-attachments/assets/44641079-f494-46e2-8584-abe842db1e14" />
+
 ### 84 - TritonRoute Method to handle connectivity
 ### 85 - Routing topology algorithm and final files list post-route
