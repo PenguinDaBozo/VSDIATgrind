@@ -610,6 +610,7 @@ let's try to see what happens when we remove one
 
 <img width="723" height="76" alt="image" src="https://github.com/user-attachments/assets/7dc61c5e-c803-4864-811d-545b09f404b0" />
 
+<img width="949" height="51" alt="image" src="https://github.com/user-attachments/assets/ce18d6a8-a360-433e-8fa2-ad602c37aa47" />
 
 
 
