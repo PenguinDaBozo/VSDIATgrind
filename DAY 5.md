@@ -161,9 +161,9 @@ The cts.def has changed into a pdn.def and this includes both cts and pdn
 The last thing is routing with **run_routing**
 
 > *Note: from the video, which is a bit outdated and as such there is no routing strategy no more*
->
+
 <img width="1161" height="550" alt="image" src="https://github.com/user- attachments/assets/34d827b4-b0de-462f-a243-eaf8345b32ab" />
->
+
 > We will focus on routing strategy. There are 4 routing strategies. 
 >
 > For the purpose of this workshop we will use ROUTING_STRATEGY 0
