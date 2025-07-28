@@ -281,6 +281,10 @@ We have to create a new db. You need to use the verilog file that was created pr
 
 We will use this as the read_verilog netlist in the post sta analysis. Then we use the same sdc file. Then we need to read_spef for reading the parasetics. 
 
+<img width="668" height="619" alt="image" src="https://github.com/user-attachments/assets/0ccc100f-5db4-4feb-8e2d-e6715f158086" />
+
+<img width="666" height="635" alt="image" src="https://github.com/user-attachments/assets/e73eda77-4993-45d8-a62f-fbbce65df6ad" />
+
 
 The last stage will be to extract the GDSII file ready for fabrication run_magic
 
