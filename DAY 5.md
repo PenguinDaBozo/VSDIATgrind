@@ -194,9 +194,8 @@ TritonRoute is the engine used for Detail routing.
 
 <img width="924" height="481" alt="image" src="https://github.com/user-attachments/assets/cc7fcc37-29e0-4bbb-a62c-262fcee8af27" />
 
-Intra layer means within the layer, panel routing is parallel. Inter layer means between layers, panel routing is sequential. Via placement will only happen when upper routing placement.
 
-
+1)
 <img width="893" height="603" alt="image" src="https://github.com/user-attachments/assets/e4137614-091a-45be-afff-b1efdeada1e5" />
 
 After the fast routing, we have a connectivity between A and B. Blue is metal 1 and pink is M2. The preferred direction for M1 is vertical but the initial route guide isn't, so we split the non-vertical route guide. Then some of the pieces that has an edge touching with a vertical routing guide will merge with the vertical routes. Then we bridge horizontally with metal 2. And finally we make the nonpreferred direction to the preferred direction.
@@ -205,7 +204,74 @@ The benefit of this is that the route guide will be in parallel with metal 2. Th
 
 ### 83 - TritonRoute Feature 2 & 3 - Inter-guide connectivity and intra - & inter-layer routing
 
+2) 
 <img width="882" height="479" alt="image" src="https://github.com/user-attachments/assets/44641079-f494-46e2-8584-abe842db1e14" />
 
+Bullet 1 refers to earlier where when splitting occured, the pieces had to be merged back together. The purple box is the common non-vertical overlapped area and metal 1 and metal 2 is connected that way. The via is to be placed here. 
+
+Bullet 2 refers to this image. The dots are pins of standard cells and needs to be overlapped by route guides. This is the reason why we wanted the routes to be vertical and horizontal. It will have the pins on the intersecting horizontal and vertical.
+
+<img width="172" height="168" alt="image" src="https://github.com/user-attachments/assets/582979b3-fa89-4661-9171-420dcd68d130" />
+
+
+3) 
+<img width="843" height="474" alt="image" src="https://github.com/user-attachments/assets/5735ebab-ad32-4995-a93a-1b8f40a10d22" />
+
+Each layer is divided into dashed lines. Metal 2 is vertical so the dashed lines are also vertical. These dashed lines is called panel. Each routing guide is assigned to one panel. When arrows are gray, routing is completed. 
+
+Intra layer means within the layer, panel routing is parallel. Inter layer means between layers, panel routing is sequential. Via placement will only happen when upper routing placement.
+
+Routing will first happen in parallel on the even index panels and then the odd index panels.  It is happening in parallel for a vertical layer. 
+
+
 ### 84 - TritonRoute Method to handle connectivity
+
+<img width="899" height="473" alt="image" src="https://github.com/user-attachments/assets/e6a6d5c4-b003-4695-8a16-be2fdb0110d9" />
+
+<img width="1021" height="613" alt="image" src="https://github.com/user-attachments/assets/4299fb22-6550-48f5-bc9e-b38f34282b3b" />
+
+In figure a, the metals are in their preferred direction and the dashed lines are the routing tracks and the solid line is the routing which has been completed for metal 1. We connect 2 guides using vias that are placed in intersections of the solid and dashed lines. There are 5 points where vias can be placed and are referred to as access points. In figure b, the pins are connected. In figure c, it is connecting upper layer to bottom layer. There are 15 access points in C. Collection of access points are called access point cluster.
+
+The goal of MILP is to find the opotimal solution to connect two APCs.
+
 ### 85 - Routing topology algorithm and final files list post-route
+
+<img width="783" height="521" alt="image" src="https://github.com/user-attachments/assets/bcf7c33f-b85f-49de-8de9-1a4b23177768" />
+
+This is the algorithm for the APCs. For each APC, find the common cost associated with APCs and then do a minimum spanning tree (MST) between the APCs and COSTs. Essentially, this algorithm is saying that I have to find the minimum and the most optimal point between two APCs. 
+
+<img width="1002" height="452" alt="image" src="https://github.com/user-attachments/assets/e37ced43-edb8-47fd-8d45-83df0c35819a" />
+
+TritonRoute does many iterations to optimize so that the violations are minialized. Higher version will result in lower violations but will take longer. 
+
+<img width="986" height="590" alt="image" src="https://github.com/user-attachments/assets/e85fe180-5da2-410e-b834-b088c5f7e157" />
+
+The violations decrease as iterations increase
+
+<img width="800" height="594" alt="image" src="https://github.com/user-attachments/assets/9ae93ea4-fd80-4996-917e-74de0b245952" />
+
+To find the errors, read **/openLANE_flow/designs/picorv32a/runs/RUN/reports/routing/74-tritonRoute.drc**
+
+<img width="1196" height="45" alt="image" src="https://github.com/user-attachments/assets/2282fbd6-a05d-4b4d-ab00-50552cceee0a" />
+
+**Parasitic extraction**
+
+The extractor has not been included in OpenLANE so we will do extraction outside of openLANE. We need to go to work/tools/openlane/scripts to go to extractor.
+
+<img width="902" height="258" alt="image" src="https://github.com/user-attachments/assets/06e0e7a9-aa2e-4638-b978-1f75203a093a" />
+
+<img width="644" height="258" alt="image" src="https://github.com/user-attachments/assets/886ee536-cb49-4907-8e6b-ff4a7cf58793" />
+
+<img width="1199" height="187" alt="image" src="https://github.com/user-attachments/assets/86b1d299-cfba-4e3d-bf44-1e2f601b5480" />
+
+To generate the SPEF, you need to specify the lef and the def. This will create the SPEF file which will be in the same location as the tech file. 
+
+<img width="866" height="147" alt="image" src="https://github.com/user-attachments/assets/80a55992-3ef2-408a-9749-c9d925fe7e0c" />
+
+
+
+
+
+
+
+
