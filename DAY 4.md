@@ -612,6 +612,14 @@ let's try to see what happens when we remove one
 
 <img width="949" height="51" alt="image" src="https://github.com/user-attachments/assets/ce18d6a8-a360-433e-8fa2-ad602c37aa47" />
 
-
+run_cts
 
 ### 75 - Lab steps to observe impact of bigger CTS buffers on setup and hold timing
+
+There are some skipping so you should kill the process by going into **~/Desktop/work/tools/openlane_working_dir/openlane/scripts/openroad** and running the command top, which lists running tasks, and then **kill -9 PROCESS ID**
+
+<img width="736" height="39" alt="image" src="https://github.com/user-attachments/assets/983d4e7e-1f65-4763-b110-8c3c8b4aafd7" />
+
+<img width="958" height="116" alt="image" src="https://github.com/user-attachments/assets/c149afaf-50df-432c-a45d-702f1ca8d8c3" />
+
+
