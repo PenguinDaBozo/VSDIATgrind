@@ -258,19 +258,24 @@ To find the errors, read **/openLANE_flow/designs/picorv32a/runs/RUN/reports/rou
 
 The extractor has not been included in OpenLANE so we will do extraction outside of openLANE. We need to go to work/tools/openlane/scripts to go to extractor.
 
-<img width="902" height="258" alt="image" src="https://github.com/user-attachments/assets/06e0e7a9-aa2e-4638-b978-1f75203a093a" />
-
-<img width="644" height="258" alt="image" src="https://github.com/user-attachments/assets/886ee536-cb49-4907-8e6b-ff4a7cf58793" />
-
-<img width="1199" height="187" alt="image" src="https://github.com/user-attachments/assets/86b1d299-cfba-4e3d-bf44-1e2f601b5480" />
-
-To generate the SPEF, you need to specify the lef and the def. This will create the SPEF file which will be in the same location as the tech file. 
+<img width="867" height="164" alt="image" src="https://github.com/user-attachments/assets/ecf803ad-164a-4dcd-a8ca-02e74a06dc6f" />
 
 <img width="866" height="147" alt="image" src="https://github.com/user-attachments/assets/80a55992-3ef2-408a-9749-c9d925fe7e0c" />
 
+To generate the SPEF, you need to specify the lef and the def. This will create the SPEF file which will be in the same location as the def file. 
+
+<img width="893" height="170" alt="image" src="https://github.com/user-attachments/assets/8e6dd44d-c780-4002-b662-2817f0385dea" />
+
+We have to create a new db. You need to use the verilog file that was created preroute. 
+
+<img width="867" height="210" alt="image" src="https://github.com/user-attachments/assets/d8e77166-a18d-4fcb-9035-df007745fa15" />
+
+We will use this as the read_verilog netlist in the post sta analysis. Then we use the same sdc file. Then we need to read_spef for reading the parasetics. 
 
 
+The last stage will be to extract the GDSII file ready for fabrication run_magic
 
+This uses Magic to stream the GDSII file and creates picorv32a.gds. This GDSII file can then be read by Magic
 
 
 
