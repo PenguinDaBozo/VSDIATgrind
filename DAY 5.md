@@ -203,9 +203,7 @@ After the fast routing, we have a connectivity between A and B. Blue is metal 1 
 
 The benefit of this is that the route guide will be in parallel with metal 2. This will form a parallel connection with capacitor and will result in greater signals. 
 
-<img width="882" height="479" alt="image" src="https://github.com/user-attachments/assets/44641079-f494-46e2-8584-abe842db1e14" />
-
-### 83 - TritonRoute Feature 2 & 3 - Inter-guide connectivity adn intra - & inter-layer routing
+### 83 - TritonRoute Feature 2 & 3 - Inter-guide connectivity and intra - & inter-layer routing
 
 <img width="882" height="479" alt="image" src="https://github.com/user-attachments/assets/44641079-f494-46e2-8584-abe842db1e14" />
 
